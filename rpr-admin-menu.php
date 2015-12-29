@@ -43,13 +43,6 @@ if ( !class_exists( 'RPR_Admin_Menu' ) ) {
 			global $wpdb;
 			$hookname = add_menu_page( __( 'Register Plus Redux', 'register-plus-redux' ), __( 'Register Plus Redux', 'register-plus-redux' ), 'manage_options', 'register-plus-redux', array( $this, 'rpr_options_submenu' ) );
 			// NOTE: $hookname = toplevel_page_register-plus-redux
-			if ( file_exists( plugin_dir_path( __FILE__ ) . 'readygraph-extension.php' ) && (get_option('readygraph_deleted') != "true") ) {
-				global $menu_slug;  // 'readygraph-app' as defined on line 5 of readygraph-extension.php
-				add_submenu_page( 'register-plus-redux', 'Readygraph App', __( 'Readygraph App', 'register-plus-redux' ), 'administrator', $menu_slug, array( $this, 'rpr_readygraph_menu_page' ) );
-			}
-			if ( file_exists( plugin_dir_path( __FILE__ ) . ' readygraph-extension.php')) {
-				add_submenu_page( 'register-plus-redux', 'Go Premium', __( 'Go Premium', 'register-plus-redux' ), 'administrator', 'readygraph-go-premium', array( $this, 'rpr_readygraph_premium_page' ) );
-			}
 			
 			add_action( 'load-' . $hookname, array( $this, 'rpr_options_submenu_load' ), 10, 1 );
 			//add_action( 'admin_print_scripts-' . $hookname, array( $this, 'rpr_options_submenu_scripts' ), 10, 1 );
@@ -101,52 +94,7 @@ if ( !class_exists( 'RPR_Admin_Menu' ) ) {
 		public /*.void.*/ function rpr_options_submenu_styles() {
 			if ( !is_multisite() ) wp_enqueue_style( 'thickbox' );
 		}
-		public /*.void.*/ function rpr_readygraph_menu_page(){
-			global $wpdb;
-			$current_page = isset($_GET['ac']) ? $_GET['ac'] : '';
-			switch($current_page)
-			{
-				case 'signup-popup':
-					include('extension/readygraph/signup-popup.php');
-					break;
-				case 'invite-screen':
-					include('extension/readygraph/invite-screen.php');
-					break;
-				case 'social-feed':
-					include('extension/readygraph/social-feed.php');
-					break;
-				case 'site-profile':
-					include('extension/readygraph/site-profile.php');
-					break;
-				case 'customize-emails':
-					include('extension/readygraph/customize-emails.php');
-					break;
-				case 'deactivate-readygraph':
-					include('extension/readygraph/deactivate-readygraph.php');
-					break;
-				case 'welcome-email':
-					include('extension/readygraph/welcome-email.php');
-					break;
-				case 'retention-email':
-					include('extension/readygraph/retention-email.php');
-					break;
-				case 'invitation-email':
-					include('extension/readygraph/invitation-email.php');
-					break;	
-				case 'faq':
-					include('extension/readygraph/faq.php');
-					break;
-				case 'monetization-settings':
-					include('extension/readygraph/monetization.php');
-					break;
-				default:
-					include('extension/readygraph/admin.php');
-					break;
-			}
-		}
-		public /*.void.*/ function rpr_readygraph_premium_page(){
-			include('extension/readygraph/go-premium.php');
-		}
+
 		public /*.void.*/ function rpr_options_submenu() {
 			global $register_plus_redux;
 			if ( isset( $_POST['update_settings'] ) ) {
