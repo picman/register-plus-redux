@@ -20,7 +20,7 @@ if ( !class_exists( 'RPR_Dashboard_Widget' ) ) {
 			foreach ( $invitation_code_bank as $invitation_code ) {
 				$user_count = (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM $wpdb->usermeta WHERE meta_key = 'invitation_code' AND meta_value = %s;", $invitation_code ) );
 				echo '<h3>', esc_html( $invitation_code ), ': <small style="font-weight:normal">', sprintf( __( '%s Users Registered.', 'register-plus-redux' ), $user_count ), '</small></h3>';
-			}		
+			}
 		}
 	}
 }
