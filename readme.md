@@ -1,6 +1,5 @@
 # Register Plus Redux
 Contributors: radiok
-Donate link: http://radiok.info/donate/
 Tags: registration, register, plus, redux, password, invitation, code, email, verification, disclaimer, license, agreement, privacy, policy, logo, moderation, user
 Requires at least: 3.5
 Tested up to: 4.0
@@ -76,7 +75,7 @@ Available in the following translations:
 Register Plus was abandoned by skullbit sometime after September, 2008 following the release of Register Plus 3.5.1. As of September, 2009 skullbit's website was undergoing maintenance. Several bugs had been reported to the Register Plus plugin forum since that time, to resolve these bugs and continue development radiok forked the project.
 
 ### What's New? or What's Coming Soon?
-Visit <http://radiok.info/blog/category/register-plus-redux/> for all information Register Plus Redux related
+In order, not much, and nothing likely.  I, radiok, have long been removed from active WordPress development.  Hopefully this plugin can serve some historical, education, purpose if nothing else.
 
 ### Register, Signup, what's the difference?
 Historically, users registered for WordPress sites.  WordPress MU (**M**ulti**u**ser) introduced the signup process which is conceptually similar to registration, but also very different, especially from a coding perspective.  WordPress MU has since been merged into WordPress as the Multisite (a/k/a WordPress MS) feature.  The actions, filters and, overall request lifecycle are dramatically different, as is the presentation.  The registration and signup pages are different in every way, even though they have similar intentions.  As such, developers must make the distinction between registration and signup.
