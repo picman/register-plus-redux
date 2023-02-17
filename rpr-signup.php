@@ -361,6 +361,7 @@ if ( !class_exists( 'RPR_Signup' ) ) {
                 }
             }
             if ( is_array( $redux_usermeta ) ) {
+                global $terms_exist;
                 if ( !$terms_exist ) {
                     foreach ( $redux_usermeta as $meta_field ) {
                         if ( 'terms' === $meta_field['display'] ) {

@@ -1,5 +1,6 @@
 <?php
 if ( function_exists( 'wp_new_user_notification' ) ) {
+    global $rpr_admin_menu;
     if ( $rpr_admin_menu instanceof RPR_Admin_Menu ) add_action( 'admin_notices', array( $rpr_admin_menu, 'rpr_new_user_notification_warning' ), 10, 0 );
 }
 
