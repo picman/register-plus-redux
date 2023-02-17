@@ -46,7 +46,7 @@ if ( !class_exists( 'Register_Plus_Redux' ) ) {
 
           add_action( 'admin_enqueue_scripts', array( $this, 'rpr_admin_enqueue_scripts' ), 10, 1 );
 
-          add_action( 'show_user_profile', array( $this, 'rpr_show_custom_fields' ), 1, 1 ); // Runs near the end of the user profile editing screen.
+          add_action( 'show_user_profile', array( $this, 'rpr_show_custom_fields' ), 10, 1 ); // Runs near the end of the user profile editing screen.
           add_action( 'edit_user_profile', array( $this, 'rpr_show_custom_fields' ), 10, 1 ); // Runs near the end of the user profile editing screen in the admin menus. 
           add_action( 'profile_update', array( $this, 'rpr_save_custom_fields' ), 10, 1 ); // Runs when a user's profile is updated. Action function argument: user ID.
 
