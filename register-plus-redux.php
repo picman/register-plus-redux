@@ -32,6 +32,7 @@ define( 'RPR_ACTIVATION_REQUIRED', '3.9.6' );
 if ( !class_exists( 'Register_Plus_Redux' ) ) {
     class Register_Plus_Redux {
        private /*.array[string]mixed.*/ $options;
+       private bool $terms_exist = FALSE;
 
        public /*.void.*/ function __construct() {
           register_activation_hook( __FILE__, array( $this, 'rpr_activation' ) );
@@ -280,7 +281,7 @@ if ( !class_exists( 'Register_Plus_Redux' ) ) {
         // $profileuser is a WP_User object
         public /*.void.*/ function rpr_show_custom_fields( /*.object.*/ $profileuser ) {
             $additional_fields_exist = FALSE;
-            $terms_exist = FALSE;
+            $this->terms_exist = FALSE;
 
             /*.array[]mixed.*/ $redux_usermeta = get_option( 'register_plus_redux_usermeta-rv2' );
             if ( '1' === $this->rpr_get_option( 'enable_invitation_code' ) || is_array( $redux_usermeta ) ) {
@@ -290,7 +291,7 @@ if ( !class_exists( 'Register_Plus_Redux' ) ) {
                             $additional_fields_exist = TRUE;
                             break;
                         }
-                        else if ( 'terms' === $meta_field['display'] ) { $terms_exist = TRUE; }
+                        else if ( 'terms' === $meta_field['display'] ) { $this->terms_exist = TRUE; }
                     }
                 }
                 if ( '1' === $this->rpr_get_option( 'enable_invitation_code' ) || $additional_fields_exist ) {
@@ -374,15 +375,15 @@ if ( !class_exists( 'Register_Plus_Redux' ) ) {
                 }
             }
             if ( is_array( $redux_usermeta ) ) {
-                if ( !$terms_exist ) {
+                if ( !$this->terms_exist ) {
                     foreach ( $redux_usermeta as $meta_field ) {
-                        if ( 'terms' === $meta_field['display'] ) { 
-                            $terms_exist = TRUE;
+                        if ( 'terms' === $meta_field['display'] ) {
+                            $this->terms_exist = TRUE;
                             break;
                         }
                     }
                 }
-                if ( $terms_exist ) {
+                if ( $this->terms_exist ) {
                     echo '<h3>', __( 'Terms', 'register-plus-redux' ), '</h3>';
                     echo '<table class="form-table">';
                     foreach ( $redux_usermeta as $meta_field ) {
@@ -613,6 +614,23 @@ if ( !class_exists( 'Register_Plus_Redux' ) ) {
 
         public /*.string.*/ function rpr_filter_mail_content_type_html( /*.string.*/ $content_type ) {
             return 'text/html';
+        }
+
+        /**
+         * @return bool
+         */
+        public function get_terms_exist() : bool
+        {
+            return $this->terms_exist;
+        }
+
+        /**
+         * @param bool $exist
+         * @return void
+         */
+        public function set_terms_exist(bool $exist) : void
+        {
+            $this->terms_exist = $exist;
         }
     }
 }
