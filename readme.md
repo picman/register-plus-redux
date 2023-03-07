@@ -3,7 +3,7 @@ Contributors: radiok
 Tags: registration, register, plus, redux, password, invitation, code, email, verification, disclaimer, license, agreement, privacy, policy, logo, moderation, user
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 4.3
+Stable tag: 4.3.1
 
 Enhances the user registration process with complete customization and additional administration options.
 
@@ -116,6 +116,12 @@ HTML attributes should go in the following order name -> id -> class
 4. Unverified User Management
 
 ## Changelog
+
+### 4.3.1
+March 7, 2023 by picman, radiok
+
+* Resolved 2 undefined variable errors
+* PHP 8 compatibility
 
 ### 4.3.0
 December 29, 2015 by tanaylakhani, radiok
