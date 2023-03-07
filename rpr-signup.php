@@ -361,15 +361,15 @@ if ( !class_exists( 'RPR_Signup' ) ) {
                 }
             }
             if ( is_array( $redux_usermeta ) ) {
-                if ( !$terms_exist ) {
+                if ( !$register_plus_redux->rpr_get_terms_exist() ) {
                     foreach ( $redux_usermeta as $meta_field ) {
                         if ( 'terms' === $meta_field['display'] ) {
-                            $terms_exist = TRUE;
+                            $register_plus_redux->rpr_set_terms_exist( TRUE );
                             break;
                         }
                     }
                 }
-                if ( $terms_exist ) {
+                if ( $register_plus_redux->rpr_get_terms_exist() ) {
                     foreach ( $redux_usermeta as $meta_field ) {
                         if ( 'terms' === $meta_field['display'] && '1' === $meta_field['show_on_registration'] ) {
                             $meta_value = isset( $_REQUEST[$meta_key] ) ? (string) $_REQUEST[$meta_key] : 'N';

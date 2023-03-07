@@ -1,8 +1,4 @@
 <?php
-if ( function_exists( 'wp_new_user_notification' ) ) {
-    if ( $rpr_admin_menu instanceof RPR_Admin_Menu ) add_action( 'admin_notices', array( $rpr_admin_menu, 'rpr_new_user_notification_warning' ), 10, 0 );
-}
-
 // Called after user completes registration from wp-login.php
 // Called after admin creates user from wp-admin/user-new.php
 // Called after admin creates new site, which also creates new user from wp-admin/network/edit.php (MS)
@@ -36,5 +32,9 @@ if ( !function_exists( 'wp_new_user_notification' ) ) {
             $register_plus_redux->send_admin_mail( $user_id, $plaintext_pass, $verification_code );
         }
     }
+}
+
+if ( function_exists( 'wp_new_user_notification' ) ) {
+    if ( isset( $rpr_admin_menu ) && $rpr_admin_menu instanceof RPR_Admin_Menu ) add_action( 'admin_notices', array( $rpr_admin_menu, 'rpr_new_user_notification_warning' ), 10, 0 );
 }
 ?>
