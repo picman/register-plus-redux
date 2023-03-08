@@ -21,9 +21,9 @@
  *   GNU Lesser General Public License for more details.
  * 
  *   You should have received a copy of the GNU Lesser General Public License
- *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *   along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
- * @license http://opensource.org/licenses/lgpl-license.php GNU Lesser General Public License
+ * @license https://opensource.org/licenses/lgpl-license.php GNU Lesser General Public License
  * @package csstidy
  * @author Florian Schmitz (floele at gmail dot com) 2005-2007
  * @author Brett Zamir (brettz9 at yahoo dot com) 2007
@@ -46,19 +46,19 @@ class csstidy_print {
      * @var string
      * @access private
      */
-    var $input_css = '';
+    public $input_css = '';
     /**
      * Saves the formatted CSS string
      * @var string
      * @access public
      */
-    var $output_css = '';
+    public $output_css = '';
     /**
      * Saves the formatted CSS string (plain text)
      * @var string
      * @access public
      */
-    var $output_css_plain = '';
+    public $output_css_plain = '';
 
     /**
      * Constructor
@@ -77,11 +77,19 @@ class csstidy_print {
     }
 
     /**
+     * Call constructor function.
+     * @param object $css - the CSS we're working with
+     */
+    public function csstidy_print(&$css) {
+        $this->__construct($css);
+    }
+
+    /**
      * Resets output_css and output_css_plain (new css code)
      * @access private
      * @version 1.0
      */
-    function _reset() {
+    public function _reset() {
         $this->output_css = '';
         $this->output_css_plain = '';
     }
@@ -93,7 +101,7 @@ class csstidy_print {
      * @access public
      * @version 1.0
      */
-    function plain($default_media='') {
+    public function plain($default_media='') {
         $this->_print(true, $default_media);
         return $this->output_css_plain;
     }
@@ -105,7 +113,7 @@ class csstidy_print {
      * @access public
      * @version 1.0
      */
-    function formatted($default_media='') {
+    public function formatted($default_media='') {
         $this->_print(false, $default_media);
         return $this->output_css;
     }
@@ -120,7 +128,7 @@ class csstidy_print {
      * @access public
      * @version 1.4
      */
-    function formatted_page($doctype='xhtml1.1', $externalcss=true, $title='', $lang='en') {
+    public function formatted_page($doctype='xhtml1.1', $externalcss=true, $title='', $lang='en') {
         switch ($doctype) {
             case 'xhtml1.0strict':
                 $doctype_output = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -162,14 +170,14 @@ class csstidy_print {
      * @access private
      * @version 2.0
      */
-    function _print($plain = false, $default_media='') {
+    public function _print($plain = false, $default_media='') {
         if ($this->output_css && $this->output_css_plain) {
             return;
         }
 
         $output = '';
         if (!$this->parser->get_cfg('preserve_css')) {
-            $this->_convert_raw_css($default_media);
+            $this->convert_raw_css($default_media);
         }
 
         $template = & $this->template;
@@ -179,7 +187,7 @@ class csstidy_print {
         }
 
         if ($this->parser->get_cfg('timestamp')) {
-            array_unshift($this->tokens, array(COMMENT, ' CSSTidy ' . $this->parser->version . ': ' . date('r') . ' '));
+            array_unshift($this->tokens, array(COMMENT, ' CSSTidy ' . $this->parser->version . ': ' . gmdate('r') . ' '));
         }
 
         if (!empty($this->charset)) {
@@ -213,14 +221,15 @@ class csstidy_print {
         foreach ($this->tokens as $key => $token) {
             switch ($token[0]) {
                 case AT_START:
-                    $out .= $template[0] . $this->_htmlsp($token[1], $plain) . $template[1];
+                    $out .= $template[0] . $this->htmlsp($token[1], $plain) . $template[1];
                     $out = & $in_at_out;
                     break;
 
                 case SEL_START:
-                    if ($this->parser->get_cfg('lowercase_s'))
+                    if ($this->parser->get_cfg('lowercase_s')) {
                         $token[1] = strtolower($token[1]);
-                    $out .= ( $token[1][0] !== '@') ? $template[2] . $this->_htmlsp($token[1], $plain) : $template[0] . $this->_htmlsp($token[1], $plain);
+                    }
+                    $out .= ( $token[1][0] !== '@') ? $template[2] . $this->htmlsp($token[1], $plain) : $template[0] . $this->htmlsp($token[1], $plain);
                     $out .= $template[3];
                     break;
 
@@ -230,12 +239,12 @@ class csstidy_print {
                     } elseif ($this->parser->get_cfg('case_properties') === 1) {
                         $token[1] = strtolower($token[1]);
                     }
-                    $out .= $template[4] . $this->_htmlsp($token[1], $plain) . ':' . $template[5];
+                    $out .= $template[4] . $this->htmlsp($token[1], $plain) . ':' . $template[5];
                     break;
 
                 case VALUE:
-                    $out .= $this->_htmlsp($token[1], $plain);
-                    if ($this->_seeknocomment($key, 1) == SEL_END && $this->parser->get_cfg('remove_last_;')) {
+                    $out .= $this->htmlsp($token[1], $plain);
+                    if ($this->seeknocomment($key, 1) === SEL_END && $this->parser->get_cfg('remove_last_;')) {
                         $out .= str_replace(';', '', $template[6]);
                     } else {
                         $out .= $template[6];
@@ -244,8 +253,9 @@ class csstidy_print {
 
                 case SEL_END:
                     $out .= $template[7];
-                    if ($this->_seeknocomment($key, 1) != AT_END)
+                    if ($this->seeknocomment($key, 1) !== AT_END) {
                         $out .= $template[8];
+                    }
                     break;
 
                 case AT_END:
@@ -256,7 +266,7 @@ class csstidy_print {
                     break;
 
                 case COMMENT:
-                    $out .= $template[11] . '/*' . $this->_htmlsp($token[1], $plain) . '*/' . $template[12];
+                    $out .= $template[11] . '/*' . $this->htmlsp($token[1], $plain) . '*/' . $template[12];
                     break;
             }
         }
@@ -280,14 +290,14 @@ class csstidy_print {
      * @access private
      * @version 1.0
      */
-    function _seeknocomment($key, $move) {
+    public function seeknocomment($key, $move) {
         $go = ($move > 0) ? 1 : -1;
         for ($i = $key + 1; abs($key - $i) - 1 < abs($move); $i += $go) {
             if (!isset($this->tokens[$i])) {
                 return;
             }
-            if ($this->tokens[$i][0] == COMMENT) {
-                $move += 1;
+            if ($this->tokens[$i][0] === COMMENT) {
+                ++$move;
                 continue;
             }
             return $this->tokens[$i][0];
@@ -300,22 +310,23 @@ class csstidy_print {
      * @access private
      * @version 1.0
      */
-    function _convert_raw_css($default_media='') {
+    public function convert_raw_css($default_media='') {
         $this->tokens = array();
 
         foreach ($this->css as $medium => $val) {
-            if ($this->parser->get_cfg('sort_selectors'))
+            if ($this->parser->get_cfg('sort_selectors')) {
                 ksort($val);
-            if (intval($medium) < DEFAULT_AT) {
-                $this->parser->_add_token(AT_START, $medium, true);
             }
-            elseif ($default_media) {
+            if ((int) $medium < DEFAULT_AT) {
+                $this->parser->_add_token(AT_START, $medium, true);
+            } elseif ($default_media) {
                 $this->parser->_add_token(AT_START, $default_media, true);
             }
-            
+
             foreach ($val as $selector => $vali) {
-                if ($this->parser->get_cfg('sort_properties'))
+                if ($this->parser->get_cfg('sort_properties')) {
                     ksort($vali);
+                }
                 $this->parser->_add_token(SEL_START, $selector, true);
 
                 foreach ($vali as $property => $valj) {
@@ -326,10 +337,9 @@ class csstidy_print {
                 $this->parser->_add_token(SEL_END, $selector, true);
             }
 
-            if (intval($medium) < DEFAULT_AT) {
+            if ((int) $medium < DEFAULT_AT) {
                 $this->parser->_add_token(AT_END, $medium, true);
-            }
-            elseif ($default_media) {
+            } elseif ($default_media) {
                 $this->parser->_add_token(AT_END, $default_media, true);
             }
         }
@@ -337,14 +347,14 @@ class csstidy_print {
 
     /**
      * Same as htmlspecialchars, only that chars are not replaced if $plain !== true. This makes  print_code() cleaner.
-     * @param string $string
-     * @param bool $plain
+     * @param string $string - the string we're converting
+     * @param bool $plain - plain text or not
      * @return string
      * @see csstidy_print::_print()
      * @access private
      * @version 1.0
      */
-    function _htmlsp($string, $plain) {
+    public function htmlsp($string, $plain) {
         if (!$plain) {
             return htmlspecialchars($string, ENT_QUOTES, 'utf-8');
         }
@@ -357,7 +367,7 @@ class csstidy_print {
      * @return float
      * @version 1.2
      */
-    function get_ratio() {
+    public function get_ratio() {
         if (!$this->output_css_plain) {
             $this->formatted();
         }
@@ -370,7 +380,7 @@ class csstidy_print {
      * @return string
      * @version 1.1
      */
-    function get_diff() {
+    public function get_diff() {
         if (!$this->output_css_plain) {
             $this->formatted();
         }
@@ -379,7 +389,7 @@ class csstidy_print {
 
         if ($diff > 0) {
             return '+' . $diff;
-        } elseif ($diff == 0) {
+        } elseif ($diff === 0) {
             return '+-' . $diff;
         }
 
@@ -393,7 +403,7 @@ class csstidy_print {
      * @return integer
      * @version 1.0
      */
-    function size($loc = 'output') {
+    public function size($loc = 'output') {
         if ($loc === 'output' && !$this->output_css) {
             $this->formatted();
         }

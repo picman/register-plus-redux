@@ -22,24 +22,34 @@
  * along with CSSTidy; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  *
- * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @license https://opensource.org/licenses/gpl-license.php GNU Public License
  * @package csstidy
  * @author Nikolay Matsievsky (speed at webo dot name) 2009-2010
  * @version 1.0
  */
-/* ctype_space  Check for whitespace character(s) */
+
 if (!function_exists('ctype_space')) {
 
+    /**
+     * Check for whitespace character(s).
+     *
+     * @param string $text - the text.
+     */
     function ctype_space($text) {
-        return!preg_match("/[^\s\r\n\t\f]/", $text);
+        return !preg_match("/[^\s\r\n\t\f]/", $text);
     }
 
 }
-/* ctype_alpha  Check for alphabetic character(s) */
+
 if (!function_exists('ctype_alpha')) {
 
+    /**
+     * Check for alphabetic character(s)
+     *
+     * @param string $text - the text.
+     */
     function ctype_alpha($text) {
-        return preg_match("/[a-zA-Z]/", $text);
+        return preg_match('/[a-zA-Z]/', $text);
     }
 
 }

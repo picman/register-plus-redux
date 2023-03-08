@@ -1317,6 +1317,7 @@ if ( !class_exists( 'RPR_Admin_Menu' ) ) {
             $options['custom_registration_page_css'] = '';
             if ( isset( $_POST['custom_registration_page_css'] ) ) {
                 // Stolen from Jetpack 2.0.4 custom-css.php Jetpack_Custom_CSS::init()
+                // Updated to Jetpack 11.9 custom-css.php Jetpack_Custom_CSS_Enhancements::sanitize_css()
                 require_once( 'csstidy/class.csstidy.php' );
                 $csstidy = new csstidy();
                 $csstidy->set_cfg( 'remove_bslash', FALSE );
@@ -1331,6 +1332,7 @@ if ( !class_exists( 'RPR_Admin_Menu' ) ) {
                 $csstidy->set_cfg( 'template', dirname( __FILE__ ) . '/csstidy/wordpress-standard.tpl' );
                 $custom_registration_page_css = (string) $_POST['custom_registration_page_css'];
                 $custom_registration_page_css = preg_replace( '/\\\\([0-9a-fA-F]{4})/', '\\\\\\\\$1', $custom_registration_page_css );
+                $custom_registration_page_css = str_replace( array( '\'\\\\', '"\\\\' ), array( '\'\\', '"\\' ), $custom_registration_page_css );
                 $custom_registration_page_css = str_replace( '<=', '&lt;=', $custom_registration_page_css );
                 $custom_registration_page_css = wp_kses_split( $custom_registration_page_css, array(), array() );
                 $custom_registration_page_css = str_replace( '&gt;', '>', $custom_registration_page_css );
