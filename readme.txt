@@ -691,3 +691,7 @@ WordPress Multisite users please update, signup pages were not validating, any i
 
 = 3.9.8 =
 Added new role, Unverified, and new capability, rpr_can_login, unverified users now take advantage of these, change may be jarring for long time users
+
+== License ==
+
+Register Plus Redux is licensed under GNU General Public License v3 (or later).
