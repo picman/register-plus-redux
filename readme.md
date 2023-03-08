@@ -47,20 +47,20 @@ Register Plus Redux was forked from Register Plus, developed by skullbit, after 
 
 Available in the following translations:
 
-* zh_CN Chinese
-* nl_NL Dutch
-* de_DE German
-* fr_FR French
-* ir_FA Persian
-* it_IT Italian
-* pl_PL Polish
-* pt_BR Portuguese
-* pt_BR Brazilian Portuguese
-* ro_RO Romanian
-* ru_RU Russian
-* es_ES Spanish
-* es_AR Argentinean Spanish
-* tr_TR Turkish
+* zh\_CN Chinese
+* nl\_NL Dutch
+* de\_DE German
+* fr\_FR French
+* ir\_FA Persian
+* it\_IT Italian
+* pl\_PL Polish
+* pt\_BR Portuguese
+* pt\_BR Brazilian Portuguese
+* ro\_RO Romanian
+* ru\_RU Russian
+* es\_ES Spanish
+* es\_AR Argentinean Spanish
+* tr\_TR Turkish
 
 ## Installation
 
@@ -87,7 +87,7 @@ This question is specific to WordPress with Networks, or WordPress Multisite, wh
 Register Plus offered two different CAPTCHA methods, a simple random CAPTCHA and reCAPTCHA. The simple one randomly created a 5-character sequence on a background image with two random lines drawn across the image, this CAPTCHA would be very easy for any OCR program to decipher as the characters were not modified in anyway and contrast was high. reCAPTCHA is a great idea, but there is another plugin, [WP-reCAPTCHA](http://wordpress.org/extend/plugins/wp-recaptcha/) endorsed by the reCAPTCHA developers that can be used to add reCAPTCHA to the registration page. I endorse the use of that plugin for that purpose.
 
 ### Didn't Register Plus have a feature to allow duplicate e-mail addresses?
-Register Plus did have a feature that allowed multiple users to register with the same e-mail address. I'm not sure when that stopped working for Register Plus, but I can assure you, that method does not work in WordPress 3.0 and will not work in the foreseeable future. Register Plus' method was pretty simple, if the email_exists error was thrown, 'unthrow', or more accurately, unset it. That is still possible, however, when WordPress actually creates the user, it chokes up and unpleasant things happen, in my experience. I'll leave this feature to brighter minds than my own to implement.
+Register Plus did have a feature that allowed multiple users to register with the same e-mail address. I'm not sure when that stopped working for Register Plus, but I can assure you, that method does not work in WordPress 3.0 and will not work in the foreseeable future. Register Plus' method was pretty simple, if the email\_exists error was thrown, 'unthrow', or more accurately, unset it. That is still possible, however, when WordPress actually creates the user, it chokes up and unpleasant things happen, in my experience. I'll leave this feature to brighter minds than my own to implement.
 
 ### I do not want users to go to the Dashboard after logging in. How do I redirect users after they login?
 This isn't quite a registration issue, but I can see how the line blurs since A) Redux does have configuration options for the Login screen, and B) Redux has a configuration for redirect after registration. I briefly considering programming this feature, but [Peter's Login Redirect](http://wordpress.org/extend/plugins/peters-login-redirect/) does everything I could do and so much more. I endorse the use of that plugin for this purpose.
@@ -96,7 +96,7 @@ This isn't quite a registration issue, but I can see how the line blurs since A)
 Prior to WordPress 3.2, WordPress required PHP 4, version 3.2 bumped up the requirement to PHP 5 (specifically PHP 5.2).  Register Plus Redux has been built specifically against PHP 5, functions and features may not function properly in PHP 4 or older.  WordPress 3.3 included the full jQuery UI library, previously Register Plus Redux had to include its own copy for the Datepicker widget.
 
 ### Why does Register Plus Redux require WordPress 3.5+
-Register Plus Redux uses WP_User_Query meta queries which was a developer feature added in WordPress 3.5.
+Register Plus Redux uses WP\_User\_Query meta queries which was a developer feature added in WordPress 3.5.
 
 ### Can you add a feature to change the width of the Registration Form? / How you change the width of the Registration Form?
 You can use the Custom Register CSS (found in Register Plus Redux's settings) to specify the width of the Registration form via CSS.  Specifically the code follows:
@@ -200,8 +200,8 @@ September 11, 2014 by radiok
 ### 3.9.10
 May 14, 2013 by radiok
 
-* Fixed bug, under Wordpress for Networks, super_admin users could not login
-* Added pl_PL translation
+* Fixed bug, under Wordpress for Networks, super\_admin users could not login
+* Added pl\_PL translation
 
 ### 3.9.9
 May 8, 2013 by radiok
@@ -209,8 +209,8 @@ May 8, 2013 by radiok
 * Fixed bug, upon verification usermeta was purging when changing user role from unverified to default role
 * Fixed regression from 3.9, show Datepicker
 * Fixed bug, when both email and admin verification were enabled, admin verification was not obeyed after completing email verification
-* Delete Wordpress option register_plus_redux_last_activated on deactivation or uninstall
-* New Wordpress option, register_plus_redux_version to assist in debugging
+* Delete Wordpress option register\_plus\_redux\_last\_activated on deactivation or uninstall
+* New Wordpress option, register\_plus\_redux\_version to assist in debugging
 * Moved scripts to footer of page to improve rendering
 
 ### 3.9.8
@@ -218,7 +218,7 @@ March 3, 2013 by radiok
 
 * Regression, PHP 5.3+ required for static keywords, reverting to static methods
 * Added sanity checks to allow default behavior if Redux activation fails
-* New Wordpress option, register_plus_redux_last_activated to assist in debugging
+* New Wordpress option, register\_plus\_redux\_last\_activated to assist in debugging
 
 ### 3.9.7
 March 2, 2013 by radiok
@@ -231,39 +231,39 @@ March 2, 2013 by radiok
 * Added ability to disable user email verification on WordPress Multisite
 * Significant re-factor of code base, specifically involving explicit conversions
 * Improved Unverified Users page with consistent behavior and added functionality
-* Added new 'rpr_unverified' (Unverified) user role
-* Added new 'rpr_can_login' capability
-* Converted 'unverified_*' users to Unverified user role
+* Added new 'rpr\_unverified' (Unverified) user role
+* Added new 'rpr\_can\_login' capability
+* Converted 'unverified\_*' users to Unverified user role
 * Added activation/deactivation/uninstall functions, specifically for new role purposes
-* Removed filter_login_message hack, use action to determine behavior following registration
+* Removed filter\_login\_message hack, use action to determine behavior following registration
 * Use Default CSS now adds ID's to username and e-mail's label and paragraph element on registration form
 
 ### 3.9.5
 February 19, 2013 by radiok
 
-* Added user_id parameter to rpr_signup_complete action
+* Added user\_id parameter to rpr\_signup\_complete action
 * Fixed bug, could not delete users from unverified users page
 * Fixed CSS on additional checkbox and radio fields on signup page
 * Fixed bug with signup not validating due to bad $pagenow check
-* Fixed bug, %user_login% was not replaced properly in messages following email verification
+* Fixed bug, %user\_login% was not replaced properly in messages following email verification
 
 ### 3.9.4
 February 15, 2013 by radiok
 
-* Created action, 'rpr_signup_complete' which occurs after any verification in place and after user data is committed but prior to messages being sent out
+* Created action, 'rpr\_signup\_complete' which occurs after any verification in place and after user data is committed but prior to messages being sent out
 * Misc. bug fixes, nothing significant
 * Improved CSS on various elements
 
 ### 3.9.3
 February 7, 2013 by radiok
 
-* Added new feature dynamic keywords for custom messages, %=keyword% will search user_meta for keyword and replace
+* Added new feature dynamic keywords for custom messages, %=keyword% will search user\_meta for keyword and replace
 * Fixed bug with custom admin messages
 
 ### 3.9.2
 February 6, 2013 by radiok
 
-* Improved initial 'meta_key' definition
+* Improved initial 'meta\_key' definition
 * Fixed bug with Network Activation warning which prevented any activation on Wordpress Multisite
 * Fixed some broken jQuery
 * Fixed regression from v3.7.3 introduced in v3.9 in the way that additional select, checkbox, and radio field values were stored
@@ -281,7 +281,7 @@ February 5, 2013 by radiok
 ### 3.9
 January 21, 2012 by radiok
 
-* Converted custom_fields to redux_usermeta
+* Converted custom\_fields to redux\_usermeta
 * Can now specify database key for meta fields
 * Remove hack to workaround non-english custom fields
 * Added option for unique invitation codes
@@ -297,7 +297,7 @@ January 21, 2012 by radiok
 ### 3.7.3
 March 29, 2011 by radiok
 
-* Regression, WordPress 3.1 does not resolve wp_enqueue_script problem, reverted code to 3.7.1
+* Regression, WordPress 3.1 does not resolve wp\_enqueue\_script problem, reverted code to 3.7.1
 
 ### 3.7.2
 March 23, 2011 by radiok
@@ -312,36 +312,36 @@ March 23, 2011 by radiok
 * Fixed bug with l18n only loading for admins
 * Fixed bug with user set passwords still nagging, as reported by Jim
 * Found and repaired additional untranslated strings
-* Added de_DE translation
+* Added de\_DE translation
 
 ### 3.7.1
 March 16, 2011 by radiok
 
-* Moved load_plugin_textdomain from constructor to initialization
+* Moved load\_plugin\_textdomain from constructor to initialization
 
 ### 3.7.0
 March 16, 2011 by radiok
 
-* Major change, wp_new_user_notification is only created as necessary
-* Added fr_FR, ro_RO, ru_RU, and tr_TR translations
-* Fixed bug with auto-complete not filling in user_login and user_email, as reported by webakimbo
+* Major change, wp\_new\_user\_notification is only created as necessary
+* Added fr\_FR, ro\_RO, ru\_RU, and tr\_TR translations
+* Fixed bug with auto-complete not filling in user\_login and user\_email, as reported by webakimbo
 * Fixed invitation code tracking dashboard widget, as reported by Galyn
 
 ### 3.6.22
 November 5, 2010 by radiok
 
 * Fixed bug in custom checkbox fields, as reported by notquitewild 
-* Added hack to workaround allow_url_fopen, for problem reported by shrikantjoshi
+* Added hack to workaround allow\_url\_fopen, for problem reported by shrikantjoshi
 * Added hack to workaround non-english custom fields, for problem reported by Vrefr
 
 ### 3.6.21
 November 3, 2010 by radiok
 
-* Added ir_FA and it_IT translations
+* Added ir\_FA and it\_IT translations
 * Fixed multiline email or admin responses breaking jQuery
 * Removed old responses from before jQuery that were now hidden
 * Changed logo title to not include empty blog description
-* Added %verification_link% keyword
+* Added %verification\_link% keyword
 * Fixed change to logo title to not include empty blog description
 * Localized a few more strings
 * Fixed bug in custom CSS that did not allow quotes as reported by webakimbo
@@ -370,7 +370,7 @@ October 13, 2010 by radiok
 October 12, 2010 by radiok
 
 * Added code to move custom fields around, as requested by pantone204 for Pie Register <http://wordpress.org/support/topic/plugin-pie-register-adding-new-fields-different-order>
-* Fixed bug in User Profile with invitation_code but no custom fields, as reported by ak <http://radiok.info/blog/administration-redux/>
+* Fixed bug in User Profile with invitation\_code but no custom fields, as reported by ak <http://radiok.info/blog/administration-redux/>
 
 ### 3.6.17
 October 11, 2010 by radiok
@@ -380,7 +380,7 @@ October 11, 2010 by radiok
 * Added option to enforce minimum password length
 * Added option to enforce case sensitive invitation codes
 * Added new custom field type, URL Field, this field is sanitized as a URL, as requested by Shikant Joshi <http://radiok.info/blog/administration-redux/>
-* Added invitation_code to User Profile page, as requested by janman for Pie Register <http://wordpress.org/support/topic/plugin-pie-register-invitation-code-in-user-profile-page>
+* Added invitation\_code to User Profile page, as requested by janman for Pie Register <http://wordpress.org/support/topic/plugin-pie-register-invitation-code-in-user-profile-page>
 * Fixed asterisks showing up on all predefined fields, not just required ones, as reported by pixelprophet <http://wordpress.org/support/topic/plugin-register-plus-redux-email-conflicts-with-another-plugin>
 * Fixed loophole in Lost Password that would send an unverified user their temporary user login and allow them access using that login, as reported by AzzePis <http://wordpress.org/support/topic/plugin-register-plus-redux-user-can-register-without-confirmation-of-his-account>
 
@@ -398,13 +398,13 @@ October 8, 2010 by radiok
 ### 3.6.14
 October 8, 2010 by radiok
 
-* Fixed issue with %user_password%, as reported by erbuc, and the.gamer <http://wordpress.org/support/topic/plugin-register-plus-redux-no-text-in-the-user-notification-email>
+* Fixed issue with %user\_password%, as reported by erbuc, and the.gamer <http://wordpress.org/support/topic/plugin-register-plus-redux-no-text-in-the-user-notification-email>
 * Made verification message customizable, as suggested by Shikant Joshi <http://radiok.info/blog/administration-redux/>
 * Added several options regarding when and when not to send messages, as discussed with Shikant Joshi <http://radiok.info/blog/administration-redux/>
 * Added option to add asterisks to required fields, as suggested by pixelprophet <http://wordpress.org/support/topic/plugin-register-plus-redux-email-conflicts-with-another-plugin>
 * Fixed issues with slashes in fields due to the way data is stored in MySQL, added stripslashes to applicable text fields, as reported by pixelprophet <http://wordpress.org/support/topic/plugin-register-plus-redux-email-conflicts-with-another-plugin>
 * Added option to double check email addresses, as requested by MacItaly <http://wordpress.org/support/topic/plugin-register-plus-redux-double-check-email-address>
-* Added %stored_user_login% keyword for messages, as discussed with richardmtl <http://wordpress.org/support/topic/plugin-register-plus-redux-call_user_func_array-error>
+* Added %stored\_user\_login% keyword for messages, as discussed with richardmtl <http://wordpress.org/support/topic/plugin-register-plus-redux-call_user_func_array-error>
 
 ### 3.6.13
 October 6, 2010 by radiok
@@ -417,7 +417,7 @@ October 5, 2010 by radiok
 
 * Rewrote User Administration
 * Fixed DeleteExpiredUsers
-* Changed date/time format of email_verification_sent
+* Changed date/time format of email\_verification\_sent
 * Added check to not allow users to register with a username already in queue to be authorized
 * Added jQuery to disable invalid settings
 * Added some variable checks to prevent undefined index warnings, I added a ton, but I'd need even more to eliminate all notices, as reported by overclockwork <http://wordpress.org/support/topic/plugin-register-plus-redux-settings-cleared-when-saving>
@@ -426,8 +426,8 @@ October 5, 2010 by radiok
 ### 3.6.11
 September 30, 2010 by radiok
 
-* Found errant show_about_field
-* Fixed bug with replace_keywords as reported by Angelo Dicerni <http://radiok.info/blog/the-ethos-of-register-plus-redux/>
+* Found errant show\_about\_field
+* Fixed bug with replace\_keywords as reported by Angelo Dicerni <http://radiok.info/blog/the-ethos-of-register-plus-redux/>
 * Started working on adding localization back in
 
 ### 3.6.10
@@ -437,7 +437,7 @@ September 29, 2010 by radiok
 * Rewrote all CSS written to wp-login header, completely theme-able now
 * Fixed bug with checkbox type not be available for custom fields
 * Fixed bug with select type custom fields, was using already in use variable name, as reported by shrikantjoshi <http://wordpress.org/support/topic/plugin-register-plus-redux-new-fields-problem>
-* Fixed wp_delete_user as reported by saury316 <http://wordpress.org/support/topic/plugin-register-plus-redux-error-at-user-deletion>
+* Fixed wp\_delete\_user as reported by saury316 <http://wordpress.org/support/topic/plugin-register-plus-redux-error-at-user-deletion>
 
 ### 3.6.9
 September 28, 2010 by radiok
@@ -448,9 +448,9 @@ September 28, 2010 by radiok
 * Changed default user and admin messages to match WordPress defaults
 * Renamed some of the replacement keys to match their true nature or name
 * Renamed several variables
-* Changed wp_update_user to $wpdb->query for updating user_login
-* Removed function to create random string, use wp_generate_password instead
-* Reorganized wp_new_user_notification more logically
+* Changed wp\_update\_user to $wpdb->query for updating user\_login
+* Removed function to create random string, use wp\_generate\_password instead
+* Reorganized wp\_new\_user\_notification more logically
 
 ### 3.6.8
 September 25, 2010 by radiok
@@ -471,7 +471,7 @@ September 24, 2010 by radiok
 September 24, 2010 by radiok
 
 * Introduce hooks for WPMU
-* Cleaned up wp_new_user_notification
+* Cleaned up wp\_new\_user\_notification
 * Fixed custom fields, tested, tested, and retested text fields, more testing due for other field types
 
 ### 3.6.5
@@ -484,7 +484,7 @@ September 22, 2010 by radiok
 ### 3.6.4
 September 21, 2010 by radiok
 
-* Fixed dumb bug with get_user_meta returning arrays
+* Fixed dumb bug with get\_user\_meta returning arrays
 
 ### 3.6.3
 September 21, 2010 by radiok
@@ -517,7 +517,7 @@ September 13, 2010 by radiok
 * Rewrote UploadLogo as specified by nschmede <http://wordpress.org/support/topic/plugin-register-plus-register-plus-custom-logo-problems>
 * Fixed SaveProfile as specified by bitkahuna <http://wordpress.org/support/topic/plugin-register-plus-does-registration-plus-work>
 * Fixed Invitation Code Tracking dashboard widget as specified by robert.lang <http://wordpress.org/support/topic/plugin-register-plus-error-message-on-dashboard-panel-display>
-* Fixed bug in Profile regarding website, user_url was being stored in wp_usermeta, when it should have been in wp_users, StrangeAttractor's code was most beneficial, but I made several other improvements along the way <http://wordpress.org/support/topic/plugin-register-plus-cant-update-website-in-user-profile>
+* Fixed bug in Profile regarding website, user\_url was being stored in wp\_usermeta, when it should have been in wp\_users, StrangeAttractor's code was most beneficial, but I made several other improvements along the way <http://wordpress.org/support/topic/plugin-register-plus-cant-update-website-in-user-profile>
 * Added Settings action link to Plugins page
 * Reduced use of $wpdb variable in favor of WordPress' helper functions
 * Started renaming settings
@@ -683,10 +683,10 @@ New features, can use email address as username and validate text fields with re
 Notice: Custom CSS on Checkbox and Radio fields may need to be reviewed
 
 ### 3.9.3
-New feature, meta keywords for custom messages, %=keyword% will search user_meta for keyword and replace
+New feature, meta keywords for custom messages, %=keyword% will search user\_meta for keyword and replace
 
 ### 3.9.5
 WordPress Multisite users please update, signup pages were not validating, any information entered was accepted, also Email as Username was not functioning, same root cause
 
 ### 3.9.8
-Added new role, Unverified, and new capability, rpr_can_login, unverified users now take advantage of these, change may be jarring for long time users
+Added new role, Unverified, and new capability, rpr\_can\_login, unverified users now take advantage of these, change may be jarring for long time users
