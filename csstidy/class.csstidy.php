@@ -30,13 +30,6 @@
  * @author Cedric Morin (cedric at yterium dot com) 2010
  */
 /**
- * Defines ctype functions if required
- *
- * @version 1.0
- */
-require_once __DIR__ . '/class.csstidy-ctype.php';
-
-/**
  * Various CSS data needed for correct optimisations etc.
  *
  * @version 1.3
