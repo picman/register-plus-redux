@@ -312,7 +312,6 @@ if ( !class_exists( 'Register_Plus_Redux' ) ) {
                             $additional_fields_exist = TRUE;
                             break;
                         }
-                        else if ( 'terms' === $meta_field['display'] ) { $this->rpr_set_terms_exist( TRUE ) }
                     }
                 }
                 if ( '1' === $this->rpr_get_option( 'enable_invitation_code' ) || $additional_fields_exist ) {
@@ -331,7 +330,6 @@ if ( !class_exists( 'Register_Plus_Redux' ) ) {
                             if ( current_user_can( 'edit_users' ) || '1' === $meta_field['show_on_profile'] ) {
                                 if ( 'terms' === $meta_field['display'] ) continue;
                                 $meta_key = (string) esc_attr( $meta_field['meta_key'] );
-                                $meta_value = get_user_meta( $profileuser->ID, $meta_key, TRUE );
                                 $meta_value = (string) get_user_meta( $profileuser->ID, $meta_key, TRUE );
                                 echo "\n", '<tr>';
                                 echo "\n", '<th><label for="', $meta_key, '">', esc_html( $meta_field['label'] );
