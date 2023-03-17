@@ -299,7 +299,6 @@ if ( !class_exists( 'Register_Plus_Redux' ) ) {
                             $additional_fields_exist = TRUE;
                             break;
                         }
-                        else { $this->rpr_set_terms_exist( TRUE ); }
                     }
                 }
                 if ( '1' === $this->rpr_get_option( 'enable_invitation_code' ) || $additional_fields_exist ) {
