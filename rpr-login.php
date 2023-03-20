@@ -934,13 +934,10 @@ if ( !class_exists( 'RPR_Login' ) ) {
                             // HACK support disable_password_confirmation in function
                             password2 = typeof password2 !== 'undefined' ? password2 : '';
                             var shortPass = 1, badPass = 2, goodPass = 3, strongPass = 4, mismatch = 5, symbolSize = 0, natLog, score;
-                            // password 1 !== password 2
                             if (password1 !== password2 && password2.length > 0)
                                 return mismatch;
-                            /* password < <?php echo absint( $register_plus_redux->rpr_get_option( 'min_password_length' ) ); ?> */
                             if (password1.length < <?php echo absint( $register_plus_redux->rpr_get_option( 'min_password_length' ) ); ?>)
                                 return shortPass;
-                            // password1 === username
                             if (password1.toLowerCase() === username.toLowerCase())
                                 return badPass;
                             if (password1.match(/[0-9]/))
