@@ -34,7 +34,7 @@ if ( !class_exists( 'RPR_Admin_Menu' ) ) {
         public /*.void.*/ function rpr_new_user_notification_warning() {
             global $pagenow;
             if ( 'plugins.php' === $pagenow || ( 'admin.php' === $pagenow && isset( $_GET['page'] ) && 'register-plus-redux' === $_GET['page'] ) ) {
-                echo '<div id="register-plus-redux-warning" class="updated"><p><strong>', sprintf( __( 'There is another active plugin that is conflicting with Register Plus Redux. The conflicting plugin is creating its own wp_new_user_notification function, this function is used to alter the messages sent out following the creation of a new user. Please refer to <a href="%s">radiok.info</a> for help resolving this issue.', 'register-plus-redux' ), 'http://radiok.info/blog/wp_new_user_notification-conflicts/' ), '</strong></p></div>', "\n";
+                echo '<div id="register-plus-redux-warning" class="updated"><p><strong>', sprintf( __( 'There is another active plugin that is conflicting with Register Plus Redux. The conflicting plugin is creating its own wp_new_user_notification function, this function is used to alter the messages sent out following the creation of a new user. Please refer to the <a href="%s">project</a> for help resolving this issue.', 'register-plus-redux' ), 'https://github.com/radiok/register-plus-redux/issues' ), '</strong></p></div>', "\n";
             }
         }
 
