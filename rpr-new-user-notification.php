@@ -14,9 +14,9 @@ else {
         global $register_plus_redux;
 
         if ( '1' === $register_plus_redux->rpr_get_option( 'user_set_password' ) && !empty( $_POST['pass1'] ) )
-            $notify = stripslashes( (string) $_POST['pass1'] );
+            $plaintext_pass = stripslashes( (string) $_POST['pass1'] );
         if ( 'user-new.php' === $pagenow && !empty( $_POST['pass1'] ) )
-            $notify = stripslashes( (string) $_POST['pass1'] );
+            $plaintext_pass = stripslashes( (string) $_POST['pass1'] );
         //TODO: Code now only forces users registering to verify email, may want to add settings to have admin created users verify email too
         $verification_code = '';
         if ( 'wp-login.php' === $pagenow && '1' === $register_plus_redux->rpr_get_option( 'verify_user_email' ) ) {
@@ -28,12 +28,12 @@ else {
         if ( ( 'wp-login.php' === $pagenow && '1' !== $register_plus_redux->rpr_get_option( 'disable_user_message_registered' ) ) ||
             ( 'wp-login.php' !== $pagenow && '1' !== $register_plus_redux->rpr_get_option( 'disable_user_message_created' ) ) ) {
             if ( '1' !== $register_plus_redux->rpr_get_option( 'verify_user_email' ) && '1' !== $register_plus_redux->rpr_get_option( 'verify_user_admin' ) ) {
-                $register_plus_redux->send_welcome_user_mail( $user_id, $notify );
+                $register_plus_redux->send_welcome_user_mail( $user_id, $plaintext_pass );
             }
         }
         if ( ( 'wp-login.php' === $pagenow && '1' !== $register_plus_redux->rpr_get_option( 'disable_admin_message_registered' ) ) ||
             ( 'wp-login.php' !== $pagenow && '1' !== $register_plus_redux->rpr_get_option( 'disable_admin_message_created' ) ) ) {
-            $register_plus_redux->send_admin_mail( $user_id, $notify, $verification_code );
+            $register_plus_redux->send_admin_mail( $user_id, $plaintext_pass, $verification_code );
         }
     }
 }
