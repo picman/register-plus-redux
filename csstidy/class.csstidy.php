@@ -41,14 +41,14 @@ require __DIR__ . '/data.inc.php';
  *
  * @version 1.0
  */
-require __DIR__ . '/class.csstidy-print.php';
+require __DIR__ . '/class.csstidy_print.php';
 
 /**
  * Contains a class for optimising CSS code
  *
  * @version 1.0
  */
-require __DIR__ . '/class.csstidy-optimise.php';
+require __DIR__ . '/class.csstidy_optimise.php';
 
 /**
  * CSS Parser class
