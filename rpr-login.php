@@ -23,7 +23,7 @@ if ( !class_exists( 'RPR_Login' ) ) {
             add_action( 'login_head', array( $this, 'rpr_login_head' ), 10, 0 ); // Print CSS
             add_action( 'login_footer', array( $this, 'rpr_login_footer' ), 10, 0 ); // Print scripts
             add_filter( 'login_headerurl', array( $this, 'rpr_filter_login_headerurl' ), 10, 1); // Modify url to point to site
-            add_filter( 'login_headertitle', array( $this, 'rpr_filter_login_headertitle' ), 10, 1 ); // Modify header to blogname
+            add_filter( 'login_headertext', array( $this, 'rpr_filter_login_headertext' ), 10, 1 ); // Modify header to blogname
         }
 
         public /*.void.*/ function rpr_login_enqueue_scripts() {
@@ -1016,7 +1016,7 @@ if ( !class_exists( 'RPR_Login' ) ) {
             return home_url();
         }
 
-        public /*.string.*/ function rpr_filter_login_headertitle( /*.string.*/ $title ) {
+        public /*.string.*/ function rpr_filter_login_headertext( /*.string.*/ $title ) {
             $desc = get_option( 'blogdescription' );
             if ( empty( $desc ) )
                 $title = get_option( 'blogname' ) . ' - ' . $desc;
