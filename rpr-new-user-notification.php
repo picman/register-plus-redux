@@ -13,14 +13,10 @@ else {
         global $pagenow;
         global $register_plus_redux;
 
-        if ( !empty( $_POST['pass1'] ) && ( '1' === $register_plus_redux->rpr_get_option( 'user_set_password' )  ||
-                'user-new.php' === $pagenow ) ) {
+        if ( '1' === $register_plus_redux->rpr_get_option( 'user_set_password' ) && !empty( $_POST['pass1'] ) )
             $plaintext_pass = stripslashes( (string) $_POST['pass1'] );
-        }
-        else {
-            $plaintext_pass = '';
-        }
-
+        if ( 'user-new.php' === $pagenow && !empty( $_POST['pass1'] ) )
+            $plaintext_pass = stripslashes( (string) $_POST['pass1'] );
         //TODO: Code now only forces users registering to verify email, may want to add settings to have admin created users verify email too
         $verification_code = '';
         if ( 'wp-login.php' === $pagenow && '1' === $register_plus_redux->rpr_get_option( 'verify_user_email' ) ) {
