@@ -1,9 +1,8 @@
 === Register Plus Redux ===
 Contributors: radiok
-Donate link: http://radiok.info/donate/
 Tags: registration, register, plus, redux, password, invitation, code, email, verification, disclaimer, license, agreement, privacy, policy, logo, moderation, user
-Requires at least: 3.5
-Tested up to: 4.0
+Requires at least: 5.2
+Tested up to: 5.2
 Stable tag: 4.3.1
 
 Enhances the user registration process with complete customization and additional administration options.
@@ -99,6 +98,9 @@ Prior to WordPress 3.2, WordPress required PHP 4, version 3.2 bumped up the requ
 = Why does Register Plus Redux require WordPress 3.5+ =
 Register Plus Redux uses WP_User_Query meta queries which was a developer feature added in WordPress 3.5.
 
+= Why does Register Plus Redux require WordPress 5.2+ =
+Register Plus Redux was previously using a hook, login_headertitle, that was depreciated in WordPress 5.2.  To remove this warning login_headertext was used instead to the same effect.
+
 = Can you add a feature to change the width of the Registration Form? / How you change the width of the Registration Form? =
 You can use the Custom Register CSS (found in Register Plus Redux's settings) to specify the width of the Registration form via CSS.  Specifically the code follows:
 `#login { width: 500px; }`
@@ -117,6 +119,12 @@ HTML attributes should go in the following order name -> id -> class
 4. Unverified User Management
 
 == Changelog ==
+
+= 4.4 =
+~November, 2023 by picman, radiok
+
+* Replace use of login_headertitle hook with the newer login_headertext hook, serving the same purpose
+* Bumped the "Requires at least" minimum WordPress version to 5.2 following depreciation of login_headertitle hook
 
 = 4.3.1 =
 March 7, 2023 by picman, radiok
