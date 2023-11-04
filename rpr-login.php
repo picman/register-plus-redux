@@ -1016,13 +1016,13 @@ if ( !class_exists( 'RPR_Login' ) ) {
             return home_url();
         }
 
-        public /*.string.*/ function rpr_filter_login_headertext( /*.string.*/ $title ) {
+        public /*.string.*/ function rpr_filter_login_headertext( /*.string.*/ $text ) {
             $desc = get_option( 'blogdescription' );
             if ( empty( $desc ) )
-                $title = get_option( 'blogname' ) . ' - ' . $desc;
+                $text = get_option( 'blogname' ) . ' - ' . $desc;
             else
-                $title = get_option( 'blogname' );
-            return $title;
+                $text = get_option( 'blogname' );
+            return $text;
         }
     }
 }
