@@ -305,7 +305,7 @@ if ( !class_exists( 'RPR_Login' ) ) {
             }
             if ( '1' === $register_plus_redux->rpr_get_option( 'show_disclaimer' ) ) {
                 $accept_disclaimer = isset( $_REQUEST['accept_disclaimer'] ) ? '1' : '0';
-                echo "\n", '<div id="disclaimer-p">';
+                echo "\n", '<div id="disclaimer-div">';
                 echo "\n", '<label id="disclaimer_title">', esc_html( $register_plus_redux->rpr_get_option( 'message_disclaimer_title' ) ), '</label><br />';
                 echo "\n", '<div id="disclaimer">', nl2br( $register_plus_redux->rpr_get_option( 'message_disclaimer' ) ), '</div>';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'require_disclaimer_agree' ) ) {
@@ -317,7 +317,7 @@ if ( !class_exists( 'RPR_Login' ) ) {
             }
             if ( '1' === $register_plus_redux->rpr_get_option( 'show_license' ) ) {
                 $accept_license = isset( $_REQUEST['accept_license'] ) ? '1' : '0';
-                echo "\n", '<div id="license-p">';
+                echo "\n", '<div id="license-div">';
                 echo "\n", '<label id="license_title">', esc_html( $register_plus_redux->rpr_get_option( 'message_license_title' ) ), '</label><br />';
                 echo "\n", '<div id="license">', nl2br( $register_plus_redux->rpr_get_option( 'message_license' ) ), '</div>';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'require_license_agree' ) ) {
@@ -329,7 +329,7 @@ if ( !class_exists( 'RPR_Login' ) ) {
             }
             if ( '1' === $register_plus_redux->rpr_get_option( 'show_privacy_policy' ) ) {
                 $accept_privacy_policy = isset( $_REQUEST['accept_privacy_policy'] ) ? '1' : '0';
-                echo "\n", '<div id="privacy_policy-p">';
+                echo "\n", '<div id="privacy_policy-div">';
                 echo "\n", '<label id="privacy_policy_title">', esc_html( $register_plus_redux->rpr_get_option( 'message_privacy_policy_title' ) ), '</label><br />';
                 echo "\n", '<div id="privacy_policy">', nl2br( $register_plus_redux->rpr_get_option( 'message_privacy_policy' ) ), '</div>';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'require_privacy_policy_agree' ) ) {
