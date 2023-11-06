@@ -123,56 +123,56 @@ if ( !class_exists( 'RPR_Login' ) ) {
                 $user_email2 = isset( $_REQUEST['user_email2'] ) ? (string) $_REQUEST['user_email2'] : '';
                 echo "\n", '<p id="user_email2-p"><label id="user_email2-label" for="user_email2">';
                 if ( $register_plus_redux->rpr_get_option( 'required_fields_asterisk' ) ) echo '*';
-                echo __( 'Confirm E-mail', 'register-plus-redux' ), '<br /><input type="text" autocomplete="off" name="user_email2" id="user_email2" class="input" value="', esc_attr( $user_email2 ), '" ';
-                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                echo __( 'Confirm E-mail', 'register-plus-redux' ), '<br /><input type="text" autocomplete="off" name="user_email2" id="user_email2" class="input" value="', esc_attr( $user_email2 ), '"';
+                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                 echo '/></label></p>';
             }
             if ( is_array( $register_plus_redux->rpr_get_option( 'show_fields' ) ) && in_array( 'first_name', $register_plus_redux->rpr_get_option( 'show_fields' ) ) ) {
                 $first_name = isset( $_REQUEST['first_name'] ) ? (string) $_REQUEST['first_name'] : '';
                 echo "\n", '<p id="first_name-p"><label id="first_name-label" for="first_name">';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'required_fields_asterisk' ) && is_array( $register_plus_redux->rpr_get_option( 'required_fields' ) ) && in_array( 'first_name', $register_plus_redux->rpr_get_option( 'required_fields' ) ) ) echo '*';
-                echo __( 'First Name', 'register-plus-redux' ), '<br /><input type="text" name="first_name" id="first_name" class="input" value="', esc_attr( $first_name ), '" ';
-                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                echo __( 'First Name', 'register-plus-redux' ), '<br /><input type="text" name="first_name" id="first_name" class="input" value="', esc_attr( $first_name ), '"';
+                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                 echo '/></label></p>';
             }
             if ( is_array( $register_plus_redux->rpr_get_option( 'show_fields' ) ) && in_array( 'last_name', $register_plus_redux->rpr_get_option( 'show_fields' ) ) ) {
                 $last_name = isset( $_REQUEST['last_name'] ) ? (string) $_REQUEST['last_name'] : '';
                 echo "\n", '<p id="last_name-p"><label id="last_name-label" for="last_name">';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'required_fields_asterisk' ) && is_array( $register_plus_redux->rpr_get_option( 'required_fields' ) ) && in_array( 'last_name', $register_plus_redux->rpr_get_option( 'required_fields' ) ) ) echo '*';
-                echo __( 'Last Name', 'register-plus-redux' ), '<br /><input type="text" name="last_name" id="last_name" class="input" value="', esc_attr( $last_name ), '" ';
-                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                echo __( 'Last Name', 'register-plus-redux' ), '<br /><input type="text" name="last_name" id="last_name" class="input" value="', esc_attr( $last_name ), '"';
+                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                 echo '/></label></p>';
             }
             if ( is_array( $register_plus_redux->rpr_get_option( 'show_fields' ) ) && in_array( 'user_url', $register_plus_redux->rpr_get_option( 'show_fields' ) ) ) {
                 $user_url = isset( $_REQUEST['user_url'] ) ? (string) $_REQUEST['user_url'] : '';
                 echo "\n", '<p id="user_url-p"><label id="user_url-label" for="user_url">';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'required_fields_asterisk' ) && is_array( $register_plus_redux->rpr_get_option( 'required_fields' ) ) && in_array( 'user_url', $register_plus_redux->rpr_get_option( 'required_fields' ) ) ) echo '*';
-                echo __( 'Website', 'register-plus-redux' ), '<br /><input type="text" name="user_url" id="user_url" class="input" value="', esc_attr( $user_url ), '" ';
-                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                echo __( 'Website', 'register-plus-redux' ), '<br /><input type="text" name="user_url" id="user_url" class="input" value="', esc_attr( $user_url ), '"';
+                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                 echo '/></label></p>';
             }
             if ( is_array( $register_plus_redux->rpr_get_option( 'show_fields' ) ) && in_array( 'aim', $register_plus_redux->rpr_get_option( 'show_fields' ) ) ) {
                 $aim = isset( $_REQUEST['aim'] ) ? (string) $_REQUEST['aim'] : '';
                 echo "\n", '<p id="aim-p"><label id="aim-label" for="aim">';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'required_fields_asterisk' ) && is_array( $register_plus_redux->rpr_get_option( 'required_fields' ) ) && in_array( 'aim', $register_plus_redux->rpr_get_option( 'required_fields' ) ) ) echo '*';
-                echo __( 'AIM', 'register-plus-redux' ), '<br /><input type="text" name="aim" id="aim" class="input" value="', esc_attr( $aim ), '" ';
-                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                echo __( 'AIM', 'register-plus-redux' ), '<br /><input type="text" name="aim" id="aim" class="input" value="', esc_attr( $aim ), '"';
+                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                 echo '/></label></p>';
             }
             if ( is_array( $register_plus_redux->rpr_get_option( 'show_fields' ) ) && in_array( 'yahoo', $register_plus_redux->rpr_get_option( 'show_fields' ) ) ) {
                 $yahoo = isset( $_REQUEST['yahoo'] ) ? (string) $_REQUEST['yahoo'] : '';
                 echo "\n", '<p id="yahoo-p"><label id="yahoo-label" for="yahoo">';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'required_fields_asterisk' ) && is_array( $register_plus_redux->rpr_get_option( 'required_fields' ) ) && in_array( 'yahoo', $register_plus_redux->rpr_get_option( 'required_fields' ) ) ) echo '*';
-                echo __( 'Yahoo IM', 'register-plus-redux' ), '<br /><input type="text" name="yahoo" id="yahoo" class="input" value="', esc_attr( $yahoo ), '" ';
-                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                echo __( 'Yahoo IM', 'register-plus-redux' ), '<br /><input type="text" name="yahoo" id="yahoo" class="input" value="', esc_attr( $yahoo ), '"';
+                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                 echo '/></label></p>';
             }
             if ( is_array( $register_plus_redux->rpr_get_option( 'show_fields' ) ) && in_array( 'jabber', $register_plus_redux->rpr_get_option( 'show_fields' ) ) ) {
                 $jabber = isset( $_REQUEST['jabber'] ) ? (string) $_REQUEST['jabber'] : '';
                 echo "\n", '<p id="jabber-p"><label id="jabber-label" for="jabber">';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'required_fields_asterisk' ) && is_array( $register_plus_redux->rpr_get_option( 'required_fields' ) ) && in_array( 'jabber', $register_plus_redux->rpr_get_option( 'required_fields' ) ) ) echo '*';
-                echo __( 'Jabber / Google Talk', 'register-plus-redux' ), '<br /><input type="text" name="jabber" id="jabber" class="input" value="', esc_attr( $jabber ), '" ';
-                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                echo __( 'Jabber / Google Talk', 'register-plus-redux' ), '<br /><input type="text" name="jabber" id="jabber" class="input" value="', esc_attr( $jabber ), '"';
+                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                 echo '/></label></p>';
             }
             if ( is_array( $register_plus_redux->rpr_get_option( 'show_fields' ) ) && in_array( 'about', $register_plus_redux->rpr_get_option( 'show_fields' ) ) ) {
@@ -182,7 +182,7 @@ if ( !class_exists( 'RPR_Login' ) ) {
                 echo __( 'About Yourself', 'register-plus-redux' ), '<br />';
                 echo "\n", '<span id="description_msg">', __( 'Share a little biographical information to fill out your profile. This may be shown publicly.', 'register-plus-redux' ), '</span>';
                 echo "\n", '<textarea name="description" id="description"';
-                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                 echo '>', esc_textarea( $description ), '</textarea></label></p>';
             }
             $redux_usermeta = get_option( 'register_plus_redux_usermeta-rv2' );
@@ -202,8 +202,8 @@ if ( !class_exists( 'RPR_Login' ) ) {
                                 if ( '1' === $register_plus_redux->rpr_get_option( 'required_fields_asterisk' ) && !empty( $meta_field['require_on_registration'] ) ) echo '*';
                                 echo esc_html( $meta_field['label'] ), '<br /><input type="text" name="', $meta_key, '" id="', $meta_key, '" ';
                                 if ( '1' === $meta_field['show_datepicker'] ) echo 'class="datepicker" '; else echo 'class="input" ';
-                                echo 'value="', esc_attr( $meta_value ), '" ';
-                                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                                echo 'value="', esc_attr( $meta_value ), '"';
+                                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '"';
                                 echo '/></label></p>';
                                 break;
                             case 'select':
@@ -211,7 +211,7 @@ if ( !class_exists( 'RPR_Login' ) ) {
                                 if ( '1' === $register_plus_redux->rpr_get_option( 'required_fields_asterisk' ) && !empty( $meta_field['require_on_registration'] ) ) echo '*';
                                 echo esc_html( $meta_field['label'] ), '<br />';
                                 echo "\n", '<select name="', $meta_key, '" id="', $meta_key, '"';
-                                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '"';
                                 echo '>';
                                 /*.array[]string.*/ $field_options = explode( ',', $meta_field['options'] );
                                 foreach ( $field_options as $field_option ) {
@@ -229,9 +229,9 @@ if ( !class_exists( 'RPR_Login' ) ) {
                                 /*.array[]string.*/ $field_options = explode( ',', $meta_field['options'] );
                                 foreach ( $field_options as $field_option ) {
                                     echo "\n", '<input type="checkbox" name="', $meta_key, '[]" id="', $meta_key, '-', Register_Plus_Redux::sanitize_text( $field_option ), '" value="', esc_attr( $field_option ), '" ';
-                                    if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
-                                    if ( is_array( $meta_value ) && in_array( esc_attr( $field_option ), $meta_value ) ) echo 'checked="checked" ';
-                                    if ( !is_array( $meta_value ) && ( $meta_value === esc_attr( $field_option ) ) ) echo 'checked="checked" ';
+                                    if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '"';
+                                    if ( is_array( $meta_value ) && in_array( esc_attr( $field_option ), $meta_value ) ) echo ' checked="checked"';
+                                    if ( !is_array( $meta_value ) && ( $meta_value === esc_attr( $field_option ) ) ) echo ' checked="checked"';
                                     echo '/><label id="', $meta_key, '-', Register_Plus_Redux::sanitize_text( $field_option ), '-label" class="', $meta_key, '" for="', $meta_key, '-', Register_Plus_Redux::sanitize_text( $field_option ), '">&nbsp;', esc_html( $field_option ), '</label><br />';
                                 }
                                 echo "\n", '</p>';
@@ -242,9 +242,9 @@ if ( !class_exists( 'RPR_Login' ) ) {
                                 echo esc_html( $meta_field['label'] ), '</label><br />';
                                 /*.array[]string.*/ $field_options = explode( ',', $meta_field['options'] );
                                 foreach ( $field_options as $field_option ) {
-                                    echo "\n", '<input type="radio" name="', $meta_key, '" id="', $meta_key, '-', Register_Plus_Redux::sanitize_text( $field_option ), '" value="', esc_attr( $field_option ), '" ';
-                                    if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
-                                    if ( $meta_value === esc_attr( $field_option ) ) echo 'checked="checked" ';
+                                    echo "\n", '<input type="radio" name="', $meta_key, '" id="', $meta_key, '-', Register_Plus_Redux::sanitize_text( $field_option ), '" value="', esc_attr( $field_option ), '"';
+                                    if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '"';
+                                    if ( $meta_value === esc_attr( $field_option ) ) echo ' checked="checked"';
                                     echo '/><label id="', $meta_key, '-', Register_Plus_Redux::sanitize_text( $field_option ), '-label" class="', $meta_key, '" for="', $meta_key, '-', Register_Plus_Redux::sanitize_text( $field_option ), '">&nbsp;', esc_html( $field_option ), '</label><br />';
                                 }
                                 echo "\n", '</p>';
@@ -257,8 +257,8 @@ if ( !class_exists( 'RPR_Login' ) ) {
                                 echo '>', esc_textarea( $meta_value ), '</textarea></label></p>';
                                 break;
                             case 'hidden':
-                                echo "\n", '<input type="hidden" name="', $meta_key, '" id="', $meta_key, '" value="', esc_attr( $meta_value ), '" ';
-                                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                                echo "\n", '<input type="hidden" name="', $meta_key, '" id="', $meta_key, '" value="', esc_attr( $meta_value ), '"';
+                                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                                 echo '/>';
                                 break;
                             case 'text':
@@ -271,14 +271,14 @@ if ( !class_exists( 'RPR_Login' ) ) {
             if ( '1' === $register_plus_redux->rpr_get_option( 'user_set_password' ) ) {
                 echo "\n", '<p id="pass1-p"><label id="pass1-label" for="pass1">';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'required_fields_asterisk' ) ) echo '*';
-                echo __( 'Password', 'register-plus-redux' ), '<br /><input type="password" autocomplete="off" name="pass1" id="pass1" ';
-                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                echo __( 'Password', 'register-plus-redux' ), '<br /><input type="password" autocomplete="off" name="pass1" id="pass1"';
+                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                 echo '/></label></p>';
                 if ( '1' !== $register_plus_redux->rpr_get_option( 'disable_password_confirmation' ) ) {
                     echo "\n", '<p id="pass2-p"><label id="pass2-label" for="pass2">';
                     if ( '1' === $register_plus_redux->rpr_get_option( 'required_fields_asterisk' ) ) echo '*';
                     echo __( 'Confirm Password', 'register-plus-redux' ), '<br /><input type="password" autocomplete="off" name="pass2" id="pass2" ';
-                    if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                    if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '"';
                     echo '/></label></p>';
                 }
                 if ( '1' === $register_plus_redux->rpr_get_option( 'show_password_meter' ) ) {
@@ -290,8 +290,8 @@ if ( !class_exists( 'RPR_Login' ) ) {
                 $invitation_code = isset( $_REQUEST['invitation_code'] ) ? (string) $_REQUEST['invitation_code'] : '';
                 echo "\n", '<p id="invitation_code-p"><label id="invitation_code-label" for="invitation_code">';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'required_fields_asterisk' ) && '1' === $register_plus_redux->rpr_get_option( 'require_invitation_code' ) ) echo '*';
-                echo __( 'Invitation Code', 'register-plus-redux' ), '<br /><input type="text" name="invitation_code" id="invitation_code" class="input" value="', esc_attr( $invitation_code ), '" ';
-                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                echo __( 'Invitation Code', 'register-plus-redux' ), '<br /><input type="text" name="invitation_code" id="invitation_code" class="input" value="', esc_attr( $invitation_code ), '"';
+                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                 echo '/></label>';
                 echo "\n", '<span id="invitation_code_msg">';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'require_invitation_code' ) ) {
@@ -305,39 +305,39 @@ if ( !class_exists( 'RPR_Login' ) ) {
             }
             if ( '1' === $register_plus_redux->rpr_get_option( 'show_disclaimer' ) ) {
                 $accept_disclaimer = isset( $_REQUEST['accept_disclaimer'] ) ? '1' : '0';
-                echo "\n", '<p id="disclaimer-p">';
+                echo "\n", '<div id="disclaimer-p">';
                 echo "\n", '<label id="disclaimer_title">', esc_html( $register_plus_redux->rpr_get_option( 'message_disclaimer_title' ) ), '</label><br />';
-                echo "\n", '<div id="disclaimer"">', nl2br( $register_plus_redux->rpr_get_option( 'message_disclaimer' ) ), '</div>';
+                echo "\n", '<div id="disclaimer">', nl2br( $register_plus_redux->rpr_get_option( 'message_disclaimer' ) ), '</div>';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'require_disclaimer_agree' ) ) {
-                    echo "\n", '<label id="accept_disclaimer-label" class="accept_check" for="accept_disclaimer"><input type="checkbox" name="accept_disclaimer" id="accept_disclaimer" value="1"'; if ( !empty( $accept_disclaimer ) ) echo ' checked="checked" ';
-                    if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                    echo "\n", '<label id="accept_disclaimer-label" class="accept_check" for="accept_disclaimer"><input type="checkbox" name="accept_disclaimer" id="accept_disclaimer" value="1"'; if ( !empty( $accept_disclaimer ) ) echo ' checked="checked"';
+                    if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                     echo '/>&nbsp;', esc_html( $register_plus_redux->rpr_get_option( 'message_disclaimer_agree' ) ), '</label>';
                 }
-                echo "\n", '</p>';
+                echo "\n", '</div>';
             }
             if ( '1' === $register_plus_redux->rpr_get_option( 'show_license' ) ) {
                 $accept_license = isset( $_REQUEST['accept_license'] ) ? '1' : '0';
-                echo "\n", '<p id="license-p">';
+                echo "\n", '<div id="license-p">';
                 echo "\n", '<label id="license_title">', esc_html( $register_plus_redux->rpr_get_option( 'message_license_title' ) ), '</label><br />';
-                echo "\n", '<div id="license"">', nl2br( $register_plus_redux->rpr_get_option( 'message_license' ) ), '</div>';
+                echo "\n", '<div id="license">', nl2br( $register_plus_redux->rpr_get_option( 'message_license' ) ), '</div>';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'require_license_agree' ) ) {
-                    echo "\n", '<label id="accept_license-label" class="accept_check" for="accept_license"><input type="checkbox" name="accept_license" id="accept_license" value="1"'; if ( !empty( $accept_license ) ) echo ' checked="checked" ';
-                    if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                    echo "\n", '<label id="accept_license-label" class="accept_check" for="accept_license"><input type="checkbox" name="accept_license" id="accept_license" value="1"'; if ( !empty( $accept_license ) ) echo ' checked="checked"';
+                    if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                     echo '/>&nbsp;', esc_html( $register_plus_redux->rpr_get_option( 'message_license_agree' ) ), '</label>';
                 }
-                echo "\n", '</p>';
+                echo "\n", '</div>';
             }
             if ( '1' === $register_plus_redux->rpr_get_option( 'show_privacy_policy' ) ) {
                 $accept_privacy_policy = isset( $_REQUEST['accept_privacy_policy'] ) ? '1' : '0';
-                echo "\n", '<p id="privacy_policy-p">';
+                echo "\n", '<div id="privacy_policy-p">';
                 echo "\n", '<label id="privacy_policy_title">', esc_html( $register_plus_redux->rpr_get_option( 'message_privacy_policy_title' ) ), '</label><br />';
                 echo "\n", '<div id="privacy_policy">', nl2br( $register_plus_redux->rpr_get_option( 'message_privacy_policy' ) ), '</div>';
                 if ( '1' === $register_plus_redux->rpr_get_option( 'require_privacy_policy_agree' ) ) {
-                    echo "\n", '<label id="accept_privacy_policy-label" class="accept_check" for="accept_privacy_policy"><input type="checkbox" name="accept_privacy_policy" id="accept_privacy_policy" value="1"'; if ( !empty( $accept_privacy_policy ) ) echo ' checked="checked" ';
-                    if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                    echo "\n", '<label id="accept_privacy_policy-label" class="accept_check" for="accept_privacy_policy"><input type="checkbox" name="accept_privacy_policy" id="accept_privacy_policy" value="1"'; if ( !empty( $accept_privacy_policy ) ) echo ' checked="checked"';
+                    if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                     echo '/>&nbsp;', esc_html( $register_plus_redux->rpr_get_option( 'message_privacy_policy_agree' ) ), '</label>';
                 }
-                echo "\n", '</p>';
+                echo "\n", '</div>';
             }
             if ( is_array( $redux_usermeta ) ) {
                 if ( !$terms_exist ) {
@@ -357,8 +357,8 @@ if ( !class_exists( 'RPR_Login' ) ) {
                             echo "\n", '<label id="', $meta_key, '-label">', esc_html( $meta_field['label'] ), '</label><br />';
                             echo "\n", '<span id="', $meta_key, '-content">', nl2br( $meta_field['terms_content'] ), '</span>';
                             if ( '1' === $meta_field['require_on_registration'] ) {
-                                echo "\n", '<label id="accept_', $meta_key, '-label" class="accept_check" for="', $meta_key, '"><input type="checkbox" name="', $meta_key, '" id="', $meta_key, '" value="Y"', checked( $meta_value, 'Y' ), ' ';
-                                if ( 0 !== $tabindex ) echo 'tabindex="', $tabindex++, '" ';
+                                echo "\n", '<label id="accept_', $meta_key, '-label" class="accept_check" for="', $meta_key, '"><input type="checkbox" name="', $meta_key, '" id="', $meta_key, '" value="Y" ', checked( $meta_value, 'Y' );
+                                if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                                 echo '/>&nbsp;', esc_html( $meta_field['terms_agreement_text'] ), '</label>';
                             }
                             echo "\n", '</p>';
