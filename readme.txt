@@ -125,6 +125,8 @@ HTML attributes should go in the following order name -> id -> class
 
 * Replace use of login_headertitle hook with the newer login_headertext hook, serving the same purpose
 * Bumped the "Requires at least" minimum WordPress version to 5.2 following depreciation of login_headertitle hook
+* Correct some invalid HTML
+* Changed identifiers of "disclaimer-p", "license-p", and "privacy_policy-p" to "disclaimer-div", "license-div", and "privacy_policy-div" following HTML element changes
 
 = 4.3.1 =
 March 7, 2023 by picman, radiok
