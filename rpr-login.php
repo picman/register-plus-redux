@@ -118,6 +118,9 @@ if ( !class_exists( 'RPR_Login' ) ) {
             $terms_exist = FALSE;
             $_REQUEST = stripslashes_deep( (array) $_REQUEST );
             $tabindex = absint( $register_plus_redux->rpr_get_option( 'starting_tabindex' ) );
+            $now = new DateTime();
+            $registration_timestamp =  $now->getTimestamp();
+            echo PHP_EOL, "<input type=\"hidden\" id=\"regts\" name=\"regts\" value=\"$registration_timestamp\">";
             if ( !is_numeric( $tabindex ) || $tabindex < 1 ) $tabindex = 0;
             if ( '1' === $register_plus_redux->rpr_get_option( 'double_check_email' ) ) {
                 $user_email2 = isset( $_REQUEST['user_email2'] ) ? (string) $_REQUEST['user_email2'] : '';
@@ -370,6 +373,16 @@ if ( !class_exists( 'RPR_Login' ) ) {
 
         public /*.object.*/ function rpr_registration_errors( /*.object.*/ $errors, /*.string.*/ $sanitized_user_login, /*.string.*/ $user_email ) {
             global $register_plus_redux;
+            $now = new DateTime();
+            $now_timestamp =  $now->getTimestamp();
+            $then_timestamp = $_POST['regts'] ?? 0;
+            $limit = $register_plus_redux->rpr_get_option('min_registration_duration') ?? 0;
+            if($now_timestamp - $then_timestamp < $limit) {
+                $errors->add(
+                        'accept_license',
+                        '<strong>' . __( 'ERROR', 'register-plus-redux' ) . '</strong>:&nbsp;' .
+                            __('Registration not allowed', 'register-plus-redux') . '.');
+            }
             if ( '1' === $register_plus_redux->rpr_get_option( 'username_is_email' ) ) {
                 if ( is_array( $errors->errors ) && isset( $errors->errors['empty_username'] ) ) {
                     $temp = $errors->errors;

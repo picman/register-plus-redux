@@ -1,33 +1,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Register Plus Redux v3.9.5\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/register-plus-redux\n"
-"POT-Creation-Date: 2013-01-21 09:10:25+00:00\n"
-"PO-Revision-Date: 2013-03-01 20:26-0500\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/register-plus-"
+"redux\n"
+"POT-Creation-Date: 2023-11-07 09:22+0100\n"
+"PO-Revision-Date: 2023-11-07 09:30+0100\n"
 "Last-Translator: Will Hinds <radiok@radiok.info>\n"
 "Language-Team: Dionysios Z. <info@powersupport.gr>\n"
 "Language: el_GR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.5.4\n"
-"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_n;_x;_ex;_nx;esc_attr__;esc_attr_e;esc_attr_x;"
 "esc_html__;esc_html_e;esc_html_x\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: register-plus-redux.php:68
-msgid "Additional Information"
-msgstr "Επιπρόσθετες Πληροφορίες"
-
-#: register-plus-redux.php:72 rpr-admin-menu.php:256 rpr-login.php:238
-#: rpr-signup.php:414
-msgid "Invitation Code"
-msgstr "Κωδικός Πρόσκλησης"
-
-#: register-plus-redux.php:288
+#: register-plus-redux.php:88
 msgid ""
 "<h2>%user_login% is your new username</h2>\n"
 "<p>But, before you can start using your new username, <strong>you must "
@@ -38,7 +30,7 @@ msgid ""
 "sign up again.</p>"
 msgstr ""
 
-#: register-plus-redux.php:289
+#: register-plus-redux.php:89
 msgid ""
 "Please verify your account using the verification link sent to your email "
 "address."
@@ -46,7 +38,7 @@ msgstr ""
 "Παρακαλώ, επιβεβαιώστε ότι ο λογαριασμός σας χρησιμοποιεί τον σύνδεσμο "
 "επιβεβαίωσης που σας εστάλλει στο email σας."
 
-#: register-plus-redux.php:291 rpr-login.php:451
+#: register-plus-redux.php:91 rpr-login.php:579
 msgid ""
 "Your account will be reviewed by an administrator and you will be notified "
 "when it is activated."
@@ -54,22 +46,49 @@ msgstr ""
 "Ο Λογαριασμός σας θα ελεχθεί από έναν διαχειριστή και θα ενημερωθείτε όταν "
 "εγκριθεί."
 
-#: register-plus-redux.php:347
+#: register-plus-redux.php:142
 msgid "Your Login Information"
 msgstr "Τα Στοιχεία Σύνδεσης σας"
 
-#: register-plus-redux.php:354
+#: register-plus-redux.php:149
 msgid "Verify Your Account"
 msgstr "Επιβεβαίωση του Λογαριασμού σας"
 
-#: register-plus-redux.php:365
+#: register-plus-redux.php:160
 msgid "New User Registered"
 msgstr "Εγγραφή Νέου Χρήστη"
 
-#: rpr-admin-menu.php:19
+#: register-plus-redux.php:322
+msgid "Additional Information"
+msgstr "Επιπρόσθετες Πληροφορίες"
+
+#: register-plus-redux.php:326 rpr-admin-menu.php:283 rpr-login.php:298
+#: rpr-signup.php:320
+msgid "Invitation Code"
+msgstr "Κωδικός Πρόσκλησης"
+
+#: register-plus-redux.php:410 rpr-admin-menu.php:472
+msgid "Terms"
+msgstr ""
+
+#: register-plus-redux.php:424
+msgid "Last Revised:"
+msgstr ""
+
+#: register-plus-redux.php:425
+msgid "Accepted:"
+msgstr ""
+
+#: rpr-activate.php:16
+#, fuzzy
+#| msgid "Register Plus Redux Settings"
+msgid "Register Plus Redux DEBUG: rpr_activate_init from %s"
+msgstr "Ρυθμίσεις Register Plus Redux"
+
+#: rpr-admin-menu.php:23
 #, fuzzy
 msgid ""
-"Register Plus Redux requires WordPress 3.2 or greater. You are currently "
+"Register Plus Redux requires WordPress 3.5 or greater. You are currently "
 "using WordPress %s, please upgrade WordPress or deactivate Register Plus "
 "Redux."
 msgstr ""
@@ -77,20 +96,20 @@ msgstr ""
 "χρησιμοποιείτε το  WordPress %s. Παρακαλώ αναβαθμίστε το ή απενεργοποιήστε "
 "το Register Plus Redux"
 
-#: rpr-admin-menu.php:26
+#: rpr-admin-menu.php:30
 msgid ""
 "Register Plus Redux must be Network Activated by Super Admin under WordPress "
 "Multisite. You will have limited functionality while not Network Activated. "
 "Please refer to <a href=\"%s\">radiok.info</a> for help resolving this issue."
 msgstr ""
 
-#: rpr-admin-menu.php:32
+#: rpr-admin-menu.php:37
 #, fuzzy
 msgid ""
 "There is another active plugin that is conflicting with Register Plus Redux. "
 "The conflicting plugin is creating its own wp_new_user_notification "
 "function, this function is used to alter the messages sent out following the "
-"creation of a new user. Please refer to <a href=\"%s\">radiok.info</a> for "
+"creation of a new user. Please refer to the <a href=\"%s\">project</a> for "
 "help resolving this issue."
 msgstr ""
 "Υπάρχει ένα άλλο ενεργό plugin που είναι σε διένεξη με Register Plus Redux. "
@@ -101,32 +120,37 @@ msgstr ""
 "conflicts/\">http://radiok.info/blog/wp_new_user_notification-conflicts/</a> "
 "για να σας βοηθήσει στην επίλυση αυτού του ζητήματος."
 
-#: rpr-admin-menu.php:40 rpr-admin-menu.php:78
-msgid "Register Plus Redux Settings"
-msgstr "Ρυθμίσεις Register Plus Redux"
+#. Plugin Name of the plugin/theme
+#: rpr-admin-menu.php:44
+msgid "Register Plus Redux"
+msgstr "Register Plus Redux - Ελληνική Έκδοση"
 
-#: rpr-admin-menu.php:47 rpr-admin-menu.php:1008
+#: rpr-admin-menu.php:59 rpr-admin-menu.php:1151
 msgid "Unverified Users"
 msgstr "Μη-Επιβεβαιωμένοι Χρήστες"
 
-#: rpr-admin-menu.php:52
+#: rpr-admin-menu.php:65 rpr-admin-menu.php:68
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
-#: rpr-admin-menu.php:74
+#: rpr-admin-menu.php:103
 msgid "Settings Saved"
 msgstr "Οι Ρυθμίσεις ΣΣώθηκαν"
 
-#: rpr-admin-menu.php:84
+#: rpr-admin-menu.php:107
+msgid "Register Plus Redux Settings"
+msgstr "Ρυθμίσεις Register Plus Redux"
+
+#: rpr-admin-menu.php:113
 msgid "Custom Logo URL"
 msgstr "Διεύθυνση URL Προσαρμοσμένου Λογότυπου"
 
-#: rpr-admin-menu.php:86
+#: rpr-admin-menu.php:115
 #, fuzzy
 msgid "Upload Image"
 msgstr "Μεταφορτώστε ένα νέο λογότυπο:"
 
-#: rpr-admin-menu.php:87
+#: rpr-admin-menu.php:116
 msgid ""
 "Custom Logo will be shown on Registration and Login Forms in place of the "
 "default Wordpress logo. For the best results custom logo should not exceed "
@@ -136,23 +160,23 @@ msgstr ""
 "στην θέση του προεπιλεγμένου λογότυπου Wordpress. Για καλύτερα αποτελέσματα, "
 "το Προσαρμοσμένο Λογότυπο δεν θα πρέπει να ξεπερνά τα 350px σε πλάτος."
 
-#: rpr-admin-menu.php:92
+#: rpr-admin-menu.php:121
 msgid "Remove Logo"
 msgstr "Αφαίρεση Λογότυπου"
 
-#: rpr-admin-menu.php:93
+#: rpr-admin-menu.php:122
 msgid "You must Save Changes to remove logo."
 msgstr "Θα πρέπει να σώσετε τις αλλαγές για να αφαιρέσετε το λογότυπο."
 
-#: rpr-admin-menu.php:98
+#: rpr-admin-menu.php:128
 msgid "Email Verification"
 msgstr "Επιβεβαίωση Email"
 
-#: rpr-admin-menu.php:100
+#: rpr-admin-menu.php:130
 msgid "Verify all new users email address..."
 msgstr "Να επιβεβαιώνεται η διεύθυνση email όλων των νέων χρηστών."
 
-#: rpr-admin-menu.php:101
+#: rpr-admin-menu.php:131
 msgid ""
 "A verification code will be sent to any new users email address, new users "
 "will not be able to login or reset their password until they have completed "
@@ -165,7 +189,7 @@ msgstr ""
 "εγκρίνουν νέους χρήστες από την Σελίδα Ανεπιβεβαίωτων Χρηστών κατά την κρίση "
 "τους."
 
-#: rpr-admin-menu.php:103
+#: rpr-admin-menu.php:133
 msgid ""
 "The following message will be shown to users after registering. You may "
 "include HTML in this message."
@@ -173,15 +197,15 @@ msgstr ""
 "Το παρακάτω μήνυμα θα εμφανίζεται στους χρήστες μετά την εγγραφή τους. "
 "Μπορείτε να συμπεριλάβετε HTML σε αυτό το μήνυμα."
 
-#: rpr-admin-menu.php:110
+#: rpr-admin-menu.php:139 rpr-login.php:626
 msgid "Admin Verification"
 msgstr "Επιβεβαίωση Διαχειριστή"
 
-#: rpr-admin-menu.php:112
+#: rpr-admin-menu.php:141
 msgid "Moderate all new user registrations..."
 msgstr "Να ελέγχονται και να εγκρίνονται όλες οι νέες εγγραφές χρηστών."
 
-#: rpr-admin-menu.php:113
+#: rpr-admin-menu.php:142
 msgid ""
 "New users will not be able to login or reset their password until they have "
 "been authorized by an administrator from the Unverified Users Page. If both "
@@ -195,7 +219,7 @@ msgstr ""
 "θα μπορούν να συνδεθούν ή να αλλάξουν τον κωδικό τους μέχρι να εγκριθούν από "
 "έναν διαχειριστή ακόμα και αν ολοκληρώσουν την διαδικασία επιβεβαίωσης email."
 
-#: rpr-admin-menu.php:115
+#: rpr-admin-menu.php:144
 msgid ""
 "The following message will be shown to users after registering (or verifying "
 "their email if both verification options are enabled). You may include HTML "
@@ -205,15 +229,15 @@ msgstr ""
 "επιβεβαιώνουν το email τους, εαν και οι δύο επιλογές επιβεβαίωσης είναι "
 "ενεργές). Μπορείτε να συμπεριλάβετε κώδικα HTML σε αυτό το μήνυμα."
 
-#: rpr-admin-menu.php:121
+#: rpr-admin-menu.php:150
 msgid "Grace Period"
 msgstr "Περίοδος Χάριτος"
 
-#: rpr-admin-menu.php:123
+#: rpr-admin-menu.php:152
 msgid "days"
 msgstr "ημέρες"
 
-#: rpr-admin-menu.php:124
+#: rpr-admin-menu.php:153
 msgid ""
 "All unverified users will automatically be deleted after the Grace Period "
 "specified, to disable this process enter 0 to never automatically delete "
@@ -223,11 +247,11 @@ msgstr ""
 "χάριτος. Για να απενεργοποιήσετε αυτή την διαδικασία, εισάγετε 0 για να μην "
 "διαγράφονται οι ανεπιβεβαίωτοι χρήστες αυτόματα."
 
-#: rpr-admin-menu.php:128
+#: rpr-admin-menu.php:157
 msgid "Registration Redirect"
 msgstr "Ανακατεύθυνση Σελίδας Εγγραφής"
 
-#: rpr-admin-menu.php:131
+#: rpr-admin-menu.php:160
 msgid ""
 "By default, after registering, users will be sent to %s/wp-login.php?"
 "checkemail=registered, leave this value empty if you do not wish to change "
@@ -239,11 +263,11 @@ msgstr ""
 "αλλάξετε την συμπεριφορά αυτή. Μπορείτε να βάλετε μια διαφορετική διεύθυνση "
 "εδώ αλλά εαν δεν βρίσκεται στο ίδιο domain το Wordpress θα την αγνοήσει."
 
-#: rpr-admin-menu.php:135
+#: rpr-admin-menu.php:164
 msgid "Verification Redirect"
 msgstr "Ανακατελυθυνση Επιβεβαίωσης"
 
-#: rpr-admin-menu.php:138
+#: rpr-admin-menu.php:167
 #, fuzzy
 msgid ""
 "By default, after verifying, users will be sent to %s/wp-login.php, leave "
@@ -256,28 +280,28 @@ msgstr ""
 "συμπεριφορά αυτή. Μπορείτε να βάλετε μια διαφορετική διεύθυνση εδώ αλλά εαν "
 "δεν βρίσκεται στο ίδιο domain το Wordpress θα την αγνοήσει."
 
-#: rpr-admin-menu.php:143
+#: rpr-admin-menu.php:171
 msgid "Autologin user"
 msgstr ""
 
-#: rpr-admin-menu.php:145
+#: rpr-admin-menu.php:173
 #, fuzzy
 msgid "Autologin user after registration."
 msgstr "Αυτό θα ανακατευθύνει την συνδεση του χρήστη μετά την εγγραφή."
 
-#: rpr-admin-menu.php:146
+#: rpr-admin-menu.php:174
 msgid ""
 "Works if Email Verification and Admin Verification are turned off. By "
 "default users will be sent to %s, to change this behavior, set up "
 "Registration Redirect field above."
 msgstr ""
 
-#: rpr-admin-menu.php:152
+#: rpr-admin-menu.php:179
 #, fuzzy
 msgid "Registration Form"
 msgstr "Εγγραφή"
 
-#: rpr-admin-menu.php:153
+#: rpr-admin-menu.php:180
 #, fuzzy
 msgid ""
 "Select which fields to show on the Registration Form. Users will not be able "
@@ -287,11 +311,11 @@ msgstr ""
 "μπορούν να ολοκληρώσουν την διαδικασία χωρίς να συμπληρώσουν τα πεδία που "
 "είναι μαρκαρισμένα ως απαραίτητα."
 
-#: rpr-admin-menu.php:155
+#: rpr-admin-menu.php:182
 msgid "Signup Form"
 msgstr ""
 
-#: rpr-admin-menu.php:156
+#: rpr-admin-menu.php:183
 #, fuzzy
 msgid ""
 "Select which fields to show on the Signup Form. Users will not be able to "
@@ -301,11 +325,11 @@ msgstr ""
 "μπορούν να ολοκληρώσουν την διαδικασία χωρίς να συμπληρώσουν τα πεδία που "
 "είναι μαρκαρισμένα ως απαραίτητα."
 
-#: rpr-admin-menu.php:160
+#: rpr-admin-menu.php:187
 msgid "Use Email as Username"
 msgstr "Χρησιμοποίηση Email για Όνομα Χρήστη"
 
-#: rpr-admin-menu.php:161
+#: rpr-admin-menu.php:188
 msgid ""
 "New users will not be asked to enter a username, instead their email address "
 "will be used as their username."
@@ -313,224 +337,224 @@ msgstr ""
 "Δεν θα ζητέιται από τους νέους χρήστες να εισάγουν όνομα χρήστη. Αντ' αυτού, "
 "το email τους θα χρησιμοποιείται ως όνομα χρήστη. "
 
-#: rpr-admin-menu.php:164
+#: rpr-admin-menu.php:191
 msgid "Confirm Email"
 msgstr "Email Επιβεβαίωσης"
 
-#: rpr-admin-menu.php:165
+#: rpr-admin-menu.php:192
 msgid "Require new users to enter e-mail address twice during registration."
 msgstr ""
 "Απαίτηση εισαγωγής του email δύο φορές από τους χρήστες κατά την εγγραφή."
 
-#: rpr-admin-menu.php:168
+#: rpr-admin-menu.php:195
 msgid "Profile Fields"
 msgstr "Πεδιά Προφιλ"
 
-#: rpr-admin-menu.php:173
+#: rpr-admin-menu.php:200
 msgid "Show"
 msgstr "Εμφάνισε"
 
-#: rpr-admin-menu.php:174
+#: rpr-admin-menu.php:201
 msgid "Require"
 msgstr "Απαραίτητο"
 
-#: rpr-admin-menu.php:178 rpr-login.php:72 rpr-signup.php:249
+#: rpr-admin-menu.php:205 rpr-login.php:139 rpr-signup.php:160
 msgid "First Name"
 msgstr "Όνομα"
 
-#: rpr-admin-menu.php:183 rpr-login.php:81 rpr-signup.php:260
+#: rpr-admin-menu.php:210 rpr-login.php:147 rpr-signup.php:170
 msgid "Last Name"
 msgstr "Επίθετο"
 
-#: rpr-admin-menu.php:188 rpr-login.php:90 rpr-signup.php:271
+#: rpr-admin-menu.php:215 rpr-login.php:155 rpr-signup.php:180
 msgid "Website"
 msgstr "Ιστότοπος"
 
-#: rpr-admin-menu.php:193 rpr-login.php:99 rpr-signup.php:282
+#: rpr-admin-menu.php:220 rpr-login.php:163 rpr-signup.php:190
 msgid "AIM"
 msgstr "AIM"
 
-#: rpr-admin-menu.php:198 rpr-login.php:108 rpr-signup.php:293
+#: rpr-admin-menu.php:225 rpr-login.php:171 rpr-signup.php:200
 msgid "Yahoo IM"
 msgstr "Yahoo IM"
 
-#: rpr-admin-menu.php:203 rpr-login.php:117 rpr-signup.php:304
+#: rpr-admin-menu.php:230 rpr-login.php:179 rpr-signup.php:210
 msgid "Jabber / Google Talk"
 msgstr "Jabber / Google Talk"
 
-#: rpr-admin-menu.php:208 rpr-login.php:126 rpr-signup.php:315
+#: rpr-admin-menu.php:235 rpr-login.php:187 rpr-signup.php:220
 msgid "About Yourself"
 msgstr "Λίγα Λόγια για εσένα"
 
-#: rpr-admin-menu.php:217
+#: rpr-admin-menu.php:244
 msgid "User Set Password"
 msgstr "Κωδικός Χρήστη"
 
-#: rpr-admin-menu.php:219
+#: rpr-admin-menu.php:246
 msgid "Require new users enter a password during registration..."
 msgstr "Απαίτηση εισαγωγής κωδικού από τον χρήστη κατά την εγγραφή"
 
-#: rpr-admin-menu.php:221
+#: rpr-admin-menu.php:248
 msgid "Minimum password length: "
 msgstr "Ελάχιστο μέγεθος κωδικού:"
 
-#: rpr-admin-menu.php:222
+#: rpr-admin-menu.php:249
 msgid "Do not require users to confirm password."
 msgstr ""
 
-#: rpr-admin-menu.php:223
+#: rpr-admin-menu.php:250
 msgid "Show password strength meter..."
 msgstr "Εμφάνιση μετρητή δύναμης κωδικού..."
 
-#: rpr-admin-menu.php:227
+#: rpr-admin-menu.php:254
 msgid "Empty"
 msgstr "Άδειος"
 
-#: rpr-admin-menu.php:231
+#: rpr-admin-menu.php:258
 msgid "Short"
 msgstr "Μικρός"
 
-#: rpr-admin-menu.php:235
+#: rpr-admin-menu.php:262
 msgid "Bad"
 msgstr "Κακός"
 
-#: rpr-admin-menu.php:239
+#: rpr-admin-menu.php:266
 msgid "Good"
 msgstr "Καλός"
 
-#: rpr-admin-menu.php:243
+#: rpr-admin-menu.php:270
 msgid "Strong"
 msgstr "Δυνατός"
 
-#: rpr-admin-menu.php:247
+#: rpr-admin-menu.php:274
 msgid "Mismatch"
 msgstr "Αναντιστοιχία Κωδικού"
 
-#: rpr-admin-menu.php:258
+#: rpr-admin-menu.php:285
 msgid "Use invitation codes to track or authorize new user registration..."
 msgstr ""
 "Χρησιμοποιήστε Κωδικούς Πρόσκλησης για να παρακολουθείτε ή να εγκρίνετε "
 "νέους χρήστες"
 
-#: rpr-admin-menu.php:260
+#: rpr-admin-menu.php:287
 msgid ""
 "Require new user enter one of the following invitation codes to register."
 msgstr ""
 "Απαίτηση εισαγωγής ενός από τους παρακάτω κωδικούς πρόσκλησης, από τον "
 "χρήστη για να κάνει εγγραφή."
 
-#: rpr-admin-menu.php:261
+#: rpr-admin-menu.php:288
 msgid "Enforce case-sensitivity of invitation codes."
 msgstr "Να επιβληθεί το case-sensitivity στους κωδικούς πρόσκλησης"
 
-#: rpr-admin-menu.php:262
+#: rpr-admin-menu.php:289
 msgid "Each invitation code may only be used once."
 msgstr ""
 
-#: rpr-admin-menu.php:263
+#: rpr-admin-menu.php:290
 msgid "Show Invitation Code Tracking widget on Dashboard."
 msgstr ""
 "Εμφάνισε την Μονάδα Παρακολούθησης Κωδικών Πρόσκλησης στον Πίνακα Ελέγχου."
 
-#: rpr-admin-menu.php:272 rpr-admin-menu.php:676 rpr-admin-menu.php:677
+#: rpr-admin-menu.php:299 rpr-admin-menu.php:727 rpr-admin-menu.php:728
 msgid "Remove Code"
 msgstr "Αφαίρεση Κώδικα"
 
-#: rpr-admin-menu.php:275
+#: rpr-admin-menu.php:302
 #, fuzzy
 msgid "Show %d hidden invitation code"
 msgid_plural "Show %d hidden invitation codes"
 msgstr[0] "Πρόσθεσε ένα νέο κωδικό πρόσκλησης"
 msgstr[1] "Πρόσθεσε ένα νέο κωδικό πρόσκλησης"
 
-#: rpr-admin-menu.php:279
+#: rpr-admin-menu.php:308
 msgid "Add Code"
 msgstr "Πρόσθεσε Κωδικό"
 
-#: rpr-admin-menu.php:279
+#: rpr-admin-menu.php:308
 msgid "Add a new invitation code"
 msgstr "Πρόσθεσε ένα νέο κωδικό πρόσκλησης"
 
-#: rpr-admin-menu.php:284
+#: rpr-admin-menu.php:313
 msgid "Disclaimer"
 msgstr "Όροι Χρήσης"
 
-#: rpr-admin-menu.php:286
+#: rpr-admin-menu.php:315
 msgid "Show Disclaimer during registration..."
 msgstr "Εμφάνισε Όρους Χρήσης κατά την εγγραφή..."
 
-#: rpr-admin-menu.php:291
+#: rpr-admin-menu.php:320
 msgid "Disclaimer Title"
 msgstr "Τίτλος Όρων Χρήσεως."
 
-#: rpr-admin-menu.php:299
+#: rpr-admin-menu.php:328
 msgid "Disclaimer Content"
 msgstr "Περιεχόμενο Όρων Χρήσης"
 
-#: rpr-admin-menu.php:305 rpr-admin-menu.php:337 rpr-admin-menu.php:369
+#: rpr-admin-menu.php:334 rpr-admin-menu.php:366 rpr-admin-menu.php:398
 msgid "Require Agreement"
 msgstr "Απαίτηση συμφωνίας"
 
-#: rpr-admin-menu.php:316
+#: rpr-admin-menu.php:345
 msgid "License Agreement"
 msgstr "Άδεια Χρήσης"
 
-#: rpr-admin-menu.php:318
+#: rpr-admin-menu.php:347
 msgid "Show License Agreement during registration..."
 msgstr "Εμφάνιση της Άδεις Χρήσης κατά την εγγραφή"
 
-#: rpr-admin-menu.php:323
+#: rpr-admin-menu.php:352
 msgid "License Agreement Title"
 msgstr "Τίτλος Άδειας Χρήσης"
 
-#: rpr-admin-menu.php:331
+#: rpr-admin-menu.php:360
 msgid "License Agreement Content"
 msgstr "Περιεχόμενο Άδειας Χρήσης"
 
-#: rpr-admin-menu.php:348
+#: rpr-admin-menu.php:377
 msgid "Privacy Policy"
 msgstr "Πολιτική Απορρήτου"
 
-#: rpr-admin-menu.php:350
+#: rpr-admin-menu.php:379
 msgid "Show Privacy Policy during registration..."
 msgstr "Εμφάνιση Πολιτικής Απορρήτου κατά την εγγραφή...."
 
-#: rpr-admin-menu.php:355
+#: rpr-admin-menu.php:384
 msgid "Privacy Policy Title"
 msgstr "Τίτλος Πολιτικής Απορρήτου"
 
-#: rpr-admin-menu.php:363
+#: rpr-admin-menu.php:392
 msgid "Privacy Policy Content"
 msgstr "Περιεχόμενο Πολιτικής Απορρήτου"
 
-#: rpr-admin-menu.php:380
+#: rpr-admin-menu.php:409
 msgid "Use Default Style Rules"
 msgstr "Χρησιμοποίησε τους προεπιλεγμένους κανόνες στυλ"
 
-#: rpr-admin-menu.php:381
+#: rpr-admin-menu.php:410
 #, fuzzy
 msgid "Apply default Wordpress styling to all fields."
 msgstr "Εφάρμοσε το στυλ του Wordpress 3.0.1 σε όλα τα πεδία"
 
-#: rpr-admin-menu.php:384
+#: rpr-admin-menu.php:413
 msgid "Required Fields Style Rules"
 msgstr "Απαιτουμενοι κανόνες για το στυλ των πεδίων"
 
-#: rpr-admin-menu.php:388
+#: rpr-admin-menu.php:417
 msgid "Required Fields Asterisk"
 msgstr "Απαιτούμενοι Αστερίσκοι στα πεδία"
 
-#: rpr-admin-menu.php:389
+#: rpr-admin-menu.php:418
 msgid "Add asterisk to left of all required field's name."
 msgstr ""
 "Πρόσθεσε έναν αστερίσκο στα αριστερά του όνόματος όλων των απαιτούμενων "
 "πεδίων."
 
-#: rpr-admin-menu.php:393
+#: rpr-admin-menu.php:422
 msgid "Starting Tabindex"
 msgstr "Έναρξη Tabindex"
 
-#: rpr-admin-menu.php:396
+#: rpr-admin-menu.php:425
 msgid ""
 "The first field added will have this tabindex, the tabindex will increment "
 "by 1 for each additional field. Enter 0 to remove all tabindex's."
@@ -538,11 +562,27 @@ msgstr ""
 "Το πρώτο πεδίο θα έχει αυτό το tabindex. To tabindex θα αυξάνεται κατά ένα "
 "για κάθε προστιθέμενο πεδίο. Εισάγετε 0 για αφαίρεση όλων των tabindex's."
 
-#: rpr-admin-menu.php:401
+#: rpr-admin-menu.php:432
+#, fuzzy
+#| msgid "Registration Redirect"
+msgid "Minimal registration duration"
+msgstr "Ανακατεύθυνση Σελίδας Εγγραφής"
+
+#: rpr-admin-menu.php:438
+msgid "seconds"
+msgstr ""
+
+#: rpr-admin-menu.php:440
+msgid ""
+"A minimal duration of registration to prevent false registrations. Set to 0 "
+"to disable this check."
+msgstr ""
+
+#: rpr-admin-menu.php:446
 msgid "Additional Fields"
 msgstr "Επιπλέον Πεδία"
 
-#: rpr-admin-menu.php:402
+#: rpr-admin-menu.php:447
 msgid ""
 "Enter additional fields to show on the User Profile and/or Registration "
 "Pages. Additional fields will be shown after existing profile fields on User "
@@ -564,105 +604,131 @@ msgstr ""
 "Για παράδειγμα, ένα πεδίο Radio όνομα \"Φύλο \" θα μπορούσε να έχει τις "
 "ακόλουθες επιλογές, \"Άντρας, Γυναίκα \"."
 
-#: rpr-admin-menu.php:413
+#: rpr-admin-menu.php:458
 msgid "Reorder"
 msgstr ""
 
-#: rpr-admin-menu.php:413
+#: rpr-admin-menu.php:458
 msgid "Drag to Reorder"
 msgstr ""
 
-#: rpr-admin-menu.php:418
+#: rpr-admin-menu.php:458 rpr-admin-menu.php:943 rpr-admin-menu.php:948
+#, fuzzy
+#| msgid "Settings"
+msgid "Show Settings"
+msgstr "Ρυθμίσεις"
+
+#: rpr-admin-menu.php:463
 msgid "Display"
 msgstr ""
 
-#: rpr-admin-menu.php:420
+#: rpr-admin-menu.php:465
 #, fuzzy
 msgid "Textbox Field"
 msgstr "Πεδίο Κειμένου"
 
-#: rpr-admin-menu.php:421
+#: rpr-admin-menu.php:466
 msgid "Select Field"
 msgstr "Πεδίο Επιλογών"
 
-#: rpr-admin-menu.php:422
+#: rpr-admin-menu.php:467
 msgid "Checkbox Fields"
 msgstr "Πεδία Checkbox"
 
-#: rpr-admin-menu.php:423
+#: rpr-admin-menu.php:468
 msgid "Radio Fields"
 msgstr "Πεδία Radio"
 
-#: rpr-admin-menu.php:424
+#: rpr-admin-menu.php:469
 msgid "Text Area"
 msgstr "Περιοχή Κειμένου"
 
-#: rpr-admin-menu.php:425
+#: rpr-admin-menu.php:470
 msgid "Hidden Field"
 msgstr "Κρυφό Πεδίο"
 
-#: rpr-admin-menu.php:426
+#: rpr-admin-menu.php:471
 msgid "Static Text"
 msgstr "Στατικό Κείμενο"
 
-#: rpr-admin-menu.php:429
+#: rpr-admin-menu.php:475
 msgid "Options"
 msgstr "Επιλογές"
 
-#: rpr-admin-menu.php:432
+#: rpr-admin-menu.php:478
 msgid "Database Key"
 msgstr ""
 
-#: rpr-admin-menu.php:435
+#: rpr-admin-menu.php:481
 #, fuzzy
 msgid "Show on Profile"
 msgstr "Προφίλ"
 
-#: rpr-admin-menu.php:438
+#: rpr-admin-menu.php:484
 #, fuzzy
 msgid "Show on Registration"
 msgstr "Εγγραφή"
 
-#: rpr-admin-menu.php:441
+#: rpr-admin-menu.php:487
 #, fuzzy
 msgid "Required Field"
 msgstr "Απαιτούμενοι Αστερίσκοι στα πεδία"
 
-#: rpr-admin-menu.php:444
+#: rpr-admin-menu.php:490
+msgid "Show Datepicker"
+msgstr ""
+
+#: rpr-admin-menu.php:493
+#, fuzzy
+#| msgid "Disclaimer Content"
+msgid "Terms Content"
+msgstr "Περιεχόμενο Όρων Χρήσης"
+
+#: rpr-admin-menu.php:496
+#, fuzzy
+#| msgid "License Agreement Title"
+msgid "Terms Agreement Text"
+msgstr "Τίτλος Άδειας Χρήσης"
+
+#: rpr-admin-menu.php:499
+msgid "Revised"
+msgstr ""
+
+#: rpr-admin-menu.php:502
 msgid "Actions"
 msgstr "Ενέργειες"
 
-#: rpr-admin-menu.php:445 rpr-admin-menu.php:709
+#: rpr-admin-menu.php:503 rpr-admin-menu.php:760
 msgid "Help"
 msgstr ""
 
-#: rpr-admin-menu.php:445
+#: rpr-admin-menu.php:503
 msgid "No help available"
 msgstr "Δεν υπάρχει Βοήθεια"
 
-#: rpr-admin-menu.php:446 rpr-admin-menu.php:701
+#: rpr-admin-menu.php:504 rpr-admin-menu.php:752
 #, fuzzy
 msgid "Remove"
 msgstr "Αφαίρεση Κώδικα"
 
-#: rpr-admin-menu.php:446 rpr-admin-menu.php:702
+#: rpr-admin-menu.php:504 rpr-admin-menu.php:753
 msgid "Remove Field"
 msgstr "Αφαίρεση Πεδίου"
 
-#: rpr-admin-menu.php:457
+#: rpr-admin-menu.php:516
 msgid "Add Field"
 msgstr "Πρόσθεση Πεδίου"
 
-#: rpr-admin-menu.php:457
+#: rpr-admin-menu.php:516
 msgid "Add a new custom field."
 msgstr "Προσθέστε ένα νέο προσαρμοσμένο πεδίο."
 
-#: rpr-admin-menu.php:496
+#: rpr-admin-menu.php:555
 #, fuzzy
 msgid "Autocomplete URL"
 msgstr "Αυτόματη συμπλήρωση ερευνών"
 
-#: rpr-admin-menu.php:497
+#: rpr-admin-menu.php:556
 #, fuzzy
 msgid ""
 "You can create a URL to autocomplete specific fields for the user. "
@@ -673,87 +739,87 @@ msgstr ""
 "συμπλήρωση συγκεκριμένων πεδίων για τον χρήστη. Έχω συμπεριλάβει τα κλειδιά "
 "ερευνών παρακάτω καθως και ένα παράδειγμα από μια έρευνα URL."
 
-#: rpr-admin-menu.php:501
+#: rpr-admin-menu.php:560
 msgid "New User Message Settings"
 msgstr "Ρυθμίσεις Μηνύματος Νέου Χρήστη"
 
-#: rpr-admin-menu.php:504
+#: rpr-admin-menu.php:563
 msgid "New User Message"
 msgstr "Μήνυμα Νέου Χρήστη"
 
-#: rpr-admin-menu.php:506
+#: rpr-admin-menu.php:565
 msgid "Do NOT send user an email after they are registered"
 msgstr "ΜΗΝ στείλεις μήνυμα στον χρήστη αφού κάνει εγγραφή"
 
-#: rpr-admin-menu.php:507
+#: rpr-admin-menu.php:566
 msgid "Do NOT send user an email when created by an administrator"
 msgstr ""
 "ΜΗΝ στείλεις μήνυμα στον χρήστη όταν αυτός δημιουργείται από τον Διαχειριστή."
 
-#: rpr-admin-menu.php:511
+#: rpr-admin-menu.php:570
 msgid "Custom New User Message"
 msgstr "Προσαρμοσμένο Μήνυμα Νέου Χρήστη"
 
-#: rpr-admin-menu.php:513 rpr-admin-menu.php:544 rpr-admin-menu.php:592
+#: rpr-admin-menu.php:572 rpr-admin-menu.php:603 rpr-admin-menu.php:651
 msgid "Enable..."
 msgstr "Ενεργοποίηση..."
 
-#: rpr-admin-menu.php:517 rpr-admin-menu.php:548 rpr-admin-menu.php:596
+#: rpr-admin-menu.php:576 rpr-admin-menu.php:607 rpr-admin-menu.php:655
 msgid "From Email"
 msgstr "Από Email"
 
-#: rpr-admin-menu.php:518 rpr-admin-menu.php:522 rpr-admin-menu.php:526
-#: rpr-admin-menu.php:531 rpr-admin-menu.php:549 rpr-admin-menu.php:553
-#: rpr-admin-menu.php:557 rpr-admin-menu.php:562 rpr-admin-menu.php:597
-#: rpr-admin-menu.php:601 rpr-admin-menu.php:605 rpr-admin-menu.php:610
+#: rpr-admin-menu.php:577 rpr-admin-menu.php:581 rpr-admin-menu.php:585
+#: rpr-admin-menu.php:590 rpr-admin-menu.php:608 rpr-admin-menu.php:612
+#: rpr-admin-menu.php:616 rpr-admin-menu.php:621 rpr-admin-menu.php:656
+#: rpr-admin-menu.php:660 rpr-admin-menu.php:664 rpr-admin-menu.php:669
 msgid "Restore Default"
 msgstr "Επαναφορά Προεπιλογής"
 
-#: rpr-admin-menu.php:521 rpr-admin-menu.php:552 rpr-admin-menu.php:600
+#: rpr-admin-menu.php:580 rpr-admin-menu.php:611 rpr-admin-menu.php:659
 msgid "From Name"
 msgstr "Από Όνομα"
 
-#: rpr-admin-menu.php:525 rpr-admin-menu.php:556 rpr-admin-menu.php:604
+#: rpr-admin-menu.php:584 rpr-admin-menu.php:615 rpr-admin-menu.php:663
 msgid "Subject"
 msgstr "Θέμα"
 
-#: rpr-admin-menu.php:530 rpr-admin-menu.php:561
+#: rpr-admin-menu.php:589 rpr-admin-menu.php:620
 msgid "User Message"
 msgstr "Μήνυμα Χρήστη"
 
-#: rpr-admin-menu.php:532 rpr-admin-menu.php:563 rpr-admin-menu.php:611
+#: rpr-admin-menu.php:591 rpr-admin-menu.php:622 rpr-admin-menu.php:670
 msgid "Replacement Keywords"
 msgstr "Αντικατάσταση Λέξεων-Κλειδιών"
 
-#: rpr-admin-menu.php:533 rpr-admin-menu.php:564 rpr-admin-menu.php:612
+#: rpr-admin-menu.php:592 rpr-admin-menu.php:623 rpr-admin-menu.php:671
 msgid "Send as HTML"
 msgstr "Αποστολή ως HTML"
 
-#: rpr-admin-menu.php:534 rpr-admin-menu.php:565 rpr-admin-menu.php:613
+#: rpr-admin-menu.php:593 rpr-admin-menu.php:624 rpr-admin-menu.php:672
 msgid "Convert new lines to &lt;br /&gt; tags (HTML only)"
 msgstr "Μετατροπή νέων γραμμών σε &lt;br /&gt; tags (μόνο για HTML)"
 
-#: rpr-admin-menu.php:542
+#: rpr-admin-menu.php:601
 msgid "Custom Verification Message"
 msgstr "Προσαρμοσμένο Μήνυμα Επιβεβαίωσης"
 
-#: rpr-admin-menu.php:573 rpr-admin-menu.php:621
+#: rpr-admin-menu.php:632 rpr-admin-menu.php:680
 msgid "Summary"
 msgstr "Περίληψη"
 
-#: rpr-admin-menu.php:579
+#: rpr-admin-menu.php:638
 msgid "Admin Notification Settings"
 msgstr "Ρυθμίσεις Ενημερώσης Διαχειριστή"
 
-#: rpr-admin-menu.php:582
+#: rpr-admin-menu.php:641
 msgid "Admin Notification"
 msgstr "Ενημέρωση Διαχειριστή"
 
-#: rpr-admin-menu.php:584
+#: rpr-admin-menu.php:643
 msgid "Do NOT send administrator an email whenever a new user registers"
 msgstr "ΜΗΝ στείλεις μήνυμα στον διαχειριστή όταν ένας χρήστης κάνει εγγραφή"
 
-#: rpr-admin-menu.php:585
+#: rpr-admin-menu.php:644
 msgid ""
 "Do NOT send administrator an email whenever a new user is created by an "
 "administrator"
@@ -761,100 +827,84 @@ msgstr ""
 "ΜΗΝ στείλεις μήνυμα στον διαχειριστή όταν ένας χρήστης δημιουργέιται από "
 "έναν διαχειριστή"
 
-#: rpr-admin-menu.php:586
+#: rpr-admin-menu.php:645
 #, fuzzy
 msgid "Send administrator an email after a new user is verified"
 msgstr "ΜΗΝ στείλεις μήνυμα στον διαχειριστή όταν ένας χρήστης κάνει εγγραφή"
 
-#: rpr-admin-menu.php:590
+#: rpr-admin-menu.php:649
 msgid "Custom Admin Notification"
 msgstr "Προσαρμοσμένη Ενημέρωση Διαχειριστή"
 
-#: rpr-admin-menu.php:609
+#: rpr-admin-menu.php:668
 msgid "Admin Message"
 msgstr "Μήνυμα Διαχειριστή"
 
-#: rpr-admin-menu.php:628
+#: rpr-admin-menu.php:687
 msgid "Custom CSS for Register & Login Pages"
 msgstr "Προσαρμοσμένο CSS για τις σελίδες εγγραφής και Σύνδεσης"
 
-#: rpr-admin-menu.php:629
+#: rpr-admin-menu.php:688
 msgid "CSS Rule Example:"
 msgstr "Παράδειγμα Κανόνα CSS:"
 
-#: rpr-admin-menu.php:632
+#: rpr-admin-menu.php:691
 msgid "Custom Register CSS"
 msgstr "Προσαρμοσμένο CSS για την σελίδα Εγγραφής"
 
-#: rpr-admin-menu.php:636
+#: rpr-admin-menu.php:695
 msgid "Custom Login CSS"
 msgstr "Προσαρμοσμένο CSS για την σελίδα Σύνδεσης"
 
-#: rpr-admin-menu.php:641
-msgid "Hacks & Fixes"
-msgstr "Διορθώσεις και Hacks"
-
-#: rpr-admin-menu.php:644
-msgid "Random Password Appears in Messages"
-msgstr ""
-
-#: rpr-admin-menu.php:646
-#, fuzzy
-msgid "Filter Random Passwords."
-msgstr "Επιβεβαίωση Κωδικού"
-
-#: rpr-admin-menu.php:647
-msgid ""
-"When user set password is enabled, and another plugin is being used to "
-"modify outgoing messages, a random password may appear in those messages, "
-"regardless of the fact that a user entered password was specified. This "
-"option will filter all password requests and show the user entered password "
-"if possible."
-msgstr ""
-
-#: rpr-admin-menu.php:652
+#: rpr-admin-menu.php:700
 msgid "Save Changes"
 msgstr "Αποθήκευση Αλλαγών"
 
-#: rpr-admin-menu.php:653
+#: rpr-admin-menu.php:702
 msgid "Preview Registration Page"
 msgstr "Προεπισκόπηση Σελίδας Εγγραφής"
 
-#: rpr-admin-menu.php:690
+#: rpr-admin-menu.php:704
+#, fuzzy
+#| msgid "Preview Registration Page"
+msgid "Preview Signup Page"
+msgstr "Προεπισκόπηση Σελίδας Εγγραφής"
+
+#: rpr-admin-menu.php:741
 msgid "New"
 msgstr ""
 
-#: rpr-admin-menu.php:691
+#: rpr-admin-menu.php:742
 #, fuzzy
 msgid "New Field"
 msgstr "Πεδίο Κειμένου"
 
-#: rpr-admin-menu.php:710
+#: rpr-admin-menu.php:761
 msgid ""
 "You must save after adding new fields before all options become available."
 msgstr ""
 
-#: rpr-admin-menu.php:727
+#: rpr-admin-menu.php:778
 msgid "The following message will be sent when a user is registered:"
 msgstr "Το παρακάτω μήνυμα θα σταλεί όταν ένας χρήστης κάνει εγγραφή:"
 
-#: rpr-admin-menu.php:741 rpr-admin-menu.php:780 rpr-admin-menu.php:817
+#: rpr-admin-menu.php:792 rpr-admin-menu.php:831 rpr-admin-menu.php:868
 msgid "To: "
 msgstr "Προς: "
 
-#: rpr-admin-menu.php:742 rpr-admin-menu.php:781 rpr-admin-menu.php:818
+#: rpr-admin-menu.php:793 rpr-admin-menu.php:832 rpr-admin-menu.php:869
 msgid "From: "
 msgstr "Από: "
 
-#: rpr-admin-menu.php:743 rpr-admin-menu.php:782 rpr-admin-menu.php:819
+#: rpr-admin-menu.php:794 rpr-admin-menu.php:833 rpr-admin-menu.php:870
 msgid "Subject: "
 msgstr "Θέμα: "
 
-#: rpr-admin-menu.php:744 rpr-admin-menu.php:783 rpr-admin-menu.php:820
+#: rpr-admin-menu.php:795 rpr-admin-menu.php:834 rpr-admin-menu.php:871
 msgid "Content-Type: "
 msgstr "Μήνυμα: "
 
-#: rpr-admin-menu.php:752
+#: rpr-admin-menu.php:803
 msgid ""
 "No message will be sent to user whether they are registered or created by an "
 "administrator."
@@ -862,39 +912,39 @@ msgstr ""
 "Δεν θα σταλεί μήνυμα στον χρήστη όταν κάνει εγγραφή ή δημιουργηθεί από τον "
 "διαχειριστή."
 
-#: rpr-admin-menu.php:756 rpr-admin-menu.php:799
+#: rpr-admin-menu.php:807 rpr-admin-menu.php:850
 msgid "The following message will be sent when a user is "
 msgstr "Το παρακάτω μήνυμα θα σταλλεί όταν ένας χρήστης "
 
-#: rpr-admin-menu.php:757 rpr-admin-menu.php:800
+#: rpr-admin-menu.php:808 rpr-admin-menu.php:851
 msgid "registered"
 msgstr "κάνει εγγραφή"
 
-#: rpr-admin-menu.php:758 rpr-admin-menu.php:801
+#: rpr-admin-menu.php:809 rpr-admin-menu.php:852
 msgid " or "
 msgstr " ή "
 
-#: rpr-admin-menu.php:759 rpr-admin-menu.php:802
+#: rpr-admin-menu.php:810 rpr-admin-menu.php:853
 msgid "created"
 msgstr "δημιουργηθεί"
 
-#: rpr-admin-menu.php:760
+#: rpr-admin-menu.php:811
 msgid " after "
 msgstr " αφού "
 
-#: rpr-admin-menu.php:762
+#: rpr-admin-menu.php:813
 msgid "the user has verified their email address"
 msgstr "ο χρήστης έχει επιβεβαιώσει την διεύθυνση email του"
 
-#: rpr-admin-menu.php:763
+#: rpr-admin-menu.php:814
 msgid " and/or "
 msgstr " και/ή "
 
-#: rpr-admin-menu.php:765
+#: rpr-admin-menu.php:816
 msgid "an administrator has approved the new user"
 msgstr " ένας διαχειριστής έχει εγκρίνει το νέο χρήστη "
 
-#: rpr-admin-menu.php:795
+#: rpr-admin-menu.php:846
 msgid ""
 "No message will be sent to administrator whether a user is registered or "
 "created."
@@ -902,84 +952,106 @@ msgstr ""
 "Δεν θα σταλεί μήνυμα στον διαχειριστή είτε όταν ένας χρήστης κάνει εγγραφή "
 "είτε δημιουργηθεί."
 
-#: rpr-admin-menu.php:972
-msgid "You cannot edit that user."
-msgstr "Δεν μπορείτε να επεξεργαστείτε αυτόν τον χρήστη"
+#: rpr-admin-menu.php:888
+msgid "Upload/Select Logo"
+msgstr ""
 
-#: rpr-admin-menu.php:996
+#: rpr-admin-menu.php:944
+#, fuzzy
+#| msgid "Settings"
+msgid "Hide Settings"
+msgstr "Ρυθμίσεις"
+
+#: rpr-admin-menu.php:1129
+#, fuzzy
+#| msgid "Users approved."
+msgid "User approved."
+msgstr "Εγκεκριμένοι Χρήστες"
+
+#: rpr-admin-menu.php:1132
 msgid "Users approved."
 msgstr "Εγκεκριμένοι Χρήστες"
 
-#: rpr-admin-menu.php:999
+#: rpr-admin-menu.php:1135
+#, fuzzy
+#| msgid "Verification emails sent."
+msgid "Verification email sent."
+msgstr "Απεσταλμένα email επιβεβαίωσης"
+
+#: rpr-admin-menu.php:1138
 msgid "Verification emails sent."
 msgstr "Απεσταλμένα email επιβεβαίωσης"
 
-#: rpr-admin-menu.php:1002
+#: rpr-admin-menu.php:1141
+#, fuzzy
+#| msgid "Users deleted."
+msgid "User deleted."
+msgstr "Διαγραμμένοι Χρήστες"
+
+#: rpr-admin-menu.php:1144
 msgid "Users deleted."
 msgstr "Διαγραμμένοι Χρήστες"
 
-#: rpr-admin-menu.php:1014
+#: rpr-admin-menu.php:1157
 msgid "Bulk Actions"
 msgstr "Μαζικές Ενέργειες"
 
-#: rpr-admin-menu.php:1015
+#: rpr-admin-menu.php:1158 rpr-admin-menu.php:1190
 msgid "Approve"
 msgstr "Έγκριση"
 
-#: rpr-admin-menu.php:1016
+#: rpr-admin-menu.php:1159
 msgid "Send E-mail Verification"
 msgstr "Αποστολή email Επιβεβαίωσης"
 
-#: rpr-admin-menu.php:1017 rpr-admin-menu.php:1051
+#: rpr-admin-menu.php:1160 rpr-admin-menu.php:1192
 msgid "Delete"
 msgstr "Διαγραφή"
 
-#: rpr-admin-menu.php:1019
+#: rpr-admin-menu.php:1162
 msgid "Apply"
 msgstr "Εφαρμογή"
 
-#: rpr-admin-menu.php:1028
+#: rpr-admin-menu.php:1170
 msgid "Username"
 msgstr "Όνομα Χρήστη"
 
-#: rpr-admin-menu.php:1029
-msgid "Temp Username"
-msgstr "Προσωρινό Όνομα Χρήστη"
-
-#: rpr-admin-menu.php:1030 rpr-login.php:821 rpr-login.php:826
-#: rpr-login.php:835 rpr-login.php:840
+#: rpr-admin-menu.php:1171 rpr-login.php:1003 rpr-login.php:1008
+#: rpr-login.php:1019 rpr-login.php:1024
 msgid "E-mail"
 msgstr "E-mail"
 
-#: rpr-admin-menu.php:1031
+#: rpr-admin-menu.php:1172
 msgid "Registered"
 msgstr "Εγγεγραμμένος"
 
-#: rpr-admin-menu.php:1032
+#: rpr-admin-menu.php:1173
 msgid "Verification Sent"
 msgstr "Αποστολή Επιβεβαίωσης"
 
-#: rpr-admin-menu.php:1033
+#: rpr-admin-menu.php:1174
 msgid "Verified"
 msgstr "Εγγεκριμένος"
 
-#: rpr-admin-menu.php:1050
-msgid "Edit"
-msgstr "Επεξεργασία"
+#: rpr-admin-menu.php:1191
+#, fuzzy
+#| msgid "Send E-mail Verification"
+msgid "Send Verification"
+msgstr "Αποστολή email Επιβεβαίωσης"
 
-#: rpr-admin-menu.php:1055
+#: rpr-admin-menu.php:1195
 msgid "E-mail: "
 msgstr "E-mail: "
 
-#: rpr-admin-menu.php:1068
+#: rpr-admin-menu.php:1208
 msgid "Approve Selected Users"
 msgstr "Έγκριση Επιλεγμένων Χρηστών"
 
-#: rpr-admin-menu.php:1069
+#: rpr-admin-menu.php:1209
 msgid "Send E-mail Verification to Selected Users"
 msgstr "Αποστολή EMail Επιβεβάιωσης στους Επιλεγμένους Χρήστες"
 
-#: rpr-admin-menu.php:1070
+#: rpr-admin-menu.php:1210
 msgid "Delete Selected Users"
 msgstr "Διαγραφή Επιλεγμένων Χρηστών"
 
@@ -992,11 +1064,11 @@ msgstr "Παρακολούθηση Κώδικά Πρόσκλησης"
 msgid "%s Users Registered."
 msgstr "Εγγραφή Νέου Χρήστη"
 
-#: rpr-login.php:63 rpr-signup.php:238
+#: rpr-login.php:131 rpr-signup.php:150
 msgid "Confirm E-mail"
 msgstr "Επιβεβαίωση E-Mail"
 
-#: rpr-login.php:127 rpr-signup.php:320
+#: rpr-login.php:188 rpr-signup.php:225
 msgid ""
 "Share a little biographical information to fill out your profile. This may "
 "be shown publicly."
@@ -1004,15 +1076,15 @@ msgstr ""
 "Μοιραστείτε λίγα βιογραφικά στοιχεία για να συμπληρώσετε το προφίλ σας. Αυτό "
 "μπορεί να εμφανίζεται δημόσια."
 
-#: rpr-login.php:218 rpr-signup.php:390
+#: rpr-login.php:279 rpr-signup.php:297
 msgid "Password"
 msgstr "Κωδικός"
 
-#: rpr-login.php:224 rpr-signup.php:398
+#: rpr-login.php:285 rpr-signup.php:305
 msgid "Confirm Password"
 msgstr "Επιβεβαίωση Κωδικού"
 
-#: rpr-login.php:230 rpr-signup.php:406
+#: rpr-login.php:292 rpr-signup.php:313
 msgid ""
 "Your password must be at least %d characters long. To make your password "
 "stronger, use upper and lower case letters, numbers, and the following "
@@ -1022,7 +1094,7 @@ msgstr ""
 "τον κωδικό σας πιο δύνατό, χρησιμοποιήστε κεφαλαία και πεζά γράμματα, "
 "νούμερα και κάποιο ή κάποια από τα παρακάτω σύμβολα !@#$%%^&amp;*()"
 
-#: rpr-login.php:243 rpr-signup.php:420
+#: rpr-login.php:303 rpr-signup.php:326
 msgid ""
 "This website is currently closed to public registrations. You will need an "
 "invitation code to register."
@@ -1030,22 +1102,28 @@ msgstr ""
 "Ο ιστότοπος είναι κλειστός για δημόσιες εγγραφές. Θα χρειαστείτε έναν κωδικό "
 "πρόσκλησης για να εγγραφείτε."
 
-#: rpr-login.php:246 rpr-signup.php:422
+#: rpr-login.php:306 rpr-signup.php:328
 msgid "Have an invitation code? Enter it here. (This is not required)"
 msgstr ""
 "Έχετε ένα κώδικά πρόσκλησης; Καταχωρήστε τον εδώ. (Αυτό δεν είναι "
 "υποχρεωτικό)"
 
-#: rpr-login.php:298 rpr-login.php:304 rpr-login.php:309 rpr-login.php:312
-#: rpr-login.php:317 rpr-login.php:322 rpr-login.php:327 rpr-login.php:332
-#: rpr-login.php:337 rpr-login.php:342 rpr-login.php:347 rpr-login.php:355
-#: rpr-login.php:358 rpr-login.php:363 rpr-login.php:366 rpr-login.php:369
-#: rpr-login.php:374 rpr-login.php:385 rpr-login.php:395 rpr-login.php:403
-#: rpr-login.php:408 rpr-login.php:413
+#: rpr-login.php:386 rpr-login.php:403 rpr-login.php:408 rpr-login.php:411
+#: rpr-login.php:416 rpr-login.php:421 rpr-login.php:426 rpr-login.php:431
+#: rpr-login.php:436 rpr-login.php:441 rpr-login.php:446 rpr-login.php:454
+#: rpr-login.php:457 rpr-login.php:463 rpr-login.php:466 rpr-login.php:469
+#: rpr-login.php:477 rpr-login.php:488 rpr-login.php:498 rpr-login.php:507
+#: rpr-login.php:512 rpr-login.php:517
 msgid "ERROR"
 msgstr "ΣΦΑΛΜΑ"
 
-#: rpr-login.php:298
+#: rpr-login.php:387
+#, fuzzy
+#| msgid "Registration Page"
+msgid "Registration not allowed"
+msgstr "Σελίδα Εγγραφής"
+
+#: rpr-login.php:403
 msgid ""
 "Email address is not appropriate as a username, please enter another email "
 "address."
@@ -1053,62 +1131,56 @@ msgstr ""
 "Το email σας δεν είναι αποδεκτό ως Όνομα Χρήστη. Παρακαλώ εισάγετε κάποιο "
 "άλλο email."
 
-#: rpr-login.php:304
-msgid "This username is already registered, please choose another one."
-msgstr ""
-"Το Όνομα Χρήστη που βάλατε χρησιμοποιείται ήδη. Παρακαλώ διαλέξτε κάποιο "
-"άλλο."
-
-#: rpr-login.php:309 rpr-signup.php:519
+#: rpr-login.php:408 rpr-signup.php:644
 #, fuzzy
 msgid "Please confirm your e-mail address."
 msgstr "Παρακαλώ επιβεβαιώστε την διεύθυνση email σας."
 
-#: rpr-login.php:312 rpr-signup.php:522
+#: rpr-login.php:411 rpr-signup.php:647
 #, fuzzy
 msgid "Your e-mail address does not match."
 msgstr "Το email σας και η επιβεβαίωση του δεν ταιριάζουν."
 
-#: rpr-login.php:317 rpr-signup.php:527
+#: rpr-login.php:416 rpr-signup.php:652
 #, fuzzy
 msgid "Please enter your first name."
 msgstr "Παρακαλώ εισάγετε το όνομα σας."
 
-#: rpr-login.php:322 rpr-signup.php:532
+#: rpr-login.php:421 rpr-signup.php:657
 #, fuzzy
 msgid "Please enter your last name."
 msgstr "Παρακαλώ εισάγετε το επώνυμο σας."
 
-#: rpr-login.php:327 rpr-signup.php:537
+#: rpr-login.php:426 rpr-signup.php:662
 #, fuzzy
 msgid "Please enter your website URL."
 msgstr "Παρακαλώ εισάγετε την διεύθυνση URL του ιστότοπου σας."
 
-#: rpr-login.php:332 rpr-signup.php:542
+#: rpr-login.php:431 rpr-signup.php:667
 #, fuzzy
 msgid "Please enter your AIM username."
 msgstr "Παρακαλώ εισάγετε το ονομα χρήστη AIM."
 
-#: rpr-login.php:337 rpr-signup.php:547
+#: rpr-login.php:436 rpr-signup.php:672
 #, fuzzy
 msgid "Please enter your Yahoo IM username."
 msgstr "Παρακαλώ εισάγετε το όνομα χρήστη Yahoo IM."
 
-#: rpr-login.php:342 rpr-signup.php:552
+#: rpr-login.php:441 rpr-signup.php:677
 #, fuzzy
 msgid "Please enter your Jabber / Google Talk username."
 msgstr "Παρακαλώ εισάγετε το όνομα χρήστη Jabber / Google Talk."
 
-#: rpr-login.php:347 rpr-signup.php:557
+#: rpr-login.php:446 rpr-signup.php:682
 #, fuzzy
 msgid "Please enter some information about yourself."
 msgstr "Παρακαλώ εισάγετε μερικές πληροφορίες για εσάς."
 
-#: rpr-login.php:355 rpr-signup.php:565
+#: rpr-login.php:454 rpr-signup.php:690
 msgid "Please enter a value for %s."
 msgstr ""
 
-#: rpr-login.php:358 rpr-signup.php:568
+#: rpr-login.php:457 rpr-signup.php:693
 #, fuzzy
 msgid ""
 "Please enter new value for %s, value specified is not in the correct format."
@@ -1116,44 +1188,50 @@ msgstr ""
 "Παρακαλώ εισάγετε νέα στοιχεία για το %s. Τα στοιχεία που εισάγατε δεν είναι "
 "στην σωστή μορφή."
 
-#: rpr-login.php:363 rpr-signup.php:573
+#: rpr-login.php:463 rpr-signup.php:699
 #, fuzzy
 msgid "Please enter a password."
 msgstr "Παρακαλώ εισάγετε έναν κωδικό."
 
-#: rpr-login.php:366 rpr-signup.php:576
+#: rpr-login.php:466 rpr-signup.php:702
 #, fuzzy
 msgid "Your password must be at least %d characters in length."
 msgstr "Ο κωδικός θα πρέπει να είναι τουλάχιστον %d χαρακτήρες."
 
-#: rpr-login.php:369 rpr-signup.php:579
+#: rpr-login.php:469 rpr-signup.php:705
 #, fuzzy
 msgid "Your password does not match."
 msgstr "Οι κωδικοί δεν ταιριάζουν."
 
-#: rpr-login.php:374 rpr-signup.php:589
+#: rpr-login.php:477 rpr-signup.php:713
 #, fuzzy
 msgid "Please enter an invitation code."
 msgstr "Παρακαλώ εισάγετε έναν κωδικό πρόσκλησης."
 
-#: rpr-login.php:385 rpr-signup.php:600
+#: rpr-login.php:488 rpr-signup.php:724
 #, fuzzy
 msgid "That invitation code is invalid."
 msgstr "Ο κωδικός πρόσκλησης δεν είναι έγκυρος."
 
-#: rpr-login.php:395 rpr-signup.php:610
+#: rpr-login.php:498 rpr-signup.php:734
 msgid ""
 "This invitation code is already in use, please enter a unique invitation "
 "code."
 msgstr ""
 
-#: rpr-login.php:403 rpr-login.php:408 rpr-login.php:413 rpr-signup.php:618
-#: rpr-signup.php:623 rpr-signup.php:628
+#: rpr-login.php:507 rpr-login.php:512 rpr-login.php:517 rpr-signup.php:743
+#: rpr-signup.php:748 rpr-signup.php:753
 #, fuzzy
 msgid "Please accept the %s"
 msgstr "Παρακαλώ αποδεχθείτε το %s"
 
-#: rpr-login.php:445
+#: rpr-login.php:529 rpr-login.php:534
+#, fuzzy
+#| msgid "Invalid verification code."
+msgid "Invalid verification code"
+msgstr "Μη Έγκυρος Κωδικός Επιβεβαίωσης"
+
+#: rpr-login.php:571
 msgid ""
 "Thank you %s, your account has been verified, please login with the password "
 "you specified during registration."
@@ -1161,7 +1239,7 @@ msgstr ""
 "Ευχαριστούμε πολύ %s, ο λογαριασμός σας επιβεβαιώθηκε. Παρακαλώ συνδεθείτε "
 "χρησιμοποιώντας τον κωδικό που εισάγατε κατά την εγγραφή σας στον ιστότοπο."
 
-#: rpr-login.php:447
+#: rpr-login.php:574
 msgid ""
 "Thank you %s, your account has been verified, your password will be emailed "
 "to you."
@@ -1169,30 +1247,105 @@ msgstr ""
 "Ευχαριστούμε πολύ %s, ο λογαριασμός σας επιβεβαιώθηκε. Ο κωδικός σας θα σας "
 "σταλεί στο email σας."
 
-#: rpr-login.php:455
+#: rpr-login.php:583
 msgid "Invalid verification code."
 msgstr "Μη Έγκυρος Κωδικός Επιβεβαίωσης"
 
-#: rpr-signup.php:502
+#: rpr-login.php:585 rpr-login.php:606
+#, fuzzy
+#| msgid "From Email"
+msgid "Verify Email"
+msgstr "Από Email"
+
+#: rpr-signup.php:627
 msgid "Sorry, that username already exists!"
 msgstr ""
 
-#: rpr-signup.php:511
+#: rpr-signup.php:636
 msgid ""
 "That username is currently reserved but may be available in a couple of days."
 msgstr ""
 
-#: rpr-signup.php:514
+#: rpr-signup.php:639
 msgid "username and email used"
 msgstr ""
 
-#. Plugin Name of the plugin/theme
-msgid "Register Plus Redux"
-msgstr "Register Plus Redux - Ελληνική Έκδοση"
+#: rpr-signup.php:782
+msgid ""
+"To activate your user, please click the following link:\n"
+"\n"
+"%verification_url%\n"
+"\n"
+"After you activate, you will receive *another email* with your login."
+msgstr ""
+
+#: rpr-signup.php:783
+msgid "[%from_name%] Activate %user_login%"
+msgstr ""
+
+#: rpr-signup.php:856
+msgid "User registration has been disabled."
+msgstr ""
+
+#: rpr-signup.php:894
+msgid "Site registration has been disabled."
+msgstr ""
+
+#: rpr-signup.php:914 rpr-signup.php:935
+msgid "Your account is now active!"
+msgstr ""
+
+#: rpr-signup.php:918
+msgid ""
+"Your account has been activated. You may now <a href=\"%1$s\">log in</a> to "
+"the site using your chosen username of &#8220;%2$s&#8221;. Please check your "
+"email inbox at %3$s for your password and login instructions. If you do not "
+"receive an email, please check your junk or spam folder. If you still do not "
+"receive an email within an hour, you can <a href=\"%4$s\">reset your "
+"password</a>."
+msgstr ""
+
+#: rpr-signup.php:920
+msgid ""
+"Your site at <a href=\"%1$s\">%2$s</a> is active. You may now log in to your "
+"site using your chosen username of &#8220;%3$s&#8221;. Please check your "
+"email inbox at %4$s for your password and login instructions. If you do not "
+"receive an email, please check your junk or spam folder. If you still do not "
+"receive an email within an hour, you can <a href=\"%5$s\">reset your "
+"password</a>."
+msgstr ""
+
+#: rpr-signup.php:925
+msgid "An error occurred during the activation"
+msgstr ""
+
+#: rpr-signup.php:937
+#, fuzzy
+#| msgid "Username"
+msgid "Username:"
+msgstr "Όνομα Χρήστη"
+
+#: rpr-signup.php:938
+#, fuzzy
+#| msgid "Password"
+msgid "Password:"
+msgstr "Κωδικός"
+
+#: rpr-signup.php:941
+msgid ""
+"Your account is now activated. <a href=\"%1$s\">View your site</a> or <a "
+"href=\"%2$s\">Log in</a>"
+msgstr ""
+
+#: rpr-signup.php:943
+msgid ""
+"Your account is now activated. <a href=\"%1$s\">Log in</a> or go back to the "
+"<a href=\"%2$s\">homepage</a>."
+msgstr ""
 
 #. Plugin URI of the plugin/theme
 #, fuzzy
-msgid "http://radiok.info/blog/category/register-plus-redux/"
+msgid "https://github.com/radiok/register-plus-redux"
 msgstr "http://radiok.info/category/register-plus-redux/"
 
 #. Description of the plugin/theme
@@ -1208,8 +1361,32 @@ msgid "radiok"
 msgstr "radiok"
 
 #. Author URI of the plugin/theme
-msgid "http://radiok.info/"
-msgstr "http://radiok.info/"
+msgid "https://github.com/radiok"
+msgstr ""
+
+#~ msgid "Hacks & Fixes"
+#~ msgstr "Διορθώσεις και Hacks"
+
+#, fuzzy
+#~ msgid "Filter Random Passwords."
+#~ msgstr "Επιβεβαίωση Κωδικού"
+
+#~ msgid "You cannot edit that user."
+#~ msgstr "Δεν μπορείτε να επεξεργαστείτε αυτόν τον χρήστη"
+
+#~ msgid "Temp Username"
+#~ msgstr "Προσωρινό Όνομα Χρήστη"
+
+#~ msgid "Edit"
+#~ msgstr "Επεξεργασία"
+
+#~ msgid "This username is already registered, please choose another one."
+#~ msgstr ""
+#~ "Το Όνομα Χρήστη που βάλατε χρησιμοποιείται ήδη. Παρακαλώ διαλέξτε κάποιο "
+#~ "άλλο."
+
+#~ msgid "http://radiok.info/"
+#~ msgstr "http://radiok.info/"
 
 #~ msgid "Date Field"
 #~ msgstr "Πεδίο Ημερ/νίας"
@@ -1225,9 +1402,6 @@ msgstr "http://radiok.info/"
 
 #~ msgid "You must Save Changes to upload logo."
 #~ msgstr "Θα πρέπει να σώσετε τις αλλαγές για να μεταφορτώσετε ένα λογότυπο."
-
-#~ msgid "Registration Page"
-#~ msgstr "Σελίδα Εγγραφής"
 
 #~ msgid "Name"
 #~ msgstr "Όνομα"

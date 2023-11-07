@@ -426,6 +426,20 @@ if ( !class_exists( 'RPR_Admin_Menu' ) ) {
                         </td>
                     </tr>
                     <?php } ?>
+                    <tr>
+                        <th scope="row">
+                            <?php _e('Minimal registration duration', 'register-plus-redux') ?>
+                        </th>
+                        <td>
+                            <input type="text" name="min_registration_duration" id="min_registration_duration"
+                                   style="width:50px;"
+                                   value="<?= esc_attr($register_plus_redux->rpr_get_option('min_registration_duration')) ?>">
+                            <?php _e('seconds', 'register-plus-redux'); ?>
+                            <br>
+                            <?php _e('A minimal duration of registration to prevent false registrations. Set to 0 to disable this check.',
+                                'register-plus-redux') ?>
+                        </td>
+                    </tr>
                 </table>
                 <h3 class="title"><?php _e( 'Additional Fields', 'register-plus-redux' ); ?></h3>
                 <p><?php _e( 'Enter additional fields to show on the User Profile and/or Registration Pages. Additional fields will be shown after existing profile fields on User Profile, and after selected profile fields on Registration Page but before Password, Invitation Code, Disclaimer, License Agreement, or Privacy Policy (if any of those fields are enabled). Options must be entered for Select, Checkbox, and Radio fields. Options should be entered with commas separating each possible value. For example, a Radio field named "Gender" could have the following options, "Male,Female".', 'register-plus-redux' ); ?></p>
@@ -1277,6 +1291,7 @@ if ( !class_exists( 'RPR_Admin_Menu' ) ) {
             }
             $options['required_fields_asterisk'] = isset( $_POST['required_fields_asterisk'] ) ? '1' : '0';
             $options['starting_tabindex'] = isset( $_POST['starting_tabindex'] ) ? absint( $_POST['starting_tabindex'] ) : 0;
+            $options['min_registration_duration'] = $_POST['min_registration_duration'] ?? 0;
 
             /*
             if ( isset( $_POST['datepicker_firstdayofweek'] ) ) $options['datepicker_firstdayofweek'] = absint( $_POST['datepicker_firstdayofweek'] );
