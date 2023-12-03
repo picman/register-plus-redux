@@ -117,10 +117,13 @@ if ( !class_exists( 'RPR_Login' ) ) {
             global $register_plus_redux;
             $terms_exist = FALSE;
             $_REQUEST = stripslashes_deep( (array) $_REQUEST );
+            $min_expected_seconds_to_register = absint( $register_plus_redux->rpr_get_option( 'min_expected_seconds_to_register' ) );
+            if ( !is_numeric( $min_expected_seconds_to_register ) || $min_expected_seconds_to_register < 1 ) $min_expected_seconds_to_register = 0;
+            if ( $min_expected_seconds_to_register > 0 ) {
+                $now = new DateTimeImmutable();
+                echo "\n", '<input type="hidden" id="registration_timestamp" name="registration_timestamp" value="', $now->getTimestamp(), '">';
+            }
             $tabindex = absint( $register_plus_redux->rpr_get_option( 'starting_tabindex' ) );
-            $now = new DateTime();
-            $registration_timestamp =  $now->getTimestamp();
-            echo PHP_EOL, "<input type=\"hidden\" id=\"regts\" name=\"regts\" value=\"$registration_timestamp\">";
             if ( !is_numeric( $tabindex ) || $tabindex < 1 ) $tabindex = 0;
             if ( '1' === $register_plus_redux->rpr_get_option( 'double_check_email' ) ) {
                 $user_email2 = isset( $_REQUEST['user_email2'] ) ? (string) $_REQUEST['user_email2'] : '';
@@ -373,15 +376,19 @@ if ( !class_exists( 'RPR_Login' ) ) {
 
         public /*.object.*/ function rpr_registration_errors( /*.object.*/ $errors, /*.string.*/ $sanitized_user_login, /*.string.*/ $user_email ) {
             global $register_plus_redux;
-            $now = new DateTime();
-            $now_timestamp =  $now->getTimestamp();
-            $then_timestamp = $_POST['regts'] ?? 0;
-            $limit = $register_plus_redux->rpr_get_option('min_registration_duration') ?? 0;
-            if($now_timestamp - $then_timestamp < $limit) {
-                $errors->add(
-                        'accept_license',
-                        '<strong>' . __( 'ERROR', 'register-plus-redux' ) . '</strong>:&nbsp;' .
-                            __('Registration not allowed', 'register-plus-redux') . '.');
+            $min_expected_seconds_to_register = absint( $register_plus_redux->rpr_get_option( 'min_expected_seconds_to_register' ) );
+            if ( !is_numeric( $min_expected_seconds_to_register ) || $min_expected_seconds_to_register < 1 ) $min_expected_seconds_to_register = 0;
+            if ( $min_expected_seconds_to_register > 0 ) {
+                $now = new DateTimeImmutable();
+                if ( empty( $_POST['registration_timestamp'] ) ) {
+                    $errors->add( 'empty_registration_timestamp', '<strong>' . __( 'ERROR', 'register-plus-redux' ) . '</strong>:&nbsp;' . __( 'Registration not allowed.', 'register-plus-redux' ) );
+                }
+                elseif ( !is_numeric( $_POST['registration_timestamp'] ) ) {
+                    $errors->add( 'invalid_registration_timestamp', '<strong>' . __( 'ERROR', 'register-plus-redux' ) . '</strong>:&nbsp;' . __( 'Registration not allowed.', 'register-plus-redux' ) );
+                }
+                elseif ( ( $now->getTimestamp() - (int) $_POST['registration_timestamp'] ) < $min_expected_seconds_to_register ) {
+                    $errors->add( 'min_expected_seconds_to_register_violation', '<strong>' . __( 'ERROR', 'register-plus-redux' ) . '</strong>:&nbsp;' . __( 'Registration not allowed.', 'register-plus-redux' ) );
+                }
             }
             if ( '1' === $register_plus_redux->rpr_get_option( 'username_is_email' ) ) {
                 if ( is_array( $errors->errors ) && isset( $errors->errors['empty_username'] ) ) {

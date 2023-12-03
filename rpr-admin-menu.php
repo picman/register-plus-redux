@@ -426,18 +426,13 @@ if ( !class_exists( 'RPR_Admin_Menu' ) ) {
                         </td>
                     </tr>
                     <?php } ?>
-                    <tr>
-                        <th scope="row">
-                            <?php _e('Minimal registration duration', 'register-plus-redux') ?>
-                        </th>
+                    <tr valign="top">
+                        <th scope="row"><?php _e( 'Minimal registration duration', 'register-plus-redux' ); ?></th>
                         <td>
-                            <input type="text" name="min_registration_duration" id="min_registration_duration"
-                                   style="width:50px;"
-                                   value="<?= esc_attr($register_plus_redux->rpr_get_option('min_registration_duration')) ?>">
-                            <?php _e('seconds', 'register-plus-redux'); ?>
-                            <br>
-                            <?php _e('A minimal duration of registration to prevent false registrations. Set to 0 to disable this check.',
-                                'register-plus-redux') ?>
+                            <input type="text" name="min_expected_seconds_to_register" id="min_expected_seconds_to_register" style="width:50px;" value="<?php echo esc_attr( $register_plus_redux->rpr_get_option( 'min_expected_seconds_to_register' ) ); ?>">
+                            <?php _e( 'seconds', 'register-plus-redux' ); ?>
+                            <br />
+                            <?php _e( 'A minimal duration of registration to prevent false registrations. Set to 0 to disable this check.', 'register-plus-redux' ) ?>
                         </td>
                     </tr>
                 </table>
