@@ -121,8 +121,9 @@ HTML attributes should go in the following order name -> id -> class
 == Changelog ==
 
 = 4.4 =
-~November, 2023 by picman, radiok
+~December, 2023 by picman, radiok
 
+* New feature, "Minimal registration duration" to combat spammy machine generated users, registrations completed faster than configured timeframe (in seconds) will be rejected
 * Replace use of login_headertitle hook with the newer login_headertext hook, serving the same purpose
 * Bumped the "Requires at least" minimum WordPress version to 5.2 following depreciation of login_headertitle hook
 * Correct some invalid HTML
