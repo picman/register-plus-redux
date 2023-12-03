@@ -160,7 +160,8 @@ if ( !class_exists( 'Register_Plus_Redux' ) ) {
                 'admin_message_subject' => '[' . $blogname . '] ' . __( 'New User Registered', 'register-plus-redux' ),
                 'admin_message_body' => "New user registered on your site %blogname%\n\nUsername: %user_login%\nE-mail: %user_email%\n",
                 'send_admin_message_in_html' => '0',
-                'admin_message_newline_as_br' => '0'
+                'admin_message_newline_as_br' => '0',
+                'min_expected_seconds_to_register' => 0
             );
             if ( !empty( $option ) ) {
                 if ( array_key_exists( $option, $options ) ) {

@@ -1,32 +1,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Register Plus Redux 3.9.5\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/register-plus-redux\n"
-"POT-Creation-Date: 2013-01-21 09:10:25+00:00\n"
-"PO-Revision-Date: 2013-03-02 12:23-0500\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/register-plus-"
+"redux\n"
+"POT-Creation-Date: 2023-11-07 09:22+0100\n"
+"PO-Revision-Date: 2023-11-07 09:28+0100\n"
 "Last-Translator: Will Hinds <radiok@radiok.info>\n"
 "Language-Team: Chen Yang <zcheny@hotmail.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-KeywordsList: __;_e;_n;_x;_ex;_nx;esc_attr__;esc_attr_e;esc_attr_x;"
 "esc_html__;esc_html_e;esc_html_x\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.5.4\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: register-plus-redux.php:68
-msgid "Additional Information"
-msgstr "附加信息"
-
-#: register-plus-redux.php:72 rpr-admin-menu.php:256 rpr-login.php:238
-#: rpr-signup.php:414
-msgid "Invitation Code"
-msgstr "邀请码"
-
-#: register-plus-redux.php:288
+#: register-plus-redux.php:88
 msgid ""
 "<h2>%user_login% is your new username</h2>\n"
 "<p>But, before you can start using your new username, <strong>you must "
@@ -41,40 +33,72 @@ msgstr ""
 "<p>检查您的<strong>%user_email%</strong>收件箱，并点击里面的链接。</p>\n"
 "<p>如果您未能在两天内激活您的用户名，您将不得不重新注册。</p>"
 
-#: register-plus-redux.php:289
+#: register-plus-redux.php:89
 msgid ""
 "Please verify your account using the verification link sent to your email "
 "address."
 msgstr "请使用发送到您邮箱的确认链接对您的帐户进行确认。"
 
-#: register-plus-redux.php:291 rpr-login.php:451
+#: register-plus-redux.php:91 rpr-login.php:579
 msgid ""
 "Your account will be reviewed by an administrator and you will be notified "
 "when it is activated."
 msgstr "您的帐户将等待管理员批准，一旦激活后您将会收到通知。"
 
-#: register-plus-redux.php:347
+#: register-plus-redux.php:142
 msgid "Your Login Information"
 msgstr "您的登录信息"
 
-#: register-plus-redux.php:354
+#: register-plus-redux.php:149
 msgid "Verify Your Account"
 msgstr "确认您的帐户"
 
-#: register-plus-redux.php:365
+#: register-plus-redux.php:160
 msgid "New User Registered"
 msgstr "新用户已注册"
 
-#: rpr-admin-menu.php:19
+#: register-plus-redux.php:322
+msgid "Additional Information"
+msgstr "附加信息"
+
+#: register-plus-redux.php:326 rpr-admin-menu.php:283 rpr-login.php:298
+#: rpr-signup.php:320
+msgid "Invitation Code"
+msgstr "邀请码"
+
+#: register-plus-redux.php:410 rpr-admin-menu.php:472
+msgid "Terms"
+msgstr ""
+
+#: register-plus-redux.php:424
+msgid "Last Revised:"
+msgstr ""
+
+#: register-plus-redux.php:425
+msgid "Accepted:"
+msgstr ""
+
+#: rpr-activate.php:16
+#, fuzzy
+#| msgid "Register Plus Redux Settings"
+msgid "Register Plus Redux DEBUG: rpr_activate_init from %s"
+msgstr "Register Plus Redux设置"
+
+#: rpr-admin-menu.php:23
+#, fuzzy
+#| msgid ""
+#| "Register Plus Redux requires WordPress 3.2 or greater. You are currently "
+#| "using WordPress %s, please upgrade WordPress or deactivate Register Plus "
+#| "Redux."
 msgid ""
-"Register Plus Redux requires WordPress 3.2 or greater. You are currently "
+"Register Plus Redux requires WordPress 3.5 or greater. You are currently "
 "using WordPress %s, please upgrade WordPress or deactivate Register Plus "
 "Redux."
 msgstr ""
 "Register Plus Redux需要WordPress 3.2或以上版本。您现在使用的是WordPress %s，"
 "请升级或停用Register Plus Redux。"
 
-#: rpr-admin-menu.php:26
+#: rpr-admin-menu.php:30
 msgid ""
 "Register Plus Redux must be Network Activated by Super Admin under WordPress "
 "Multisite. You will have limited functionality while not Network Activated. "
@@ -84,43 +108,55 @@ msgstr ""
 "活。未激活前，您只能使用部分功能。请联系<a href=\"%s\">radiok.info</a>寻求帮"
 "助来解决这个问题。"
 
-#: rpr-admin-menu.php:32
+#: rpr-admin-menu.php:37
+#, fuzzy
+#| msgid ""
+#| "There is another active plugin that is conflicting with Register Plus "
+#| "Redux. The conflicting plugin is creating its own "
+#| "wp_new_user_notification function, this function is used to alter the "
+#| "messages sent out following the creation of a new user. Please refer to "
+#| "<a href=\"%s\">radiok.info</a> for help resolving this issue."
 msgid ""
 "There is another active plugin that is conflicting with Register Plus Redux. "
 "The conflicting plugin is creating its own wp_new_user_notification "
 "function, this function is used to alter the messages sent out following the "
-"creation of a new user. Please refer to <a href=\"%s\">radiok.info</a> for "
+"creation of a new user. Please refer to the <a href=\"%s\">project</a> for "
 "help resolving this issue."
 msgstr ""
 "另一个已启用的插件与Register Plus Redux发生冲突。这个插件创建了它自己的"
 "wp_new_user_notification函数，这个函数用来改变用户创建后所发送的消息。请联系"
 "<a href=\"%s\">radiok.info</a>寻求帮助以解决该问题。"
 
-#: rpr-admin-menu.php:40 rpr-admin-menu.php:78
-msgid "Register Plus Redux Settings"
-msgstr "Register Plus Redux设置"
+#. Plugin Name of the plugin/theme
+#: rpr-admin-menu.php:44
+msgid "Register Plus Redux"
+msgstr "Register Plus Redux"
 
-#: rpr-admin-menu.php:47 rpr-admin-menu.php:1008
+#: rpr-admin-menu.php:59 rpr-admin-menu.php:1151
 msgid "Unverified Users"
 msgstr "未验证的用户"
 
-#: rpr-admin-menu.php:52
+#: rpr-admin-menu.php:65 rpr-admin-menu.php:68
 msgid "Settings"
 msgstr "设置"
 
-#: rpr-admin-menu.php:74
+#: rpr-admin-menu.php:103
 msgid "Settings Saved"
 msgstr "设定已保存"
 
-#: rpr-admin-menu.php:84
+#: rpr-admin-menu.php:107
+msgid "Register Plus Redux Settings"
+msgstr "Register Plus Redux设置"
+
+#: rpr-admin-menu.php:113
 msgid "Custom Logo URL"
 msgstr "自定义商标图片URL"
 
-#: rpr-admin-menu.php:86
+#: rpr-admin-menu.php:115
 msgid "Upload Image"
 msgstr "上传图片"
 
-#: rpr-admin-menu.php:87
+#: rpr-admin-menu.php:116
 msgid ""
 "Custom Logo will be shown on Registration and Login Forms in place of the "
 "default Wordpress logo. For the best results custom logo should not exceed "
@@ -129,23 +165,23 @@ msgstr ""
 "自定义的商标图片将显示在注册和登录窗口中WordPress图标的默认位置。为了达到最佳"
 "效果，图片宽度不要超过350px。"
 
-#: rpr-admin-menu.php:92
+#: rpr-admin-menu.php:121
 msgid "Remove Logo"
 msgstr "移除图片"
 
-#: rpr-admin-menu.php:93
+#: rpr-admin-menu.php:122
 msgid "You must Save Changes to remove logo."
 msgstr "您必须保存设定以移除图片"
 
-#: rpr-admin-menu.php:98
+#: rpr-admin-menu.php:128
 msgid "Email Verification"
 msgstr "邮件确认"
 
-#: rpr-admin-menu.php:100
+#: rpr-admin-menu.php:130
 msgid "Verify all new users email address..."
 msgstr "确认所有新用户邮件地址..."
 
-#: rpr-admin-menu.php:101
+#: rpr-admin-menu.php:131
 msgid ""
 "A verification code will be sent to any new users email address, new users "
 "will not be able to login or reset their password until they have completed "
@@ -155,21 +191,21 @@ msgstr ""
 "确认码将会发送至新用户的邮件地址，新用户在完成确认流程前将无法登陆或重置密"
 "码。管理员可以在未确认用户页面自行授权新用户。"
 
-#: rpr-admin-menu.php:103
+#: rpr-admin-menu.php:133
 msgid ""
 "The following message will be shown to users after registering. You may "
 "include HTML in this message."
 msgstr "下列消息将在注册后显示给用户。你可以在消息中包含HTML。"
 
-#: rpr-admin-menu.php:110
+#: rpr-admin-menu.php:139 rpr-login.php:626
 msgid "Admin Verification"
 msgstr "管理员确认"
 
-#: rpr-admin-menu.php:112
+#: rpr-admin-menu.php:141
 msgid "Moderate all new user registrations..."
 msgstr "所有新用户注册需要批准..."
 
-#: rpr-admin-menu.php:113
+#: rpr-admin-menu.php:142
 msgid ""
 "New users will not be able to login or reset their password until they have "
 "been authorized by an administrator from the Unverified Users Page. If both "
@@ -181,7 +217,7 @@ msgstr ""
 "选项都被使用，那么无论新用户是否完成了确认流程，他们都将无法进行登录，直到管"
 "理员进行了授权。"
 
-#: rpr-admin-menu.php:115
+#: rpr-admin-menu.php:144
 msgid ""
 "The following message will be shown to users after registering (or verifying "
 "their email if both verification options are enabled). You may include HTML "
@@ -190,15 +226,15 @@ msgstr ""
 "下列消息将在注册完成后显示给用户（或确认他们的邮件后，如果两个确认选项都被使"
 "用）。你可以在消息中包含HTML。"
 
-#: rpr-admin-menu.php:121
+#: rpr-admin-menu.php:150
 msgid "Grace Period"
 msgstr "宽限期"
 
-#: rpr-admin-menu.php:123
+#: rpr-admin-menu.php:152
 msgid "days"
 msgstr "天"
 
-#: rpr-admin-menu.php:124
+#: rpr-admin-menu.php:153
 msgid ""
 "All unverified users will automatically be deleted after the Grace Period "
 "specified, to disable this process enter 0 to never automatically delete "
@@ -207,11 +243,11 @@ msgstr ""
 "在指定的限期后，未确认的用户将被自动删除。可以输入0来停止自动删除未确认的用"
 "户。"
 
-#: rpr-admin-menu.php:128
+#: rpr-admin-menu.php:157
 msgid "Registration Redirect"
 msgstr "注册重定向"
 
-#: rpr-admin-menu.php:131
+#: rpr-admin-menu.php:160
 msgid ""
 "By default, after registering, users will be sent to %s/wp-login.php?"
 "checkemail=registered, leave this value empty if you do not wish to change "
@@ -222,11 +258,11 @@ msgstr ""
 "你不希望改变这个行为，请将该项保留为空值。你可以在此输入另外一个地址，然而，"
 "如果那个地址使用不同的域名，WordPress将不会进行重定向。"
 
-#: rpr-admin-menu.php:135
+#: rpr-admin-menu.php:164
 msgid "Verification Redirect"
 msgstr "确认重定向"
 
-#: rpr-admin-menu.php:138
+#: rpr-admin-menu.php:167
 msgid ""
 "By default, after verifying, users will be sent to %s/wp-login.php, leave "
 "this value empty if you do not wish to change this behavior. You may enter "
@@ -237,15 +273,15 @@ msgstr ""
 "为，请保留该项为空。你可以在此输入另一个地址，然而，如果那个地址使用不同的域"
 "名，WordPress将不会进行重定向。"
 
-#: rpr-admin-menu.php:143
+#: rpr-admin-menu.php:171
 msgid "Autologin user"
 msgstr "自动登录用户"
 
-#: rpr-admin-menu.php:145
+#: rpr-admin-menu.php:173
 msgid "Autologin user after registration."
 msgstr "注册后，自动登录用户。"
 
-#: rpr-admin-menu.php:146
+#: rpr-admin-menu.php:174
 msgid ""
 "Works if Email Verification and Admin Verification are turned off. By "
 "default users will be sent to %s, to change this behavior, set up "
@@ -254,21 +290,21 @@ msgstr ""
 "邮件确认和管理员确认选项关闭后有效。默认用户将被发送到%s，要改变这个行为，请"
 "设置上面的注册重定向选项。"
 
-#: rpr-admin-menu.php:152
+#: rpr-admin-menu.php:179
 msgid "Registration Form"
 msgstr "注册表单"
 
-#: rpr-admin-menu.php:153
+#: rpr-admin-menu.php:180
 msgid ""
 "Select which fields to show on the Registration Form. Users will not be able "
 "to register without completing any fields marked required."
 msgstr "选择显示在注册页面的输入项。用户如果没有完成所有的必填项，将无法注册。"
 
-#: rpr-admin-menu.php:155
+#: rpr-admin-menu.php:182
 msgid "Signup Form"
 msgstr "注册页面"
 
-#: rpr-admin-menu.php:156
+#: rpr-admin-menu.php:183
 msgid ""
 "Select which fields to show on the Signup Form. Users will not be able to "
 "signup without completing any fields marked required."
@@ -276,223 +312,223 @@ msgstr ""
 "选择显示在注册(Signup)页面的输入项。用户如果没有输入所有必填项，将无法完成注"
 "册(signup)。"
 
-#: rpr-admin-menu.php:160
+#: rpr-admin-menu.php:187
 msgid "Use Email as Username"
 msgstr "使用邮箱作为用户名"
 
-#: rpr-admin-menu.php:161
+#: rpr-admin-menu.php:188
 msgid ""
 "New users will not be asked to enter a username, instead their email address "
 "will be used as their username."
 msgstr "新用户可以不输入用户名，他们的邮件地址将作为用户名。"
 
-#: rpr-admin-menu.php:164
+#: rpr-admin-menu.php:191
 msgid "Confirm Email"
 msgstr "确认邮件"
 
-#: rpr-admin-menu.php:165
+#: rpr-admin-menu.php:192
 msgid "Require new users to enter e-mail address twice during registration."
 msgstr "注册时要求新用户输入两次邮件地址。"
 
-#: rpr-admin-menu.php:168
+#: rpr-admin-menu.php:195
 msgid "Profile Fields"
 msgstr "个人资料栏"
 
-#: rpr-admin-menu.php:173
+#: rpr-admin-menu.php:200
 msgid "Show"
 msgstr "显示"
 
-#: rpr-admin-menu.php:174
+#: rpr-admin-menu.php:201
 msgid "Require"
 msgstr "必填项"
 
-#: rpr-admin-menu.php:178 rpr-login.php:72 rpr-signup.php:249
+#: rpr-admin-menu.php:205 rpr-login.php:139 rpr-signup.php:160
 msgid "First Name"
 msgstr "名"
 
-#: rpr-admin-menu.php:183 rpr-login.php:81 rpr-signup.php:260
+#: rpr-admin-menu.php:210 rpr-login.php:147 rpr-signup.php:170
 msgid "Last Name"
 msgstr "姓"
 
-#: rpr-admin-menu.php:188 rpr-login.php:90 rpr-signup.php:271
+#: rpr-admin-menu.php:215 rpr-login.php:155 rpr-signup.php:180
 msgid "Website"
 msgstr "网站"
 
-#: rpr-admin-menu.php:193 rpr-login.php:99 rpr-signup.php:282
+#: rpr-admin-menu.php:220 rpr-login.php:163 rpr-signup.php:190
 msgid "AIM"
 msgstr "AIM"
 
-#: rpr-admin-menu.php:198 rpr-login.php:108 rpr-signup.php:293
+#: rpr-admin-menu.php:225 rpr-login.php:171 rpr-signup.php:200
 msgid "Yahoo IM"
 msgstr "雅虎通"
 
-#: rpr-admin-menu.php:203 rpr-login.php:117 rpr-signup.php:304
+#: rpr-admin-menu.php:230 rpr-login.php:179 rpr-signup.php:210
 msgid "Jabber / Google Talk"
 msgstr "Jabber / Google Talk"
 
-#: rpr-admin-menu.php:208 rpr-login.php:126 rpr-signup.php:315
+#: rpr-admin-menu.php:235 rpr-login.php:187 rpr-signup.php:220
 msgid "About Yourself"
 msgstr "关于你自己"
 
-#: rpr-admin-menu.php:217
+#: rpr-admin-menu.php:244
 msgid "User Set Password"
 msgstr "用户设置密码"
 
-#: rpr-admin-menu.php:219
+#: rpr-admin-menu.php:246
 msgid "Require new users enter a password during registration..."
 msgstr "在注册过程中要求新用户输入一个密码..."
 
-#: rpr-admin-menu.php:221
+#: rpr-admin-menu.php:248
 msgid "Minimum password length: "
 msgstr "最短密码长度："
 
-#: rpr-admin-menu.php:222
+#: rpr-admin-menu.php:249
 msgid "Do not require users to confirm password."
 msgstr "不要求用户确认密码。"
 
-#: rpr-admin-menu.php:223
+#: rpr-admin-menu.php:250
 msgid "Show password strength meter..."
 msgstr "显示密码强度指示"
 
-#: rpr-admin-menu.php:227
+#: rpr-admin-menu.php:254
 msgid "Empty"
 msgstr "空白"
 
-#: rpr-admin-menu.php:231
+#: rpr-admin-menu.php:258
 msgid "Short"
 msgstr "过短"
 
-#: rpr-admin-menu.php:235
+#: rpr-admin-menu.php:262
 msgid "Bad"
 msgstr "不安全"
 
-#: rpr-admin-menu.php:239
+#: rpr-admin-menu.php:266
 msgid "Good"
 msgstr "好"
 
-#: rpr-admin-menu.php:243
+#: rpr-admin-menu.php:270
 msgid "Strong"
 msgstr "强"
 
-#: rpr-admin-menu.php:247
+#: rpr-admin-menu.php:274
 msgid "Mismatch"
 msgstr "不一致"
 
-#: rpr-admin-menu.php:258
+#: rpr-admin-menu.php:285
 msgid "Use invitation codes to track or authorize new user registration..."
 msgstr "使用邀请码来跟踪或授权新用户注册..."
 
-#: rpr-admin-menu.php:260
+#: rpr-admin-menu.php:287
 msgid ""
 "Require new user enter one of the following invitation codes to register."
 msgstr "要求新用户输入下列邀请码完成注册。"
 
-#: rpr-admin-menu.php:261
+#: rpr-admin-menu.php:288
 msgid "Enforce case-sensitivity of invitation codes."
 msgstr "强制邀请码大小写敏感。"
 
-#: rpr-admin-menu.php:262
+#: rpr-admin-menu.php:289
 msgid "Each invitation code may only be used once."
 msgstr "每个邀请码只能使用一次。"
 
-#: rpr-admin-menu.php:263
+#: rpr-admin-menu.php:290
 msgid "Show Invitation Code Tracking widget on Dashboard."
 msgstr "在控制面板上显示邀请码跟踪部件。"
 
-#: rpr-admin-menu.php:272 rpr-admin-menu.php:676 rpr-admin-menu.php:677
+#: rpr-admin-menu.php:299 rpr-admin-menu.php:727 rpr-admin-menu.php:728
 msgid "Remove Code"
 msgstr "移除代码"
 
-#: rpr-admin-menu.php:275
+#: rpr-admin-menu.php:302
 msgid "Show %d hidden invitation code"
 msgid_plural "Show %d hidden invitation codes"
 msgstr[0] "显示%d个隐藏的邀请码"
 
-#: rpr-admin-menu.php:279
+#: rpr-admin-menu.php:308
 msgid "Add Code"
 msgstr "添加代码"
 
-#: rpr-admin-menu.php:279
+#: rpr-admin-menu.php:308
 msgid "Add a new invitation code"
 msgstr "添加新的邀请码"
 
-#: rpr-admin-menu.php:284
+#: rpr-admin-menu.php:313
 msgid "Disclaimer"
 msgstr "免责申明"
 
-#: rpr-admin-menu.php:286
+#: rpr-admin-menu.php:315
 msgid "Show Disclaimer during registration..."
 msgstr "注册时显示免责申明..."
 
-#: rpr-admin-menu.php:291
+#: rpr-admin-menu.php:320
 msgid "Disclaimer Title"
 msgstr "免责申明标题"
 
-#: rpr-admin-menu.php:299
+#: rpr-admin-menu.php:328
 msgid "Disclaimer Content"
 msgstr "免责申明正文"
 
-#: rpr-admin-menu.php:305 rpr-admin-menu.php:337 rpr-admin-menu.php:369
+#: rpr-admin-menu.php:334 rpr-admin-menu.php:366 rpr-admin-menu.php:398
 msgid "Require Agreement"
 msgstr "要求协议"
 
-#: rpr-admin-menu.php:316
+#: rpr-admin-menu.php:345
 msgid "License Agreement"
 msgstr "许可证协议"
 
-#: rpr-admin-menu.php:318
+#: rpr-admin-menu.php:347
 msgid "Show License Agreement during registration..."
 msgstr "注册时显示许可证协议..."
 
-#: rpr-admin-menu.php:323
+#: rpr-admin-menu.php:352
 msgid "License Agreement Title"
 msgstr "许可证协议标题"
 
-#: rpr-admin-menu.php:331
+#: rpr-admin-menu.php:360
 msgid "License Agreement Content"
 msgstr "许可证协议正文"
 
-#: rpr-admin-menu.php:348
+#: rpr-admin-menu.php:377
 msgid "Privacy Policy"
 msgstr "隐私规定"
 
-#: rpr-admin-menu.php:350
+#: rpr-admin-menu.php:379
 msgid "Show Privacy Policy during registration..."
 msgstr "注册时显示隐私规定..."
 
-#: rpr-admin-menu.php:355
+#: rpr-admin-menu.php:384
 msgid "Privacy Policy Title"
 msgstr "隐私规定标题"
 
-#: rpr-admin-menu.php:363
+#: rpr-admin-menu.php:392
 msgid "Privacy Policy Content"
 msgstr "隐私规定正文"
 
-#: rpr-admin-menu.php:380
+#: rpr-admin-menu.php:409
 msgid "Use Default Style Rules"
 msgstr "使用默认样式规则"
 
-#: rpr-admin-menu.php:381
+#: rpr-admin-menu.php:410
 msgid "Apply default Wordpress styling to all fields."
 msgstr "将默认WordPress样式应用到所有栏目。"
 
-#: rpr-admin-menu.php:384
+#: rpr-admin-menu.php:413
 msgid "Required Fields Style Rules"
 msgstr "必填项样式规则"
 
-#: rpr-admin-menu.php:388
+#: rpr-admin-menu.php:417
 msgid "Required Fields Asterisk"
 msgstr "必填项指示符"
 
-#: rpr-admin-menu.php:389
+#: rpr-admin-menu.php:418
 msgid "Add asterisk to left of all required field's name."
 msgstr "所有必填项的标题左边添加星号。"
 
-#: rpr-admin-menu.php:393
+#: rpr-admin-menu.php:422
 msgid "Starting Tabindex"
 msgstr "起始Tab选取序号"
 
-#: rpr-admin-menu.php:396
+#: rpr-admin-menu.php:425
 msgid ""
 "The first field added will have this tabindex, the tabindex will increment "
 "by 1 for each additional field. Enter 0 to remove all tabindex's."
@@ -500,11 +536,27 @@ msgstr ""
 "第一个输入项将使用这个Tab选取序号，后续的输入项序号将会自动加1。输入0取消所有"
 "的Tab选取序号。"
 
-#: rpr-admin-menu.php:401
+#: rpr-admin-menu.php:432
+#, fuzzy
+#| msgid "Registration Redirect"
+msgid "Minimal registration duration"
+msgstr "注册重定向"
+
+#: rpr-admin-menu.php:438
+msgid "seconds"
+msgstr ""
+
+#: rpr-admin-menu.php:440
+msgid ""
+"A minimal duration of registration to prevent false registrations. Set to 0 "
+"to disable this check."
+msgstr ""
+
+#: rpr-admin-menu.php:446
 msgid "Additional Fields"
 msgstr "附加输入项"
 
-#: rpr-admin-menu.php:402
+#: rpr-admin-menu.php:447
 msgid ""
 "Enter additional fields to show on the User Profile and/or Registration "
 "Pages. Additional fields will be shown after existing profile fields on User "
@@ -521,99 +573,125 @@ msgstr ""
 "项)。对于选择框、检查框和单选框，选项值必须事先输入。所有的选项值之间使用逗号"
 "分隔。例如，一个名称为“性别”的单选项，可以使用下列选项值：“男,女”。"
 
-#: rpr-admin-menu.php:413
+#: rpr-admin-menu.php:458
 msgid "Reorder"
 msgstr "重新排序"
 
-#: rpr-admin-menu.php:413
+#: rpr-admin-menu.php:458
 msgid "Drag to Reorder"
 msgstr "拖拽来重新排序"
 
-#: rpr-admin-menu.php:418
+#: rpr-admin-menu.php:458 rpr-admin-menu.php:943 rpr-admin-menu.php:948
+#, fuzzy
+#| msgid "Settings"
+msgid "Show Settings"
+msgstr "设置"
+
+#: rpr-admin-menu.php:463
 msgid "Display"
 msgstr "显示"
 
-#: rpr-admin-menu.php:420
+#: rpr-admin-menu.php:465
 msgid "Textbox Field"
 msgstr "文字输入框"
 
-#: rpr-admin-menu.php:421
+#: rpr-admin-menu.php:466
 msgid "Select Field"
 msgstr "选择框"
 
-#: rpr-admin-menu.php:422
+#: rpr-admin-menu.php:467
 msgid "Checkbox Fields"
 msgstr "检查框"
 
-#: rpr-admin-menu.php:423
+#: rpr-admin-menu.php:468
 msgid "Radio Fields"
 msgstr "单选框"
 
-#: rpr-admin-menu.php:424
+#: rpr-admin-menu.php:469
 msgid "Text Area"
 msgstr "多行文本输入区"
 
-#: rpr-admin-menu.php:425
+#: rpr-admin-menu.php:470
 msgid "Hidden Field"
 msgstr "隐藏项"
 
-#: rpr-admin-menu.php:426
+#: rpr-admin-menu.php:471
 msgid "Static Text"
 msgstr "静态文本"
 
-#: rpr-admin-menu.php:429
+#: rpr-admin-menu.php:475
 msgid "Options"
 msgstr "选项"
 
-#: rpr-admin-menu.php:432
+#: rpr-admin-menu.php:478
 msgid "Database Key"
 msgstr "数据库键"
 
-#: rpr-admin-menu.php:435
+#: rpr-admin-menu.php:481
 msgid "Show on Profile"
 msgstr "显示在个人资料"
 
-#: rpr-admin-menu.php:438
+#: rpr-admin-menu.php:484
 msgid "Show on Registration"
 msgstr "显示在注册页"
 
-#: rpr-admin-menu.php:441
+#: rpr-admin-menu.php:487
 msgid "Required Field"
 msgstr "必填项"
 
-#: rpr-admin-menu.php:444
+#: rpr-admin-menu.php:490
+msgid "Show Datepicker"
+msgstr ""
+
+#: rpr-admin-menu.php:493
+#, fuzzy
+#| msgid "Disclaimer Content"
+msgid "Terms Content"
+msgstr "免责申明正文"
+
+#: rpr-admin-menu.php:496
+#, fuzzy
+#| msgid "License Agreement Title"
+msgid "Terms Agreement Text"
+msgstr "许可证协议标题"
+
+#: rpr-admin-menu.php:499
+msgid "Revised"
+msgstr ""
+
+#: rpr-admin-menu.php:502
 msgid "Actions"
 msgstr "操作"
 
-#: rpr-admin-menu.php:445 rpr-admin-menu.php:709
+#: rpr-admin-menu.php:503 rpr-admin-menu.php:760
 msgid "Help"
 msgstr "帮助"
 
-#: rpr-admin-menu.php:445
+#: rpr-admin-menu.php:503
 msgid "No help available"
 msgstr "无可用帮助"
 
-#: rpr-admin-menu.php:446 rpr-admin-menu.php:701
+#: rpr-admin-menu.php:504 rpr-admin-menu.php:752
 msgid "Remove"
 msgstr "移除"
 
-#: rpr-admin-menu.php:446 rpr-admin-menu.php:702
+#: rpr-admin-menu.php:504 rpr-admin-menu.php:753
 msgid "Remove Field"
 msgstr "移除输入项"
 
-#: rpr-admin-menu.php:457
+#: rpr-admin-menu.php:516
 msgid "Add Field"
 msgstr "添加输入项"
 
-#: rpr-admin-menu.php:457
+#: rpr-admin-menu.php:516
 msgid "Add a new custom field."
 msgstr "添加一个新的自定义输入项。"
 
-#: rpr-admin-menu.php:496
+#: rpr-admin-menu.php:555
 msgid "Autocomplete URL"
 msgstr "Auto-Complete URL"
 
-#: rpr-admin-menu.php:497
+#: rpr-admin-menu.php:556
 msgid ""
 "You can create a URL to autocomplete specific fields for the user. "
 "Additional fields use the database key. Included below are available keys "
@@ -622,306 +700,310 @@ msgstr ""
 "你现在创建一个URL来为用户自动完成特定栏目。其余栏目使用数据库键(key)。包含在"
 "下面的是可用的查询键值和一个查询URL的样例。"
 
-#: rpr-admin-menu.php:501
+#: rpr-admin-menu.php:560
 msgid "New User Message Settings"
 msgstr "新用户消息设置"
 
-#: rpr-admin-menu.php:504
+#: rpr-admin-menu.php:563
 msgid "New User Message"
 msgstr "新用户消息"
 
-#: rpr-admin-menu.php:506
+#: rpr-admin-menu.php:565
 msgid "Do NOT send user an email after they are registered"
 msgstr "用户注册后<strong>不</strong>发送邮件给他们"
 
-#: rpr-admin-menu.php:507
+#: rpr-admin-menu.php:566
 msgid "Do NOT send user an email when created by an administrator"
 msgstr "管理员创建后<strong>不</strong>发送邮件给用户"
 
-#: rpr-admin-menu.php:511
+#: rpr-admin-menu.php:570
 msgid "Custom New User Message"
 msgstr "自定义新用户消息"
 
-#: rpr-admin-menu.php:513 rpr-admin-menu.php:544 rpr-admin-menu.php:592
+#: rpr-admin-menu.php:572 rpr-admin-menu.php:603 rpr-admin-menu.php:651
 msgid "Enable..."
 msgstr "启用..."
 
-#: rpr-admin-menu.php:517 rpr-admin-menu.php:548 rpr-admin-menu.php:596
+#: rpr-admin-menu.php:576 rpr-admin-menu.php:607 rpr-admin-menu.php:655
 msgid "From Email"
 msgstr "发件人邮箱"
 
-#: rpr-admin-menu.php:518 rpr-admin-menu.php:522 rpr-admin-menu.php:526
-#: rpr-admin-menu.php:531 rpr-admin-menu.php:549 rpr-admin-menu.php:553
-#: rpr-admin-menu.php:557 rpr-admin-menu.php:562 rpr-admin-menu.php:597
-#: rpr-admin-menu.php:601 rpr-admin-menu.php:605 rpr-admin-menu.php:610
+#: rpr-admin-menu.php:577 rpr-admin-menu.php:581 rpr-admin-menu.php:585
+#: rpr-admin-menu.php:590 rpr-admin-menu.php:608 rpr-admin-menu.php:612
+#: rpr-admin-menu.php:616 rpr-admin-menu.php:621 rpr-admin-menu.php:656
+#: rpr-admin-menu.php:660 rpr-admin-menu.php:664 rpr-admin-menu.php:669
 msgid "Restore Default"
 msgstr "恢复默认设定"
 
-#: rpr-admin-menu.php:521 rpr-admin-menu.php:552 rpr-admin-menu.php:600
+#: rpr-admin-menu.php:580 rpr-admin-menu.php:611 rpr-admin-menu.php:659
 msgid "From Name"
 msgstr "发件人名称"
 
-#: rpr-admin-menu.php:525 rpr-admin-menu.php:556 rpr-admin-menu.php:604
+#: rpr-admin-menu.php:584 rpr-admin-menu.php:615 rpr-admin-menu.php:663
 msgid "Subject"
 msgstr "主题"
 
-#: rpr-admin-menu.php:530 rpr-admin-menu.php:561
+#: rpr-admin-menu.php:589 rpr-admin-menu.php:620
 msgid "User Message"
 msgstr "用户消息"
 
-#: rpr-admin-menu.php:532 rpr-admin-menu.php:563 rpr-admin-menu.php:611
+#: rpr-admin-menu.php:591 rpr-admin-menu.php:622 rpr-admin-menu.php:670
 msgid "Replacement Keywords"
 msgstr "替换关键字"
 
-#: rpr-admin-menu.php:533 rpr-admin-menu.php:564 rpr-admin-menu.php:612
+#: rpr-admin-menu.php:592 rpr-admin-menu.php:623 rpr-admin-menu.php:671
 msgid "Send as HTML"
 msgstr "以HTML格式发送"
 
-#: rpr-admin-menu.php:534 rpr-admin-menu.php:565 rpr-admin-menu.php:613
+#: rpr-admin-menu.php:593 rpr-admin-menu.php:624 rpr-admin-menu.php:672
 msgid "Convert new lines to &lt;br /&gt; tags (HTML only)"
 msgstr "将换行符转换成&lt;br /&gt; tags（仅HTML有效）"
 
-#: rpr-admin-menu.php:542
+#: rpr-admin-menu.php:601
 msgid "Custom Verification Message"
 msgstr "自定义确认消息"
 
-#: rpr-admin-menu.php:573 rpr-admin-menu.php:621
+#: rpr-admin-menu.php:632 rpr-admin-menu.php:680
 msgid "Summary"
 msgstr "概要"
 
-#: rpr-admin-menu.php:579
+#: rpr-admin-menu.php:638
 msgid "Admin Notification Settings"
 msgstr "管理员通知设定"
 
-#: rpr-admin-menu.php:582
+#: rpr-admin-menu.php:641
 msgid "Admin Notification"
 msgstr "管理员通知"
 
-#: rpr-admin-menu.php:584
+#: rpr-admin-menu.php:643
 msgid "Do NOT send administrator an email whenever a new user registers"
 msgstr "新用户注册后<strong>不</strong>向管理员发送邮件"
 
-#: rpr-admin-menu.php:585
+#: rpr-admin-menu.php:644
 msgid ""
 "Do NOT send administrator an email whenever a new user is created by an "
 "administrator"
 msgstr "管理员创建用户后<strong>不</strong>向管理员发送邮件"
 
-#: rpr-admin-menu.php:586
+#: rpr-admin-menu.php:645
 msgid "Send administrator an email after a new user is verified"
 msgstr "新用户确认后向管理员发送邮件"
 
-#: rpr-admin-menu.php:590
+#: rpr-admin-menu.php:649
 msgid "Custom Admin Notification"
 msgstr "自定义管理员通知"
 
-#: rpr-admin-menu.php:609
+#: rpr-admin-menu.php:668
 msgid "Admin Message"
 msgstr "管理员消息"
 
-#: rpr-admin-menu.php:628
+#: rpr-admin-menu.php:687
 msgid "Custom CSS for Register & Login Pages"
 msgstr "自定义注册页面和登录页面样式表"
 
-#: rpr-admin-menu.php:629
+#: rpr-admin-menu.php:688
 msgid "CSS Rule Example:"
 msgstr "样式表规则样例："
 
-#: rpr-admin-menu.php:632
+#: rpr-admin-menu.php:691
 msgid "Custom Register CSS"
 msgstr "自定义注册样式表"
 
-#: rpr-admin-menu.php:636
+#: rpr-admin-menu.php:695
 msgid "Custom Login CSS"
 msgstr "自定义登录样式表"
 
-#: rpr-admin-menu.php:641
-msgid "Hacks & Fixes"
-msgstr "破解和修复"
-
-#: rpr-admin-menu.php:644
-msgid "Random Password Appears in Messages"
-msgstr "随机密码显示在消息中"
-
-#: rpr-admin-menu.php:646
-msgid "Filter Random Passwords."
-msgstr "过滤随机密码。"
-
-#: rpr-admin-menu.php:647
-msgid ""
-"When user set password is enabled, and another plugin is being used to "
-"modify outgoing messages, a random password may appear in those messages, "
-"regardless of the fact that a user entered password was specified. This "
-"option will filter all password requests and show the user entered password "
-"if possible."
-msgstr ""
-"当用户设置密码启用，且存在其他对发出消息进行修改的插件，尽管用户输入的密码已"
-"经设定，一个随机密码仍可能出现在这些消息中。这个选项将过滤所有的密码请求，并"
-"尽可能显示用户输入的密码。"
-
-#: rpr-admin-menu.php:652
+#: rpr-admin-menu.php:700
 msgid "Save Changes"
 msgstr "保存设定"
 
-#: rpr-admin-menu.php:653
+#: rpr-admin-menu.php:702
 msgid "Preview Registration Page"
 msgstr "预览注册页"
 
-#: rpr-admin-menu.php:690
+#: rpr-admin-menu.php:704
+#, fuzzy
+#| msgid "Preview Registration Page"
+msgid "Preview Signup Page"
+msgstr "预览注册页"
+
+#: rpr-admin-menu.php:741
 msgid "New"
 msgstr "新"
 
-#: rpr-admin-menu.php:691
+#: rpr-admin-menu.php:742
 msgid "New Field"
 msgstr "新输入项"
 
-#: rpr-admin-menu.php:710
+#: rpr-admin-menu.php:761
 msgid ""
 "You must save after adding new fields before all options become available."
 msgstr "添加新的输入项后，您必须保存，才能使所有选项可用。"
 
-#: rpr-admin-menu.php:727
+#: rpr-admin-menu.php:778
 msgid "The following message will be sent when a user is registered:"
 msgstr "下列消息将在用户注册后发送："
 
-#: rpr-admin-menu.php:741 rpr-admin-menu.php:780 rpr-admin-menu.php:817
+#: rpr-admin-menu.php:792 rpr-admin-menu.php:831 rpr-admin-menu.php:868
 msgid "To: "
 msgstr "收件人："
 
-#: rpr-admin-menu.php:742 rpr-admin-menu.php:781 rpr-admin-menu.php:818
+#: rpr-admin-menu.php:793 rpr-admin-menu.php:832 rpr-admin-menu.php:869
 msgid "From: "
 msgstr "发件人："
 
-#: rpr-admin-menu.php:743 rpr-admin-menu.php:782 rpr-admin-menu.php:819
+#: rpr-admin-menu.php:794 rpr-admin-menu.php:833 rpr-admin-menu.php:870
 msgid "Subject: "
 msgstr "主题："
 
-#: rpr-admin-menu.php:744 rpr-admin-menu.php:783 rpr-admin-menu.php:820
+#: rpr-admin-menu.php:795 rpr-admin-menu.php:834 rpr-admin-menu.php:871
 msgid "Content-Type: "
 msgstr "正文类型(Content-Type)："
 
-#: rpr-admin-menu.php:752
+#: rpr-admin-menu.php:803
 msgid ""
 "No message will be sent to user whether they are registered or created by an "
 "administrator."
 msgstr "用户自行注册或管理员创建用户后，不向用户发送消息。"
 
-#: rpr-admin-menu.php:756 rpr-admin-menu.php:799
+#: rpr-admin-menu.php:807 rpr-admin-menu.php:850
 msgid "The following message will be sent when a user is "
 msgstr "下列消息将发送，当用户是"
 
-#: rpr-admin-menu.php:757 rpr-admin-menu.php:800
+#: rpr-admin-menu.php:808 rpr-admin-menu.php:851
 msgid "registered"
 msgstr "已注册"
 
-#: rpr-admin-menu.php:758 rpr-admin-menu.php:801
+#: rpr-admin-menu.php:809 rpr-admin-menu.php:852
 msgid " or "
 msgstr "或"
 
-#: rpr-admin-menu.php:759 rpr-admin-menu.php:802
+#: rpr-admin-menu.php:810 rpr-admin-menu.php:853
 msgid "created"
 msgstr "已创建"
 
-#: rpr-admin-menu.php:760
+#: rpr-admin-menu.php:811
 msgid " after "
 msgstr "之后"
 
-#: rpr-admin-menu.php:762
+#: rpr-admin-menu.php:813
 msgid "the user has verified their email address"
 msgstr "用户已确认其邮件地址"
 
-#: rpr-admin-menu.php:763
+#: rpr-admin-menu.php:814
 msgid " and/or "
 msgstr "与/或"
 
-#: rpr-admin-menu.php:765
+#: rpr-admin-menu.php:816
 msgid "an administrator has approved the new user"
 msgstr "管理员已批准新用户"
 
-#: rpr-admin-menu.php:795
+#: rpr-admin-menu.php:846
 msgid ""
 "No message will be sent to administrator whether a user is registered or "
 "created."
 msgstr "用户注册或创建后，不向管理员发送消息。"
 
-#: rpr-admin-menu.php:972
-msgid "You cannot edit that user."
-msgstr "你无法编辑那个用户。"
+#: rpr-admin-menu.php:888
+msgid "Upload/Select Logo"
+msgstr ""
 
-#: rpr-admin-menu.php:996
+#: rpr-admin-menu.php:944
+#, fuzzy
+#| msgid "Settings"
+msgid "Hide Settings"
+msgstr "设置"
+
+#: rpr-admin-menu.php:1129
+#, fuzzy
+#| msgid "Users approved."
+msgid "User approved."
+msgstr "用户已批准了。"
+
+#: rpr-admin-menu.php:1132
 msgid "Users approved."
 msgstr "用户已批准了。"
 
-#: rpr-admin-menu.php:999
+#: rpr-admin-menu.php:1135
+#, fuzzy
+#| msgid "Verification emails sent."
+msgid "Verification email sent."
+msgstr "确认邮件已发送。"
+
+#: rpr-admin-menu.php:1138
 msgid "Verification emails sent."
 msgstr "确认邮件已发送。"
 
-#: rpr-admin-menu.php:1002
+#: rpr-admin-menu.php:1141
+#, fuzzy
+#| msgid "Users deleted."
+msgid "User deleted."
+msgstr "用户已删除。"
+
+#: rpr-admin-menu.php:1144
 msgid "Users deleted."
 msgstr "用户已删除。"
 
-#: rpr-admin-menu.php:1014
+#: rpr-admin-menu.php:1157
 msgid "Bulk Actions"
 msgstr "批量操作"
 
-#: rpr-admin-menu.php:1015
+#: rpr-admin-menu.php:1158 rpr-admin-menu.php:1190
 msgid "Approve"
 msgstr "批准"
 
-#: rpr-admin-menu.php:1016
+#: rpr-admin-menu.php:1159
 msgid "Send E-mail Verification"
 msgstr "发送邮件确认"
 
-#: rpr-admin-menu.php:1017 rpr-admin-menu.php:1051
+#: rpr-admin-menu.php:1160 rpr-admin-menu.php:1192
 msgid "Delete"
 msgstr "删除"
 
-#: rpr-admin-menu.php:1019
+#: rpr-admin-menu.php:1162
 msgid "Apply"
 msgstr "应用"
 
-#: rpr-admin-menu.php:1028
+#: rpr-admin-menu.php:1170
 msgid "Username"
 msgstr "用户名"
 
-#: rpr-admin-menu.php:1029
-msgid "Temp Username"
-msgstr "临时用户名"
-
-#: rpr-admin-menu.php:1030 rpr-login.php:821 rpr-login.php:826
-#: rpr-login.php:835 rpr-login.php:840
+#: rpr-admin-menu.php:1171 rpr-login.php:1003 rpr-login.php:1008
+#: rpr-login.php:1019 rpr-login.php:1024
 msgid "E-mail"
 msgstr "邮箱"
 
-#: rpr-admin-menu.php:1031
+#: rpr-admin-menu.php:1172
 msgid "Registered"
 msgstr "已注册"
 
-#: rpr-admin-menu.php:1032
+#: rpr-admin-menu.php:1173
 msgid "Verification Sent"
 msgstr "确认已发送"
 
-#: rpr-admin-menu.php:1033
+#: rpr-admin-menu.php:1174
 msgid "Verified"
 msgstr "已确认"
 
-#: rpr-admin-menu.php:1050
-msgid "Edit"
-msgstr "编辑"
+#: rpr-admin-menu.php:1191
+#, fuzzy
+#| msgid "Send E-mail Verification"
+msgid "Send Verification"
+msgstr "发送邮件确认"
 
-#: rpr-admin-menu.php:1055
+#: rpr-admin-menu.php:1195
 msgid "E-mail: "
 msgstr "邮箱："
 
-#: rpr-admin-menu.php:1068
+#: rpr-admin-menu.php:1208
 msgid "Approve Selected Users"
 msgstr "批准已选择的用户"
 
-#: rpr-admin-menu.php:1069
+#: rpr-admin-menu.php:1209
 msgid "Send E-mail Verification to Selected Users"
 msgstr "发送邮件确认给已选择的用户"
 
-#: rpr-admin-menu.php:1070
+#: rpr-admin-menu.php:1210
 msgid "Delete Selected Users"
 msgstr "删除已选择的用户"
 
@@ -933,25 +1015,25 @@ msgstr "邀请码跟踪"
 msgid "%s Users Registered."
 msgstr "%s用户已注册。"
 
-#: rpr-login.php:63 rpr-signup.php:238
+#: rpr-login.php:131 rpr-signup.php:150
 msgid "Confirm E-mail"
 msgstr "确认邮箱"
 
-#: rpr-login.php:127 rpr-signup.php:320
+#: rpr-login.php:188 rpr-signup.php:225
 msgid ""
 "Share a little biographical information to fill out your profile. This may "
 "be shown publicly."
 msgstr "分享一些个人生平信息。这些信息可能会对外显示。"
 
-#: rpr-login.php:218 rpr-signup.php:390
+#: rpr-login.php:279 rpr-signup.php:297
 msgid "Password"
 msgstr "密码"
 
-#: rpr-login.php:224 rpr-signup.php:398
+#: rpr-login.php:285 rpr-signup.php:305
 msgid "Confirm Password"
 msgstr "确认密码"
 
-#: rpr-login.php:230 rpr-signup.php:406
+#: rpr-login.php:292 rpr-signup.php:313
 msgid ""
 "Your password must be at least %d characters long. To make your password "
 "stronger, use upper and lower case letters, numbers, and the following "
@@ -960,150 +1042,235 @@ msgstr ""
 "您的密码长度必须超过%d个字符。为了使您的密码更加安全，请使用大写、小写、数字"
 "和后续的符号!@#$%%^&amp;*()"
 
-#: rpr-login.php:243 rpr-signup.php:420
+#: rpr-login.php:303 rpr-signup.php:326
 msgid ""
 "This website is currently closed to public registrations. You will need an "
 "invitation code to register."
 msgstr "网站已停止对公众注册。您必须获得一个邀请码来完成注册。"
 
-#: rpr-login.php:246 rpr-signup.php:422
+#: rpr-login.php:306 rpr-signup.php:328
 msgid "Have an invitation code? Enter it here. (This is not required)"
 msgstr "有了邀请码？请在此输入。(这不是必须的)"
 
-#: rpr-login.php:298 rpr-login.php:304 rpr-login.php:309 rpr-login.php:312
-#: rpr-login.php:317 rpr-login.php:322 rpr-login.php:327 rpr-login.php:332
-#: rpr-login.php:337 rpr-login.php:342 rpr-login.php:347 rpr-login.php:355
-#: rpr-login.php:358 rpr-login.php:363 rpr-login.php:366 rpr-login.php:369
-#: rpr-login.php:374 rpr-login.php:385 rpr-login.php:395 rpr-login.php:403
-#: rpr-login.php:408 rpr-login.php:413
+#: rpr-login.php:386 rpr-login.php:403 rpr-login.php:408 rpr-login.php:411
+#: rpr-login.php:416 rpr-login.php:421 rpr-login.php:426 rpr-login.php:431
+#: rpr-login.php:436 rpr-login.php:441 rpr-login.php:446 rpr-login.php:454
+#: rpr-login.php:457 rpr-login.php:463 rpr-login.php:466 rpr-login.php:469
+#: rpr-login.php:477 rpr-login.php:488 rpr-login.php:498 rpr-login.php:507
+#: rpr-login.php:512 rpr-login.php:517
 msgid "ERROR"
 msgstr "错误"
 
-#: rpr-login.php:298
+#: rpr-login.php:387
+#, fuzzy
+#| msgid "Registration Page"
+msgid "Registration not allowed"
+msgstr "注册页"
+
+#: rpr-login.php:403
 msgid ""
 "Email address is not appropriate as a username, please enter another email "
 "address."
 msgstr "该邮件地址不能作为用户名，请输入另一个邮件地址。"
 
-#: rpr-login.php:304
-msgid "This username is already registered, please choose another one."
-msgstr "该用户名已被注册，请使用其他的名称。"
-
-#: rpr-login.php:309 rpr-signup.php:519
+#: rpr-login.php:408 rpr-signup.php:644
 msgid "Please confirm your e-mail address."
 msgstr "请确认您的邮件地址。"
 
-#: rpr-login.php:312 rpr-signup.php:522
+#: rpr-login.php:411 rpr-signup.php:647
 msgid "Your e-mail address does not match."
 msgstr "您的邮件地址不相符。"
 
-#: rpr-login.php:317 rpr-signup.php:527
+#: rpr-login.php:416 rpr-signup.php:652
 msgid "Please enter your first name."
 msgstr "请输入您的名。"
 
-#: rpr-login.php:322 rpr-signup.php:532
+#: rpr-login.php:421 rpr-signup.php:657
 msgid "Please enter your last name."
 msgstr "请输入您的姓。"
 
-#: rpr-login.php:327 rpr-signup.php:537
+#: rpr-login.php:426 rpr-signup.php:662
 msgid "Please enter your website URL."
 msgstr "请输入您的网站URL地址。"
 
-#: rpr-login.php:332 rpr-signup.php:542
+#: rpr-login.php:431 rpr-signup.php:667
 #, fuzzy
 msgid "Please enter your AIM username."
 msgstr "请输入您的AIM用户名。"
 
-#: rpr-login.php:337 rpr-signup.php:547
+#: rpr-login.php:436 rpr-signup.php:672
 msgid "Please enter your Yahoo IM username."
 msgstr "请输入您的雅虎通用户名。"
 
-#: rpr-login.php:342 rpr-signup.php:552
+#: rpr-login.php:441 rpr-signup.php:677
 #, fuzzy
 msgid "Please enter your Jabber / Google Talk username."
 msgstr "请输入您的Jabber/Google Talk用户名。"
 
-#: rpr-login.php:347 rpr-signup.php:557
+#: rpr-login.php:446 rpr-signup.php:682
 msgid "Please enter some information about yourself."
 msgstr "请输入关于您自己的一些信息。"
 
-#: rpr-login.php:355 rpr-signup.php:565
+#: rpr-login.php:454 rpr-signup.php:690
 msgid "Please enter a value for %s."
 msgstr "请为%s输入一个值。"
 
-#: rpr-login.php:358 rpr-signup.php:568
+#: rpr-login.php:457 rpr-signup.php:693
 msgid ""
 "Please enter new value for %s, value specified is not in the correct format."
 msgstr "请为%s重新输入一个值，当前输入的格式不正确。"
 
-#: rpr-login.php:363 rpr-signup.php:573
+#: rpr-login.php:463 rpr-signup.php:699
 msgid "Please enter a password."
 msgstr "请输入一个密码。"
 
-#: rpr-login.php:366 rpr-signup.php:576
+#: rpr-login.php:466 rpr-signup.php:702
 msgid "Your password must be at least %d characters in length."
 msgstr "您的密码长度最少需要%d个字符。"
 
-#: rpr-login.php:369 rpr-signup.php:579
+#: rpr-login.php:469 rpr-signup.php:705
 msgid "Your password does not match."
 msgstr "您的密码不一致。"
 
-#: rpr-login.php:374 rpr-signup.php:589
+#: rpr-login.php:477 rpr-signup.php:713
 msgid "Please enter an invitation code."
 msgstr "请输入一个邀请码。"
 
-#: rpr-login.php:385 rpr-signup.php:600
+#: rpr-login.php:488 rpr-signup.php:724
 #, fuzzy
 msgid "That invitation code is invalid."
 msgstr "邀请码无效。"
 
-#: rpr-login.php:395 rpr-signup.php:610
+#: rpr-login.php:498 rpr-signup.php:734
 msgid ""
 "This invitation code is already in use, please enter a unique invitation "
 "code."
 msgstr "这个邀请码已经使用，请输入一个唯一的邀请码。"
 
-#: rpr-login.php:403 rpr-login.php:408 rpr-login.php:413 rpr-signup.php:618
-#: rpr-signup.php:623 rpr-signup.php:628
+#: rpr-login.php:507 rpr-login.php:512 rpr-login.php:517 rpr-signup.php:743
+#: rpr-signup.php:748 rpr-signup.php:753
 #, fuzzy
 msgid "Please accept the %s"
 msgstr "请接受%s"
 
-#: rpr-login.php:445
+#: rpr-login.php:529 rpr-login.php:534
+#, fuzzy
+#| msgid "Invalid verification code."
+msgid "Invalid verification code"
+msgstr "无效的确认代码。"
+
+#: rpr-login.php:571
 msgid ""
 "Thank you %s, your account has been verified, please login with the password "
 "you specified during registration."
 msgstr "感谢%s，您的帐户已经确认，请使用您注册时设定的密码进行登录。"
 
-#: rpr-login.php:447
+#: rpr-login.php:574
 msgid ""
 "Thank you %s, your account has been verified, your password will be emailed "
 "to you."
 msgstr "感谢%s，您的帐户已经确认，密码将通过邮件发送给您。"
 
-#: rpr-login.php:455
+#: rpr-login.php:583
 msgid "Invalid verification code."
 msgstr "无效的确认代码。"
 
-#: rpr-signup.php:502
+#: rpr-login.php:585 rpr-login.php:606
+#, fuzzy
+#| msgid "From Email"
+msgid "Verify Email"
+msgstr "发件人邮箱"
+
+#: rpr-signup.php:627
 msgid "Sorry, that username already exists!"
 msgstr "抱歉，那个用户名已经存在！"
 
-#: rpr-signup.php:511
+#: rpr-signup.php:636
 msgid ""
 "That username is currently reserved but may be available in a couple of days."
 msgstr "这个用户名当前被保留，但几天后也许可以使用。"
 
-#: rpr-signup.php:514
+#: rpr-signup.php:639
 msgid "username and email used"
 msgstr "用户名和邮箱地址已被使用"
 
-#. Plugin Name of the plugin/theme
-msgid "Register Plus Redux"
-msgstr "Register Plus Redux"
+#: rpr-signup.php:782
+msgid ""
+"To activate your user, please click the following link:\n"
+"\n"
+"%verification_url%\n"
+"\n"
+"After you activate, you will receive *another email* with your login."
+msgstr ""
+
+#: rpr-signup.php:783
+msgid "[%from_name%] Activate %user_login%"
+msgstr ""
+
+#: rpr-signup.php:856
+msgid "User registration has been disabled."
+msgstr ""
+
+#: rpr-signup.php:894
+msgid "Site registration has been disabled."
+msgstr ""
+
+#: rpr-signup.php:914 rpr-signup.php:935
+msgid "Your account is now active!"
+msgstr ""
+
+#: rpr-signup.php:918
+msgid ""
+"Your account has been activated. You may now <a href=\"%1$s\">log in</a> to "
+"the site using your chosen username of &#8220;%2$s&#8221;. Please check your "
+"email inbox at %3$s for your password and login instructions. If you do not "
+"receive an email, please check your junk or spam folder. If you still do not "
+"receive an email within an hour, you can <a href=\"%4$s\">reset your "
+"password</a>."
+msgstr ""
+
+#: rpr-signup.php:920
+msgid ""
+"Your site at <a href=\"%1$s\">%2$s</a> is active. You may now log in to your "
+"site using your chosen username of &#8220;%3$s&#8221;. Please check your "
+"email inbox at %4$s for your password and login instructions. If you do not "
+"receive an email, please check your junk or spam folder. If you still do not "
+"receive an email within an hour, you can <a href=\"%5$s\">reset your "
+"password</a>."
+msgstr ""
+
+#: rpr-signup.php:925
+msgid "An error occurred during the activation"
+msgstr ""
+
+#: rpr-signup.php:937
+#, fuzzy
+#| msgid "Username"
+msgid "Username:"
+msgstr "用户名"
+
+#: rpr-signup.php:938
+#, fuzzy
+#| msgid "Password"
+msgid "Password:"
+msgstr "密码"
+
+#: rpr-signup.php:941
+msgid ""
+"Your account is now activated. <a href=\"%1$s\">View your site</a> or <a "
+"href=\"%2$s\">Log in</a>"
+msgstr ""
+
+#: rpr-signup.php:943
+msgid ""
+"Your account is now activated. <a href=\"%1$s\">Log in</a> or go back to the "
+"<a href=\"%2$s\">homepage</a>."
+msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://radiok.info/blog/category/register-plus-redux/"
+#, fuzzy
+#| msgid "http://radiok.info/blog/category/register-plus-redux/"
+msgid "https://github.com/radiok/register-plus-redux"
 msgstr "http://radiok.info/blog/category/register-plus-redux/"
 
 #. Description of the plugin/theme
@@ -1117,8 +1284,43 @@ msgid "radiok"
 msgstr "radiok"
 
 #. Author URI of the plugin/theme
-msgid "http://radiok.info/"
-msgstr "http://radiok.info/"
+msgid "https://github.com/radiok"
+msgstr ""
+
+#~ msgid "Hacks & Fixes"
+#~ msgstr "破解和修复"
+
+#~ msgid "Random Password Appears in Messages"
+#~ msgstr "随机密码显示在消息中"
+
+#~ msgid "Filter Random Passwords."
+#~ msgstr "过滤随机密码。"
+
+#~ msgid ""
+#~ "When user set password is enabled, and another plugin is being used to "
+#~ "modify outgoing messages, a random password may appear in those messages, "
+#~ "regardless of the fact that a user entered password was specified. This "
+#~ "option will filter all password requests and show the user entered "
+#~ "password if possible."
+#~ msgstr ""
+#~ "当用户设置密码启用，且存在其他对发出消息进行修改的插件，尽管用户输入的密码"
+#~ "已经设定，一个随机密码仍可能出现在这些消息中。这个选项将过滤所有的密码请"
+#~ "求，并尽可能显示用户输入的密码。"
+
+#~ msgid "You cannot edit that user."
+#~ msgstr "你无法编辑那个用户。"
+
+#~ msgid "Temp Username"
+#~ msgstr "临时用户名"
+
+#~ msgid "Edit"
+#~ msgstr "编辑"
+
+#~ msgid "This username is already registered, please choose another one."
+#~ msgstr "该用户名已被注册，请使用其他的名称。"
+
+#~ msgid "http://radiok.info/"
+#~ msgstr "http://radiok.info/"
 
 #~ msgid "Date Field"
 #~ msgstr "日期项"
@@ -1134,9 +1336,6 @@ msgstr "http://radiok.info/"
 
 #~ msgid "You must Save Changes to upload logo."
 #~ msgstr "您必须保存设定后才会上载图片。"
-
-#~ msgid "Registration Page"
-#~ msgstr "注册页"
 
 #~ msgid "Name"
 #~ msgstr "名称"
