@@ -377,7 +377,7 @@ if ( !class_exists( 'RPR_Signup' ) ) {
                             echo "\n", '<label id="', $meta_key, '-label">', esc_html( $meta_field['label'] ), '</label><br />';
                             echo "\n", '<div id="', $meta_key, '-content" style="display: inline;">', nl2br( $meta_field['terms_content'] ), '</div>';
                             if ( '1' === $meta_field['require_on_registration'] ) {
-                                echo "\n", '<label id="accept_', $meta_key, '-label"><input type="checkbox" name="', $meta_key, '" id="', $meta_key, '" value="Y"', checked( $meta_value, 'Y' ), ' />&nbsp;', esc_html( $meta_field['terms_agreement_text'] ), '</label>';
+                                echo "\n", '<label id="accept_', $meta_key, '-label"><input type="checkbox" name="', $meta_key, '" id="', $meta_key, '" value="Y"', checked( $meta_value, 'Y', false ), ' />&nbsp;', esc_html( $meta_field['terms_agreement_text'] ), '</label>';
                             }
                             if ( $errmsg = $errors->get_error_message($meta_key) ) {
                                 echo '<p class="error">', $errmsg, '</p>';

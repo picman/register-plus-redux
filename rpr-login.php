@@ -363,7 +363,7 @@ if ( !class_exists( 'RPR_Login' ) ) {
                             echo "\n", '<label id="', $meta_key, '-label">', esc_html( $meta_field['label'] ), '</label><br />';
                             echo "\n", '<span id="', $meta_key, '-content">', nl2br( $meta_field['terms_content'] ), '</span>';
                             if ( '1' === $meta_field['require_on_registration'] ) {
-                                echo "\n", '<label id="accept_', $meta_key, '-label" class="accept_check" for="', $meta_key, '"><input type="checkbox" name="', $meta_key, '" id="', $meta_key, '" value="Y" ', checked( $meta_value, 'Y' );
+                                echo "\n", '<label id="accept_', $meta_key, '-label" class="accept_check" for="', $meta_key, '"><input type="checkbox" name="', $meta_key, '" id="', $meta_key, '" value="Y" ', checked( $meta_value, 'Y', false );
                                 if ( 0 !== $tabindex ) echo ' tabindex="', $tabindex++, '" ';
                                 echo '/>&nbsp;', esc_html( $meta_field['terms_agreement_text'] ), '</label>';
                             }
