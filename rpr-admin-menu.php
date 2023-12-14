@@ -472,16 +472,16 @@ if ( !class_exists( 'RPR_Admin_Menu' ) ) {
                                 echo "\n", '<td><input type="text" name="meta_key[', $index, ']" id="meta_key[', $index, ']" value="', esc_attr( $meta_field['meta_key'] ), '" style="width: 100%;" /></td></tr>';
         
                                 echo "\n", '<tr><td>', __( 'Show on Profile', 'register-plus-redux' ), '</td>';
-                                echo "\n", '<td><input type="checkbox" name="show_on_profile[', $index, ']" id="show_on_profile[', $index, ']" value="1"', checked( $meta_field['show_on_profile'], 1 ), ' /></td></tr>';
+                                echo "\n", '<td><input type="checkbox" name="show_on_profile[', $index, ']" id="show_on_profile[', $index, ']" value="1"', checked( $meta_field['show_on_profile'], 1, false ), ' /></td></tr>';
         
                                 echo "\n", '<tr><td>', __( 'Show on Registration', 'register-plus-redux' ), '</td>';
-                                echo "\n", '<td><input type="checkbox" name="show_on_registration[', $index, ']" id="show_on_registration[', $index, ']" value="1"', checked( $meta_field['show_on_registration'], 1 ), ' class="modifyNextRowCheckbox" /></td></tr>';
+                                echo "\n", '<td><input type="checkbox" name="show_on_registration[', $index, ']" id="show_on_registration[', $index, ']" value="1"', checked( $meta_field['show_on_registration'], 1, false ), ' class="modifyNextRowCheckbox" /></td></tr>';
         
                                 echo "\n", '<tr><td>', __( 'Required Field', 'register-plus-redux' ), '</td>';
-                                echo "\n", '<td><input type="checkbox" name="require_on_registration[', $index, ']" id="require_on_registration[', $index, ']" value="1"', checked( $meta_field['require_on_registration'], 1 ), ' ', disabled( empty( $meta_field['show_on_registration'] ), TRUE, FALSE ), ' /></td></tr>';
+                                echo "\n", '<td><input type="checkbox" name="require_on_registration[', $index, ']" id="require_on_registration[', $index, ']" value="1"', checked( $meta_field['require_on_registration'], 1, false ), ' ', disabled( empty( $meta_field['show_on_registration'] ), TRUE, FALSE ), ' /></td></tr>';
         
                                 echo "\n", '<tr><td>', __( 'Show Datepicker', 'register-plus-redux' ), '</td>';
-                                echo "\n", '<td><input type="checkbox" name="show_datepicker[', $index, ']" id="show_datepicker[', $index, ']" value="1"', checked( $meta_field['show_datepicker'], 1 ), ' ', disabled( $meta_field['display'] === 'textbox', FALSE, FALSE ), ' /></td></tr>';
+                                echo "\n", '<td><input type="checkbox" name="show_datepicker[', $index, ']" id="show_datepicker[', $index, ']" value="1"', checked( $meta_field['show_datepicker'], 1, false ), ' ', disabled( $meta_field['display'] === 'textbox', FALSE, FALSE ), ' /></td></tr>';
 
                                 echo "\n", '<tr><td>', __( 'Terms Content', 'register-plus-redux' ), '</td>';
                                 echo "\n", '<td><textarea name="terms_content[', $index, ']" id="terms_content[', $index, ']" style="width: 100%; height: 160px; display: block;">', esc_textarea( $meta_field['terms_content'] ),'</textarea></td></tr>';
