@@ -1286,7 +1286,7 @@ if ( !class_exists( 'RPR_Admin_Menu' ) ) {
             }
             $options['required_fields_asterisk'] = isset( $_POST['required_fields_asterisk'] ) ? '1' : '0';
             $options['starting_tabindex'] = isset( $_POST['starting_tabindex'] ) ? absint( $_POST['starting_tabindex'] ) : 0;
-            $options['min_registration_duration'] = $_POST['min_registration_duration'] ?? 0;
+            $options['min_expected_seconds_to_register'] = $_POST['min_expected_seconds_to_register'] ?? 0;
 
             /*
             if ( isset( $_POST['datepicker_firstdayofweek'] ) ) $options['datepicker_firstdayofweek'] = absint( $_POST['datepicker_firstdayofweek'] );
