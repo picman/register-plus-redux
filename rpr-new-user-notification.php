@@ -12,6 +12,7 @@ else {
     /*.void.*/ function wp_new_user_notification( /*.int.*/ $user_id, $deprecated = null, /* string */ $notify = '' ) {
         global $pagenow;
         global $register_plus_redux;
+        $plaintext_pass = '';
 
         if ( '1' === $register_plus_redux->rpr_get_option( 'user_set_password' ) && !empty( $_POST['pass1'] ) )
             $plaintext_pass = stripslashes( (string) $_POST['pass1'] );
