@@ -376,6 +376,21 @@ if ( !class_exists( 'RPR_Login' ) ) {
 
         public /*.object.*/ function rpr_registration_errors( /*.object.*/ $errors, /*.string.*/ $sanitized_user_login, /*.string.*/ $user_email ) {
             global $register_plus_redux;
+            // Email domain on the blacklist check
+            if (filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
+                $blacklist = explode(',', $register_plus_redux->rpr_get_option('domain_blacklist'));
+                $blacklist = array_map('trim', $blacklist);
+                $parts = explode('@', $user_email);
+                $domain = array_pop($parts);
+                if (in_array($domain, $blacklist)) {
+                    $errors->add(
+                        'empty_registration_timestamp',
+                        '<strong>' . __('ERROR', 'register-plus-redux') . '</strong>:&nbsp;' . __('Registration not allowed.', 'register-plus-redux')
+                    );
+                }
+                return $errors;
+            }
+            // Minimal registration duration check
             $min_expected_seconds_to_register = absint( $register_plus_redux->rpr_get_option( 'min_expected_seconds_to_register' ) );
             if ( !is_numeric( $min_expected_seconds_to_register ) || $min_expected_seconds_to_register < 1 ) $min_expected_seconds_to_register = 0;
             if ( $min_expected_seconds_to_register > 0 ) {

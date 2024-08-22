@@ -427,12 +427,27 @@ if ( !class_exists( 'RPR_Admin_Menu' ) ) {
                     </tr>
                     <?php } ?>
                     <tr valign="top">
-                        <th scope="row"><?php _e( 'Minimal registration duration', 'register-plus-redux' ); ?></th>
+                        <th scope="row"><?php _e('Minimal registration duration', 'register-plus-redux'); ?></th>
                         <td>
-                            <input type="text" name="min_expected_seconds_to_register" id="min_expected_seconds_to_register" style="width:50px;" value="<?php echo esc_attr( $register_plus_redux->rpr_get_option( 'min_expected_seconds_to_register' ) ); ?>">
-                            <?php _e( 'seconds', 'register-plus-redux' ); ?>
-                            <br />
-                            <?php _e( 'A minimal duration of registration to prevent false registrations. Set to 0 to disable this check.', 'register-plus-redux' ) ?>
+                            <input type="text" name="min_expected_seconds_to_register" id="min_expected_seconds_to_register" style="width:50px;" value="<?= esc_attr($register_plus_redux->rpr_get_option( 'min_expected_seconds_to_register')) ?>">
+                            <?php _e('seconds', 'register-plus-redux'); ?>
+                            <br>
+                            <?php _e('A minimal duration of registration to prevent false registrations. Set to 0 to disable this check.', 'register-plus-redux') ?>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <th scope="row"><?php _e('Blacklisted email domains', 'register-plus-redux'); ?></th>
+                        <td>
+                            <input type="text"
+                                   name="domain_blacklist"
+                                   id="domain_blacklist"
+                                   value="<?= esc_attr($register_plus_redux->rpr_get_option('domain_blacklist')) ?>"
+                                   style="width: 60%">
+                            <br>
+                            <?php
+                                _e('Coma separated list of domains not allowed to register',
+                                    'register-plus-redux');
+                            ?>
                         </td>
                     </tr>
                 </table>
@@ -1287,6 +1302,7 @@ if ( !class_exists( 'RPR_Admin_Menu' ) ) {
             $options['required_fields_asterisk'] = isset( $_POST['required_fields_asterisk'] ) ? '1' : '0';
             $options['starting_tabindex'] = isset( $_POST['starting_tabindex'] ) ? absint( $_POST['starting_tabindex'] ) : 0;
             $options['min_expected_seconds_to_register'] = $_POST['min_expected_seconds_to_register'] ?? 0;
+            $options['domain_blacklist'] = isset($_POST['domain_blacklist']) ? sanitize_text_field($_POST['domain_blacklist']) : '';
 
             /*
             if ( isset( $_POST['datepicker_firstdayofweek'] ) ) $options['datepicker_firstdayofweek'] = absint( $_POST['datepicker_firstdayofweek'] );
