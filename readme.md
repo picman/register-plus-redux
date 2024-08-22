@@ -120,6 +120,12 @@ HTML attributes should go in the following order name -> id -> class
 
 ## Changelog
 
+### 4.4.1
+~ August, 2024 by picman, radiok
+
+* New feature, "Blacklisted email domains" to block spammers
+* Updated embedded CSSTidy library
+
 ### 4.4.0
 ~December, 2023 by picman, radiok
 
