@@ -14,11 +14,13 @@ else {
         global $register_plus_redux;
         $plaintext_pass = '';
 
-        if ( '1' === $register_plus_redux->rpr_get_option( 'user_set_password' ) && !empty( $_POST['pass1'] ) )
-            $plaintext_pass = stripslashes( (string) $_POST['pass1'] );
-        if ( 'user-new.php' === $pagenow && !empty( $_POST['pass1'] ) )
-            $plaintext_pass = stripslashes( (string) $_POST['pass1'] );
-        //TODO: Code now only forces users registering to verify email, may want to add settings to have admin created users verify email too
+        if (!empty($_POST['pass1'])) {
+            if ('1' === $register_plus_redux->rpr_get_option('user_set_password'))
+                $plaintext_pass = stripslashes((string)$_POST['pass1']);
+            if ('user-new.php' === $pagenow)
+                $plaintext_pass = stripslashes((string)$_POST['pass1']);
+        }
+        // TODO: Code now only forces users registering to verify email, may want to add settings to have admin created users verify email too
         $verification_code = '';
         if ( 'wp-login.php' === $pagenow && '1' === $register_plus_redux->rpr_get_option( 'verify_user_email' ) ) {
             $verification_code = wp_generate_password( 20, FALSE );
