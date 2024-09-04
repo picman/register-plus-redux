@@ -175,8 +175,8 @@ if ($http_accept === 'text/html') {
 	<link rel="stylesheet" href="cssparse.css" type="text/css" />
 	<script type="text/javascript"><!--/*--><![CDATA[/*><!--*/
 	function enable_disable_preserve() {
-		var inputs =   new Array('sort_sel', 'sort_de', 'optimise_shorthands', 'merge_selectors', 'none');
-		var inputs_v = new Array( true,       true,      true,                  true,              false);
+		var inputs =   ['sort_sel', 'sort_de', 'optimise_shorthands', 'merge_selectors', 'none'];
+		var inputs_v = [true, true, true, true, false];
 		for (var i = 0; i < inputs.length; i++) {
 			if (document.getElementById('preserve_css').checked)  {
 				document.getElementById(inputs[i]).disabled = inputs_v[i];

@@ -66,8 +66,8 @@ Available in the following translations:
 
 1. Upload the 'register-plus-redux' directory to the '/wp-content/plugins/' directory
 2. When installed on WordPress with Multisite, you must Network Activate 'Register Plus Redux' from the 'Plugins' menu in Network Admin to have access to all functionality (refer to the FAQ for more information)
-2. -OR- Simply Activate 'Register Plus Redux' from the site's 'Plugins' menu
-3. Configure Register Plus Redux from the 'Register Plus Redux' page under Settings on individual sites
+3. -OR- Simply Activate 'Register Plus Redux' from the site's 'Plugins' menu
+4. Configure Register Plus Redux from the 'Register Plus Redux' page under Settings on individual sites
 
 ## Frequently Asked Questions
 

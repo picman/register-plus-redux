@@ -792,9 +792,9 @@ msgid "Send as HTML"
 msgstr "Trimite ca HTML"
 
 #: rpr-admin-menu.php:593 rpr-admin-menu.php:624 rpr-admin-menu.php:672
-msgid "Convert new lines to &lt;br /&gt; tags (HTML only)"
+msgid "Convert new lines to &lt;br&gt; tags (HTML only)"
 msgstr ""
-"Converteşte caracterul de linie nouă în &lt;br /&gt; (doar dacă se trimite "
+"Converteşte caracterul de linie nouă în &lt;br&gt; (doar dacă se trimite "
 "în format HTML)"
 
 #: rpr-admin-menu.php:601
