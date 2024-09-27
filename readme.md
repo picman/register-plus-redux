@@ -57,7 +57,6 @@ Available in the following translations:
 * pt\_BR Portuguese
 * pt\_BR Brazilian Portuguese
 * ro\_RO Romanian
-* ru\_RU Russian
 * es\_ES Spanish
 * es\_AR Argentinean Spanish
 * tr\_TR Turkish
