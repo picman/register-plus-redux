@@ -123,7 +123,7 @@ HTML attributes should go in the following order name -> id -> class
 ### 5.0.0
 ~ September, 2024 by picman
 
-* A complete reformating and clean up of the code
+* A complete reformatting and clean up of the code
 * W3C validation
 
 ### 4.4.1
