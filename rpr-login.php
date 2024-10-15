@@ -463,15 +463,16 @@ if (!class_exists('RPR_Login')) {
             if (filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
                 $blacklist = explode(',', $register_plus_redux->rpr_get_option('domain_blacklist'));
                 $blacklist = array_map('trim', $blacklist);
-                $parts = explode('@', $user_email);
-                $domain = array_pop($parts);
-                if (in_array($domain, $blacklist)) {
-                    $errors->add(
-                        'empty_registration_timestamp',
-                        '<strong>' . __('ERROR', 'register-plus-redux') . '</strong>:&nbsp;' . __('Registration not allowed.', 'register-plus-redux')
-                   );
+                foreach ($blacklist as $pattern) {
+                    if (preg_match("/$pattern/i", $user_email)) {
+                        $errors->add(
+                            'empty_registration_timestamp',
+                            '<strong>' . __('ERROR', 'register-plus-redux') . '</strong>:&nbsp;' .
+                                __('Registration not allowed.', 'register-plus-redux')
+                        );
+                        return $errors;
+                    }
                 }
-                return $errors;
             }
             // Minimal registration duration check
             $min_expected_seconds_to_register = absint($register_plus_redux->rpr_get_option('min_expected_seconds_to_register'));
