@@ -459,6 +459,7 @@ if (!class_exists('RPR_Login')) {
         {
             global $register_plus_redux;
 
+            // SPAM protection
             // Email domain on the blacklist check
             if (filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
                 $blacklist = explode(',', $register_plus_redux->rpr_get_option('domain_blacklist'));
@@ -466,7 +467,7 @@ if (!class_exists('RPR_Login')) {
                 foreach ($blacklist as $pattern) {
                     if (preg_match("/$pattern/i", $user_email)) {
                         $errors->add(
-                            'empty_registration_timestamp',
+                            'invalid_email',
                             '<strong>' . __('ERROR', 'register-plus-redux') . '</strong>:&nbsp;' .
                                 __('Registration not allowed.', 'register-plus-redux')
                         );
@@ -489,6 +490,17 @@ if (!class_exists('RPR_Login')) {
                     $errors->add('min_expected_seconds_to_register_violation', '<strong>' . __('ERROR', 'register-plus-redux') . '</strong>:&nbsp;' . __('Registration not allowed.', 'register-plus-redux'));
                 }
             }
+            // Company
+            $company = $_POST['company_name'];
+            if (preg_match("/(cucumber|youtube)/i", $company) || (strip_tags($company) != $company)) {
+                $errors->add(
+                    'invalid_company',
+                    '<strong>' . __('ERROR', 'register-plus-redux') . '</strong>:&nbsp;' .
+                    __('Registration not allowed.', 'register-plus-redux')
+                );
+                return $errors;
+            }
+            // Input data validation
             if ('1' === $register_plus_redux->rpr_get_option('username_is_email')) {
                 if (is_array($errors->errors) && isset($errors->errors['empty_username'])) {
                     $temp = $errors->errors;
