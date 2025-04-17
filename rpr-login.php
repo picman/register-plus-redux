@@ -491,7 +491,7 @@ if (!class_exists('RPR_Login')) {
                 }
             }
             // Company
-            $company = $_POST['company_name'];
+            $company = $_POST['company_name'] ?? '';
             if (preg_match("/(cucumber|youtube)/i", $company) || (strip_tags($company) != $company)) {
                 $errors->add(
                     'invalid_company',
